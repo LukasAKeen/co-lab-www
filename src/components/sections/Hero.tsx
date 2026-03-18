@@ -1,7 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, ChevronDown, Flame, Users, Clock } from 'lucide-react'
+import {
+  ArrowRight,
+  LayoutDashboard,
+  BarChart3,
+  FolderOpen,
+  LayoutTemplate,
+  Settings,
+  Handshake,
+  Flame,
+  TrendingUp,
+  Eye,
+  MoreHorizontal,
+  Plus,
+  Search,
+} from 'lucide-react'
 import { fadeUp, staggerContainer } from '@/lib/motion'
 
 function PulseDot() {
@@ -13,67 +27,106 @@ function PulseDot() {
   )
 }
 
-function FloatingCard({
-  children,
-  className,
-}: {
-  children: React.ReactNode
-  className?: string
-}) {
-  return (
-    <div
-      className={`glass rounded-[14px] px-4 py-3 shadow-lg border border-black/[0.07] ${className}`}
-    >
-      {children}
-    </div>
-  )
-}
+const navItems = [
+  { icon: LayoutDashboard, label: 'Dashboard', active: true },
+  { icon: BarChart3, label: 'Analytics', active: false },
+  { icon: FolderOpen, label: 'Assets', active: false },
+  { icon: LayoutTemplate, label: 'Templates', active: false },
+  { icon: Settings, label: 'Settings', active: false },
+]
+
+const pods = [
+  {
+    name: 'Meridian Corp',
+    sub: 'Q2 Partnership Proposal',
+    viewed: '2h ago',
+    time: '14m 22s',
+    intent: 'HIGH',
+    intentColor: '#22D3A0',
+    visitors: 3,
+    stage: 'Evaluation',
+    stageColor: '#818CF8',
+    progress: 72,
+  },
+  {
+    name: 'Nexus Capital',
+    sub: 'Enterprise Deal — Series B',
+    viewed: '38m ago',
+    time: '7m 04s',
+    intent: 'HIGH',
+    intentColor: '#22D3A0',
+    visitors: 1,
+    stage: 'Negotiation',
+    stageColor: '#F59E0B',
+    progress: 88,
+  },
+  {
+    name: 'CloudOps Inc',
+    sub: 'SaaS Renewal 2025',
+    viewed: '1d ago',
+    time: '3m 11s',
+    intent: 'MED',
+    intentColor: '#F59E0B',
+    visitors: 2,
+    stage: 'Proposal',
+    stageColor: '#6366F1',
+    progress: 55,
+  },
+  {
+    name: 'Vantage Health',
+    sub: 'Initial Introduction',
+    viewed: '3d ago',
+    time: '—',
+    intent: '—',
+    intentColor: '#4A5368',
+    visitors: 0,
+    stage: 'Discovery',
+    stageColor: '#4A5368',
+    progress: 10,
+  },
+]
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section className="relative flex flex-col items-center pt-24 pb-0 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 dot-grid opacity-60" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#6366F1] opacity-[0.06] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 dot-grid opacity-50" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#6366F1] opacity-[0.05] rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         {/* Text content */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto mb-14"
         >
-          {/* Badge */}
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-8">
-            <span className="glass border border-[#6366F1]/20 rounded-full px-4 py-1.5 text-xs font-medium text-[#6366F1] flex items-center gap-2 shadow-sm">
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-7">
+            <span className="bg-white border border-[#6366F1]/20 rounded-full px-4 py-1.5 text-xs font-medium text-[#6366F1] flex items-center gap-2 shadow-sm">
               <PulseDot />
               Now in early access
               <ArrowRight size={12} />
             </span>
           </motion.div>
 
-          {/* Headline */}
           <motion.h1
             variants={fadeUp}
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6 text-[#0D1117]"
+            className="text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight leading-[1.04] mb-5 text-[#0D1117]"
           >
             Stop sending decks.
             <br />
             <span className="text-gradient-indigo">Start closing deals.</span>
           </motion.h1>
 
-          {/* Sub */}
           <motion.p
             variants={fadeUp}
-            className="text-lg md:text-xl text-[#5A6480] leading-relaxed mb-10 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-[#5A6480] leading-relaxed mb-8 max-w-2xl mx-auto"
           >
             Co-Lab gives every deal its own personalized sales room — interactive,
             trackable, and built to move buyers forward.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="#cta"
               className="group inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-[10px] transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] active:scale-95"
@@ -83,163 +136,260 @@ export default function Hero() {
             </a>
             <a
               href="#features"
-              className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-[#5A6480] hover:text-[#0D1117] border border-black/[0.1] hover:border-black/[0.2] bg-white rounded-[10px] transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-[#5A6480] hover:text-[#0D1117] border border-black/[0.1] hover:border-black/[0.18] bg-white rounded-[10px] transition-all shadow-sm"
             >
               See how it works
-              <ChevronDown size={16} />
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Product mockup */}
+        {/* App mockup — full width, clips at bottom */}
         <motion.div
-          initial={{ opacity: 0, y: 48 }}
+          initial={{ opacity: 0, y: 56 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mt-20 max-w-4xl mx-auto"
+          transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mx-auto"
+          style={{ maxWidth: '1100px' }}
         >
-          {/* Browser frame */}
-          <div className="rounded-[18px] border border-black/[0.1] shadow-[0_32px_80px_rgba(0,0,0,0.12)] overflow-hidden glow-indigo bg-white">
-            {/* Browser chrome */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-black/[0.07] bg-[#F2F4FA]">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-[#F87171]/80" />
-                <div className="w-3 h-3 rounded-full bg-[#F59E0B]/80" />
-                <div className="w-3 h-3 rounded-full bg-[#22D3A0]/80" />
+          {/* Floating badge — intent score */}
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.9, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute -left-4 top-20 z-20 hidden xl:block"
+          >
+            <div className="bg-white rounded-[14px] px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12)] border border-black/[0.07]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-[8px] bg-[#22D3A0]/15 flex items-center justify-center">
+                  <Flame size={14} className="text-[#22D3A0]" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-[#9BA3B8] font-medium">Intent Score</div>
+                  <div className="text-sm font-bold text-[#22D3A0]">87 / 100</div>
+                </div>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-[5px] bg-[#22D3A0]/12 text-[#22D3A0] ml-0.5">HIGH</span>
               </div>
-              <div className="flex-1 mx-4">
-                <div className="bg-white rounded-[6px] px-3 py-1 text-xs text-[#9BA3B8] max-w-xs mx-auto text-center border border-black/[0.07]">
-                  pod.co-lab.com/meridian-q2-deal
+            </div>
+          </motion.div>
+
+          {/* Floating badge — visitors */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.05, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute -right-4 top-16 z-20 hidden xl:block"
+          >
+            <div className="bg-white rounded-[14px] px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12)] border border-black/[0.07]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-[8px] bg-[#6366F1]/10 flex items-center justify-center">
+                  <TrendingUp size={14} className="text-[#6366F1]" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-[#9BA3B8] font-medium">This week</div>
+                  <div className="text-sm font-bold text-[#0D1117]">+3 visitors</div>
                 </div>
               </div>
             </div>
+          </motion.div>
 
-            {/* Pod preview */}
-            <div className="bg-white p-8 min-h-[360px]">
-              {/* Pod header */}
-              <div className="mb-8">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-[10px] bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center">
-                    <span className="text-[#6366F1] font-bold text-sm">M</span>
+          {/* Browser chrome + App */}
+          <div className="rounded-t-[16px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.15),0_0_0_1px_rgba(0,0,0,0.08)]">
+
+            {/* Browser bar */}
+            <div className="flex items-center gap-3 px-4 py-3 bg-[#1C1C28] border-b border-white/[0.06]">
+              <div className="flex gap-1.5 flex-shrink-0">
+                <div className="w-3 h-3 rounded-full bg-[#FF5F57]" />
+                <div className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
+                <div className="w-3 h-3 rounded-full bg-[#28C840]" />
+              </div>
+              <div className="flex-1 flex justify-center">
+                <div className="bg-white/[0.07] rounded-[6px] px-3 py-1 text-[11px] text-white/40 max-w-[280px] w-full text-center">
+                  app.co-lab.com/dashboard
+                </div>
+              </div>
+              <div className="w-16 flex-shrink-0" />
+            </div>
+
+            {/* App shell */}
+            <div className="flex bg-[#07090F]" style={{ height: '520px' }}>
+
+              {/* Sidebar */}
+              <div className="w-[200px] flex-shrink-0 bg-[#0C1018] border-r border-white/[0.05] flex flex-col py-4">
+                {/* Logo */}
+                <div className="flex items-center gap-2 px-4 mb-6">
+                  <div className="w-7 h-7 rounded-[8px] bg-[#6366F1] flex items-center justify-center shadow-[0_0_12px_rgba(99,102,241,0.5)]">
+                    <Handshake size={14} className="text-white" />
                   </div>
-                  <div>
-                    <div className="text-xs text-[#9BA3B8]">Prepared for</div>
-                    <div className="text-sm font-semibold text-[#0D1117]">Meridian Corp</div>
+                  <span className="text-sm font-semibold text-[#EEF2FF]">Co-Lab</span>
+                </div>
+
+                {/* Nav */}
+                <div className="flex flex-col gap-0.5 px-2 flex-1">
+                  {navItems.map((item) => {
+                    const Icon = item.icon
+                    return (
+                      <div
+                        key={item.label}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-[8px] cursor-default"
+                        style={{
+                          backgroundColor: item.active ? 'rgba(99,102,241,0.12)' : 'transparent',
+                        }}
+                      >
+                        <Icon
+                          size={15}
+                          style={{ color: item.active ? '#818CF8' : '#4A5368' }}
+                        />
+                        <span
+                          className="text-xs font-medium"
+                          style={{ color: item.active ? '#EEF2FF' : '#4A5368' }}
+                        >
+                          {item.label}
+                        </span>
+                      </div>
+                    )
+                  })}
+                </div>
+
+                {/* User */}
+                <div className="px-3 pt-3 border-t border-white/[0.05]">
+                  <div className="flex items-center gap-2 px-2 py-2">
+                    <div className="w-6 h-6 rounded-full bg-[#6366F1]/30 flex items-center justify-center text-[10px] font-bold text-[#818CF8]">
+                      A
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[11px] font-medium text-[#8892AA] truncate">Alex Rivera</div>
+                      <div className="text-[9px] text-[#4A5368] truncate">Account Executive</div>
+                    </div>
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold text-[#0D1117] mb-1">
-                  Your Q2 Partnership Proposal
-                </h2>
-                <p className="text-sm text-[#5A6480]">
-                  Everything you need to evaluate Co-Lab for your sales team →
-                </p>
               </div>
 
-              {/* Content blocks */}
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { label: 'Demo Recording', color: '#6366F1', icon: '🎥' },
-                  { label: 'ROI Calculator', color: '#059669', icon: '📊' },
-                  { label: 'Case Studies', color: '#D97706', icon: '📁' },
-                  { label: 'Next Steps', color: '#4F46E5', icon: '➡️' },
-                  { label: 'Ask AI', color: '#059669', icon: '🤖' },
-                  { label: 'Book a Call', color: '#6366F1', icon: '📅' },
-                ].map((block) => (
-                  <div
-                    key={block.label}
-                    className="rounded-[10px] p-3 border flex items-center gap-2"
-                    style={{
-                      backgroundColor: `${block.color}08`,
-                      borderColor: `${block.color}20`,
-                    }}
-                  >
-                    <span className="text-base">{block.icon}</span>
-                    <span className="text-xs font-medium text-[#5A6480]">{block.label}</span>
+              {/* Main content */}
+              <div className="flex-1 flex flex-col overflow-hidden">
+
+                {/* Topbar */}
+                <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.05]">
+                  <div>
+                    <div className="text-base font-bold text-[#EEF2FF]">Your Pods</div>
+                    <div className="text-xs text-[#4A5368]">4 active deals</div>
                   </div>
-                ))}
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 bg-white/[0.04] border border-white/[0.06] rounded-[8px] px-3 py-1.5">
+                      <Search size={12} className="text-[#4A5368]" />
+                      <span className="text-xs text-[#4A5368]">Search pods...</span>
+                    </div>
+                    <button className="flex items-center gap-1.5 bg-[#6366F1] hover:bg-[#5558E8] text-white text-xs font-medium px-3 py-1.5 rounded-[8px]">
+                      <Plus size={13} />
+                      New Pod
+                    </button>
+                  </div>
+                </div>
+
+                {/* Table header */}
+                <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_32px] gap-3 px-6 py-2.5 border-b border-white/[0.04]">
+                  {['Pod', 'Last Viewed', 'Time Spent', 'Intent', 'Stage'].map((h) => (
+                    <div key={h} className="text-[10px] font-semibold text-[#4A5368] uppercase tracking-wider">
+                      {h}
+                    </div>
+                  ))}
+                  <div />
+                </div>
+
+                {/* Table rows */}
+                <div className="flex-1 overflow-hidden">
+                  {pods.map((pod, i) => (
+                    <motion.div
+                      key={pod.name}
+                      initial={{ opacity: 0, x: -8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6 + i * 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_32px] gap-3 px-6 py-3.5 border-b border-white/[0.03] hover:bg-white/[0.02] cursor-default transition-colors"
+                    >
+                      {/* Pod name */}
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div
+                          className="w-7 h-7 rounded-[7px] flex items-center justify-center text-[11px] font-bold flex-shrink-0"
+                          style={{ backgroundColor: `${pod.intentColor}18`, color: pod.intentColor }}
+                        >
+                          {pod.name[0]}
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-xs font-semibold text-[#EEF2FF] truncate">{pod.name}</div>
+                          <div className="text-[10px] text-[#4A5368] truncate">{pod.sub}</div>
+                        </div>
+                      </div>
+
+                      {/* Last viewed */}
+                      <div className="flex items-center">
+                        <span className="text-xs text-[#8892AA]">{pod.viewed}</span>
+                      </div>
+
+                      {/* Time spent */}
+                      <div className="flex items-center gap-1">
+                        <Eye size={11} className="text-[#4A5368]" />
+                        <span className="text-xs text-[#8892AA]">{pod.time}</span>
+                      </div>
+
+                      {/* Intent */}
+                      <div className="flex items-center">
+                        {pod.intent !== '—' ? (
+                          <span
+                            className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-[5px]"
+                            style={{
+                              color: pod.intentColor,
+                              backgroundColor: `${pod.intentColor}18`,
+                            }}
+                          >
+                            {pod.intent === 'HIGH' && <Flame size={9} />}
+                            {pod.intent}
+                          </span>
+                        ) : (
+                          <span className="text-xs text-[#4A5368]">—</span>
+                        )}
+                      </div>
+
+                      {/* Stage */}
+                      <div className="flex items-center">
+                        <span
+                          className="text-[10px] font-medium px-2 py-0.5 rounded-[5px]"
+                          style={{
+                            color: pod.stageColor,
+                            backgroundColor: `${pod.stageColor}18`,
+                          }}
+                        >
+                          {pod.stage}
+                        </span>
+                      </div>
+
+                      {/* More */}
+                      <div className="flex items-center justify-center">
+                        <MoreHorizontal size={14} className="text-[#4A5368]" />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Bottom stat strip */}
+                <div className="flex items-center gap-6 px-6 py-3 border-t border-white/[0.05] bg-[#0C1018]/50">
+                  {[
+                    { label: 'Total views', value: '47' },
+                    { label: 'Unique visitors', value: '6' },
+                    { label: 'Avg. session', value: '6m 14s' },
+                    { label: 'High-intent leads', value: '2' },
+                  ].map((s) => (
+                    <div key={s.label} className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-[#EEF2FF]">{s.value}</span>
+                      <span className="text-[10px] text-[#4A5368]">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
           </div>
 
-          {/* Floating cards */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute -left-8 top-16 hidden lg:block"
-          >
-            <FloatingCard>
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-[8px] bg-[#059669]/10 flex items-center justify-center">
-                  <Flame size={14} className="text-[#059669]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#9BA3B8]">Intent Score</div>
-                  <div className="text-sm font-bold text-[#059669]">87 / 100</div>
-                </div>
-                <span className="text-xs px-1.5 py-0.5 rounded-[6px] bg-[#059669]/10 text-[#059669] font-medium ml-1">
-                  HIGH
-                </span>
-              </div>
-            </FloatingCard>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.0, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute -right-8 top-12 hidden lg:block"
-          >
-            <FloatingCard>
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-[8px] bg-[#6366F1]/10 flex items-center justify-center">
-                  <Users size={14} className="text-[#6366F1]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#9BA3B8]">This week</div>
-                  <div className="text-sm font-bold text-[#0D1117]">3 visitors</div>
-                </div>
-              </div>
-            </FloatingCard>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute -right-4 bottom-12 hidden lg:block"
-          >
-            <FloatingCard>
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-[8px] bg-[#D97706]/10 flex items-center justify-center">
-                  <Clock size={14} className="text-[#D97706]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#9BA3B8]">Avg. session</div>
-                  <div className="text-sm font-bold text-[#0D1117]">4m 32s</div>
-                </div>
-              </div>
-            </FloatingCard>
-          </motion.div>
-        </motion.div>
-
-        {/* Stat bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 text-center"
-        >
-          {[
-            { value: '4.2×', label: 'more buyer engagement' },
-            { value: '< 5 min', label: 'to build a pod' },
-            { value: '100%', label: 'visibility into buyer intent' },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="text-2xl font-bold text-[#0D1117]">{stat.value}</div>
-              <div className="text-xs text-[#9BA3B8] mt-0.5">{stat.label}</div>
-            </div>
-          ))}
+          {/* Bottom fade so app clips gracefully */}
+          <div className="h-16 bg-gradient-to-b from-transparent to-[#FAFBFF] relative -mt-16 pointer-events-none" />
         </motion.div>
       </div>
     </section>
