@@ -1,7 +1,6 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
-import LogoBar from '@/components/sections/LogoBar'
 import Problem from '@/components/sections/Problem'
 import Features from '@/components/sections/Features'
 import AnalyticsSpotlight from '@/components/sections/AnalyticsSpotlight'
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="min-h-screen bg-[#FAFBFF]">
       <Navbar />
       <Hero />
-      <LogoBar />
       <Problem />
       <Features />
       <AnalyticsSpotlight />
