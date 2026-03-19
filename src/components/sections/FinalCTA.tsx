@@ -41,6 +41,11 @@ export default function FinalCTA() {
             faster. Early access is invite-only — spots are limited.
           </motion.p>
 
+          {/* Waitlist social proof */}
+          <motion.p variants={fadeUp} className="text-sm text-[#9BA3B8] mb-8">
+            Join <span className="font-semibold text-[#5A6480]">200+ sales teams</span> already on the waitlist
+          </motion.p>
+
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:hello@co-lab.com?subject=Early Access Request"
@@ -58,8 +63,8 @@ export default function FinalCTA() {
           </motion.div>
 
           {/* Trust note */}
-          <motion.p variants={fadeUp} className="mt-8 text-xs text-[#C5CBDA]">
-            No credit card required · Free to try · Cancel anytime
+          <motion.p variants={fadeUp} className="mt-6 text-xs text-[#C5CBDA]">
+            No credit card required · Invite-only · Cancel anytime
           </motion.p>
         </motion.div>
       </div>

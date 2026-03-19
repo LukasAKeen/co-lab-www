@@ -45,6 +45,20 @@ export default function Problem() {
           </motion.p>
         </motion.div>
 
+        {/* Stat strip */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+          className="max-w-4xl mx-auto mb-8"
+        >
+          <div className="rounded-[14px] bg-[#FEF2F2] border border-[#DC2626]/12 px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+            <span className="text-2xl font-extrabold text-[#DC2626]">73%</span>
+            <span className="text-sm text-[#5A6480]">of deals are lost because buyers go silent — no follow-up trigger, no visibility into intent.</span>
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Old Way */}
           <motion.div

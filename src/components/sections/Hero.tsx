@@ -15,6 +15,8 @@ import {
   MoreHorizontal,
   Plus,
   Search,
+  Play,
+  Zap,
 } from 'lucide-react'
 import { fadeUp, staggerContainer } from '@/lib/motion'
 
@@ -101,11 +103,15 @@ export default function Hero() {
           animate="visible"
           className="text-center max-w-3xl mx-auto mb-14"
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-7">
+          <motion.div variants={fadeUp} className="inline-flex flex-wrap items-center justify-center gap-2 mb-7">
             <span className="bg-white border border-[#6366F1]/20 rounded-full px-4 py-1.5 text-xs font-medium text-[#6366F1] flex items-center gap-2 shadow-sm">
               <PulseDot />
               Now in early access
               <ArrowRight size={12} />
+            </span>
+            <span className="bg-[#059669]/08 border border-[#059669]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#059669] flex items-center gap-1.5 shadow-sm">
+              <Zap size={11} className="fill-[#059669]" />
+              4.2× more buyer engagement
             </span>
           </motion.div>
 
@@ -134,12 +140,14 @@ export default function Hero() {
               Get early access
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <a
-              href="#features"
+            <button
               className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-[#5A6480] hover:text-[#0D1117] border border-black/[0.1] hover:border-black/[0.18] bg-white rounded-[10px] transition-all shadow-sm"
             >
-              See how it works
-            </a>
+              <span className="w-6 h-6 rounded-full bg-[#6366F1]/10 flex items-center justify-center flex-shrink-0">
+                <Play size={9} className="text-[#6366F1] fill-[#6366F1] ml-0.5" />
+              </span>
+              Watch demo
+            </button>
           </motion.div>
         </motion.div>
 

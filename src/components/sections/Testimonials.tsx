@@ -54,6 +54,18 @@ export default function Testimonials() {
           >
             What sales teams are saying
           </motion.h2>
+
+          {/* Metric bar */}
+          <motion.div variants={fadeUp} className="mt-8 inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <div className="flex items-center gap-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={14} className="fill-[#F59E0B] text-[#F59E0B]" />
+              ))}
+              <span className="text-sm font-semibold text-[#0D1117] ml-1">4.8 / 5 on G2</span>
+            </div>
+            <span className="hidden sm:block w-px h-4 bg-black/[0.12]" />
+            <span className="text-sm text-[#5A6480]">Loved by <span className="font-semibold text-[#0D1117]">200+</span> sales teams in early access</span>
+          </motion.div>
         </motion.div>
 
         <motion.div
