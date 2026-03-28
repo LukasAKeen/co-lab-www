@@ -146,54 +146,37 @@
 
 @media (max-width: 479px) {
   .hero-mockup-scale {
-    /* render at ~800px internal, scale to ~375px viewport */
     width: 800px;
     transform: scale(0.48);
-    margin-bottom: -52%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 50%;
-    position: relative;
-    translate: -50% 0;
+    margin-left: calc(50% - 400px);
+    margin-bottom: -416px; /* 800 * 0.52 (1 - scale) * ~height-ratio */
   }
 }
 
 @media (min-width: 480px) and (max-width: 639px) {
   .hero-mockup-scale {
     width: 800px;
-    transform: scale(0.58);
-    margin-bottom: -42%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 50%;
-    position: relative;
-    translate: -50% 0;
+    transform: scale(0.62);
+    margin-left: calc(50% - 400px);
+    margin-bottom: -304px;
   }
 }
 
 @media (min-width: 640px) and (max-width: 767px) {
   .hero-mockup-scale {
     width: 860px;
-    transform: scale(0.72);
-    margin-bottom: -28%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 50%;
-    position: relative;
-    translate: -50% 0;
+    transform: scale(0.74);
+    margin-left: calc(50% - 430px);
+    margin-bottom: -220px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-mockup-scale {
     width: 920px;
-    transform: scale(0.82);
-    margin-bottom: -18%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 50%;
-    position: relative;
-    translate: -50% 0;
+    transform: scale(0.84);
+    margin-left: calc(50% - 460px);
+    margin-bottom: -148px;
   }
 }
 
