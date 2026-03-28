@@ -67,7 +67,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-28 px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[#F2F4FA]" />
       <div className="absolute inset-0 gradient-mesh opacity-50" />
@@ -89,7 +89,7 @@ export default function HowItWorks() {
           </motion.div>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
           >
             From call to close —{' '}
             <span className="text-gradient-ai">AI handles the rest.</span>

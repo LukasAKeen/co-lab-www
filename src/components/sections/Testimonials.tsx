@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-28 px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#F2F4FA]" />
       <div className="absolute inset-0 gradient-mesh opacity-30" />
 
@@ -53,7 +53,7 @@ export default function Testimonials() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
             Teams are closing faster{' '}
             <span className="text-gradient-ai">with AI.</span>
@@ -85,7 +85,7 @@ export default function Testimonials() {
             <motion.div
               key={t.name}
               variants={scaleIn}
-              className="bg-white rounded-2xl border border-black/[0.06] p-8 flex flex-col shadow-sm card-hover"
+              className="bg-white rounded-2xl border border-black/[0.06] p-5 sm:p-8 flex flex-col shadow-sm card-hover"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6">

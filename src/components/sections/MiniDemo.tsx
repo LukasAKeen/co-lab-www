@@ -41,7 +41,7 @@ export default function MiniDemo() {
   }
 
   return (
-    <section className="py-28 px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#F2F4FA]" />
       <div className="absolute inset-0 gradient-mesh opacity-40" />
       {/* Aurora blobs */}
@@ -65,7 +65,7 @@ export default function MiniDemo() {
           </motion.div>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
           >
             See it for yourself.{' '}
             <span className="text-gradient-ai">Paste. Generate. Done.</span>

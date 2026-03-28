@@ -67,7 +67,7 @@ export default function BuilderShowcase() {
   }, [])
 
   return (
-    <section id="templates" className="py-28 px-6">
+    <section id="templates" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           variants={staggerContainer}
@@ -81,7 +81,7 @@ export default function BuilderShowcase() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
             A room for every deal,{' '}
             <span className="text-gradient-ai">built by AI.</span>
@@ -91,7 +91,7 @@ export default function BuilderShowcase() {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Block list */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}

@@ -33,7 +33,7 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-xl bg-[#6366F1] flex items-center justify-center shadow-[0_0_16px_rgba(99,102,241,0.35)] group-hover:shadow-[0_0_24px_rgba(99,102,241,0.5)] transition-shadow">
@@ -79,7 +79,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-[#3D4663] hover:text-[#0D1117] transition-colors"
+            className="md:hidden p-2.5 -mr-1 text-[#3D4663] hover:text-[#0D1117] transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -96,7 +96,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 left-0 right-0 z-40 glass-strong shadow-[0_4px_16px_rgba(0,0,0,0.06)] px-6 py-4 md:hidden"
+            className="fixed top-14 sm:top-16 left-0 right-0 z-40 glass-strong shadow-[0_4px_16px_rgba(0,0,0,0.06)] px-4 sm:px-6 py-4 md:hidden"
           >
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (

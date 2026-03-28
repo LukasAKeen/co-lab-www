@@ -130,6 +130,15 @@
   animation: aurora-2 11s ease-in-out infinite;
 }
 
+/* ── Aurora blobs: scale down on mobile ── */
+@media (max-width: 768px) {
+  .aurora-blob { filter: blur(60px); }
+  .aurora-blob-1 { width: 180px !important; height: 140px !important; }
+  .aurora-blob-2 { width: 150px !important; height: 120px !important; }
+  .aurora-blob-3 { width: 120px !important; height: 100px !important; }
+  .aurora-blob-orange { width: 100px !important; height: 80px !important; }
+}
+
 /* ── Base ── */
 * { box-sizing: border-box; }
 

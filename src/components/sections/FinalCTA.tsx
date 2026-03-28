@@ -6,7 +6,7 @@ import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
 
 export default function FinalCTA() {
   return (
-    <section id="cta" className="py-32 px-6 relative overflow-hidden">
+    <section id="cta" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-mesh-cta" />
       <div className="absolute inset-0 dot-grid opacity-30" />
@@ -27,7 +27,7 @@ export default function FinalCTA() {
 
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl lg:text-[64px] font-extrabold tracking-tight text-[#0D1117] mb-6 leading-[1.05]"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-extrabold tracking-tight text-[#0D1117] mb-5 sm:mb-6 leading-[1.08] sm:leading-[1.05]"
           >
             Ready to let AI{' '}
             <span className="text-gradient-ai">run your deals?</span>

@@ -330,7 +330,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-28 px-6">
+    <section id="features" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           variants={staggerContainer}
@@ -344,7 +344,7 @@ export default function Features() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
             Everything AI can do{' '}
             <span className="text-gradient-ai">for your deals.</span>
@@ -360,7 +360,7 @@ export default function Features() {
             return (
               <div
                 key={feature.eyebrow}
-                className={`flex flex-col ${isRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-12 lg:gap-20`}
+                className={`flex flex-col ${isRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12 lg:gap-20`}
               >
                 {/* Text */}
                 <motion.div

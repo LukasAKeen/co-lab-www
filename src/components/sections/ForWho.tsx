@@ -65,7 +65,7 @@ const personas = [
 
 export default function ForWho() {
   return (
-    <section className="py-28 px-6">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           variants={staggerContainer}
@@ -79,7 +79,7 @@ export default function ForWho() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
             Built for teams that{' '}
             <span className="text-gradient-ai">close deals.</span>

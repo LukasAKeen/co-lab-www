@@ -66,7 +66,7 @@ function AppMockup() {
       </div>
 
       {/* ── App shell ── */}
-      <div className="flex bg-[#F8F9FC] relative" style={{ minHeight: '420px' }}>
+      <div className="flex bg-[#F8F9FC] relative min-h-[320px] sm:min-h-[380px] md:min-h-[420px]">
 
         {/* ── AI Toast overlay ── */}
         <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30">
@@ -351,7 +351,7 @@ function AppMockup() {
 /* ── Hero section ── */
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center pt-28 pb-0 overflow-hidden">
+    <section className="relative flex flex-col items-center pt-20 md:pt-28 pb-0 overflow-hidden">
       {/* Background mesh */}
       <div className="absolute inset-0 gradient-mesh-hero" />
       <div className="absolute inset-0 dot-grid opacity-30" />
@@ -380,7 +380,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={fadeUp}
-            className="text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-[1.04] mb-6 text-[#0D1117]"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-[1.08] sm:leading-[1.04] mb-5 sm:mb-6 text-[#0D1117]"
           >
             Your AI builds the deal room.
             <br />
@@ -390,7 +390,7 @@ export default function Hero() {
           {/* Subhead */}
           <motion.p
             variants={fadeUp}
-            className="text-lg md:text-xl text-[#3D4663] leading-relaxed mb-10 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-[#3D4663] leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto"
           >
             Co-Lab is the AI-native digital sales room that analyzes your calls,
             auto-builds personalized pods, and gives buyers an AI assistant — so

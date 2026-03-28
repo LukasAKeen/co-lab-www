@@ -57,7 +57,7 @@ const certifications = [
 
 export default function Security() {
   return (
-    <section className="py-28 px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 dot-grid opacity-15" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -77,7 +77,7 @@ export default function Security() {
           </motion.div>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
           >
             Your data is yours.{' '}
             <span className="text-gradient-ai">Full stop.</span>
@@ -102,7 +102,7 @@ export default function Security() {
               <motion.div
                 key={badge.title}
                 variants={scaleIn}
-                className="bg-white rounded-2xl border border-black/[0.06] p-6 card-hover shadow-sm"
+                className="bg-white rounded-2xl border border-black/[0.06] p-5 sm:p-6 card-hover shadow-sm"
               >
                 <div
                   className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4"
@@ -125,7 +125,7 @@ export default function Security() {
           viewport={viewportConfig}
           className="max-w-4xl mx-auto"
         >
-          <div className="rounded-2xl bg-gradient-to-r from-[#6366F1]/[0.04] to-[#34D399]/[0.04] border border-[#6366F1]/10 p-8">
+          <div className="rounded-2xl bg-gradient-to-r from-[#6366F1]/[0.04] to-[#34D399]/[0.04] border border-[#6366F1]/10 p-5 sm:p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
               {/* Left */}
               <div className="flex-1">

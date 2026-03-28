@@ -49,7 +49,7 @@ const stats = [
 
 export default function AnalyticsSpotlight() {
   return (
-    <section id="analytics" className="py-28 px-6 relative overflow-hidden">
+    <section id="analytics" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#F2F4FA]" />
       <div className="absolute inset-0 gradient-mesh opacity-40" />
 
@@ -185,7 +185,7 @@ export default function AnalyticsSpotlight() {
             </motion.div>
             <motion.h2
               variants={fadeUp}
-              className="text-3xl md:text-4xl lg:text-[48px] font-extrabold tracking-tight text-[#0D1117] leading-tight mb-5"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-extrabold tracking-tight text-[#0D1117] leading-tight mb-5"
             >
               AI tells you when your{' '}
               <span className="text-gradient-mint">deal is heating up.</span>

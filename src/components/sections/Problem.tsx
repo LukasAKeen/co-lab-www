@@ -22,7 +22,7 @@ const newWay = [
 
 export default function Problem() {
   return (
-    <section className="py-28 px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 dot-grid opacity-20" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -38,7 +38,7 @@ export default function Problem() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] max-w-3xl mx-auto leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] max-w-3xl mx-auto leading-tight"
           >
             Manual deal rooms are killing your{' '}
             <span className="text-gradient">win rate.</span>
@@ -69,7 +69,7 @@ export default function Problem() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="rounded-2xl border border-black/[0.06] bg-[#F2F4FA]/60 p-8 opacity-75 grayscale-[30%]"
+            className="rounded-2xl border border-black/[0.06] bg-[#F2F4FA]/60 p-5 sm:p-8 opacity-75 grayscale-[30%]"
           >
             <div className="flex items-center gap-3 mb-7">
               <div className="w-11 h-11 rounded-xl bg-[#9BA3B8]/10 flex items-center justify-center">
@@ -98,7 +98,7 @@ export default function Problem() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="relative rounded-2xl glow-border-mint bg-white p-8 shadow-[0_20px_60px_rgba(52,211,153,0.10),0_0_80px_rgba(52,211,153,0.06)]"
+            className="relative rounded-2xl glow-border-mint bg-white p-5 sm:p-8 shadow-[0_20px_60px_rgba(52,211,153,0.10),0_0_80px_rgba(52,211,153,0.06)]"
           >
             {/* Aurora accent */}
             <div className="aurora-blob aurora-blob-2 w-[200px] h-[150px] -top-10 -right-10 opacity-40" />

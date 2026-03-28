@@ -95,7 +95,7 @@ function BrandedPodPreview({
 
 export default function WhiteLabel() {
   return (
-    <section className="py-28 px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute inset-0 dot-grid opacity-20" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -116,7 +116,7 @@ export default function WhiteLabel() {
 
             <motion.h2
               variants={fadeUp}
-              className="text-3xl md:text-4xl lg:text-[48px] font-extrabold tracking-tight text-[#0D1117] leading-tight mb-5"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-extrabold tracking-tight text-[#0D1117] leading-tight mb-5"
             >
               Your brand.{' '}
               <span className="text-gradient">Your deal room.</span>
