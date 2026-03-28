@@ -17,7 +17,7 @@ import {
   ListChecks,
   ChevronRight,
 } from 'lucide-react'
-import { fadeUp, staggerContainer, popIn } from '@/lib/motion'
+import { fadeUp, staggerContainer } from '@/lib/motion'
 
 const ease = [0.16, 1, 0.3, 1] as const
 
@@ -431,48 +431,6 @@ export default function Hero() {
 
           {/* Outer glow */}
           <div className="absolute -inset-8 rounded-[40px] glow-ai opacity-60 pointer-events-none" />
-
-          {/* Floating badge — AI Confidence */}
-          <motion.div
-            variants={popIn}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 3.5 }}
-            className="absolute -left-4 top-28 z-20 hidden xl:block"
-          >
-            <div className="glass-card rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.10)]">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-[#34D399]/12 flex items-center justify-center">
-                  <Sparkles size={14} className="text-[#34D399]" />
-                </div>
-                <div>
-                  <div className="text-[10px] text-[#9BA3B8] font-medium">AI Confidence</div>
-                  <div className="text-sm font-bold text-[#34D399]">95% match</div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Floating badge — Speed */}
-          <motion.div
-            variants={popIn}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 3.8 }}
-            className="absolute -right-4 top-24 z-20 hidden xl:block"
-          >
-            <div className="glass-card rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.10)]">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-[#F59E0B]/12 flex items-center justify-center">
-                  <Zap size={14} className="text-[#F59E0B]" />
-                </div>
-                <div>
-                  <div className="text-[10px] text-[#9BA3B8] font-medium">4 blocks built in</div>
-                  <div className="text-sm font-bold text-[#0D1117]">4 seconds</div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
 
           <div className="relative z-10">
             <AppMockup />
