@@ -7,6 +7,11 @@ import {
   Flame,
   Check,
   Clock,
+  ListChecks,
+  CalendarCheck,
+  Flag,
+  ArrowRight,
+  CircleCheckBig,
 } from 'lucide-react'
 import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
 
@@ -154,6 +159,117 @@ function AnalyticsMockup() {
   )
 }
 
+/* ── Feature 3 mockup: AI Mutual Action Plans ── */
+function MAPMockup() {
+  const milestones = [
+    { label: 'Discovery Call Complete', date: 'Mar 10', done: true, owner: 'AE', color: '#34D399' },
+    { label: 'Technical Requirements Shared', date: 'Mar 17', done: true, owner: 'SE', color: '#34D399' },
+    { label: 'Security Review Kickoff', date: 'Mar 24', done: true, owner: 'IT', color: '#34D399' },
+    { label: 'Proposal Delivered', date: 'Apr 2', done: false, owner: 'AE', color: '#6366F1' },
+    { label: 'Legal / Redline', date: 'Apr 14', done: false, owner: 'Legal', color: '#F59E0B' },
+    { label: 'Contract Signed', date: 'Apr 28', done: false, owner: 'VP', color: '#F43F5E' },
+  ]
+
+  return (
+    <div className="rounded-2xl border border-black/[0.06] bg-white overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.1)]">
+      <div className="flex items-center justify-between px-5 py-3.5 border-b border-black/[0.05] bg-[#FAFBFF]">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-lg bg-[#F43F5E]/12 flex items-center justify-center">
+            <ListChecks size={12} className="text-[#F43F5E]" />
+          </div>
+          <span className="text-xs font-semibold text-[#0D1117]">AI Mutual Action Plan</span>
+        </div>
+        <span className="text-[10px] bg-gradient-to-r from-[#F43F5E] to-[#F59E0B] text-white font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+          <Sparkles size={9} />
+          Auto-Generated
+        </span>
+      </div>
+
+      {/* AI source note */}
+      <div className="px-5 py-2.5 bg-[#F43F5E]/[0.03] border-b border-[#F43F5E]/10 flex items-center gap-2">
+        <Sparkles size={10} className="text-[#F43F5E]" />
+        <span className="text-[10px] text-[#F43F5E] font-medium">
+          Generated from transcript: &quot;Buyer timeline is end of Q2&quot;
+        </span>
+      </div>
+
+      {/* Timeline */}
+      <div className="p-5">
+        <div className="space-y-0">
+          {milestones.map((m, i) => (
+            <div key={m.label} className="flex items-start gap-3 relative">
+              {/* Vertical connector */}
+              {i < milestones.length - 1 && (
+                <div
+                  className="absolute left-[11px] top-[24px] w-[2px] h-[calc(100%)] rounded-full"
+                  style={{ backgroundColor: m.done ? '#34D39930' : '#E3E6F0' }}
+                />
+              )}
+              {/* Status dot */}
+              <div className="relative z-10 flex-shrink-0 mt-0.5">
+                {m.done ? (
+                  <div className="w-[22px] h-[22px] rounded-full bg-[#34D399]/15 flex items-center justify-center">
+                    <CircleCheckBig size={13} className="text-[#34D399]" />
+                  </div>
+                ) : (
+                  <div
+                    className="w-[22px] h-[22px] rounded-full border-2 flex items-center justify-center"
+                    style={{ borderColor: `${m.color}40` }}
+                  >
+                    <div className="w-2 h-2 rounded-full" style={{ backgroundColor: `${m.color}60` }} />
+                  </div>
+                )}
+              </div>
+              {/* Content */}
+              <div className="flex-1 pb-4">
+                <div className="flex items-center justify-between">
+                  <span className={`text-[12px] font-semibold ${m.done ? 'text-[#9BA3B8] line-through' : 'text-[#0D1117]'}`}>
+                    {m.label}
+                  </span>
+                  <span className="text-[10px] text-[#9BA3B8] flex items-center gap-1">
+                    <CalendarCheck size={9} />
+                    {m.date}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <span
+                    className="text-[9px] font-semibold px-1.5 py-0.5 rounded-md"
+                    style={{ color: m.color, backgroundColor: `${m.color}12` }}
+                  >
+                    {m.owner}
+                  </span>
+                  {!m.done && i === 3 && (
+                    <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-md bg-[#6366F1]/10 text-[#6366F1] flex items-center gap-0.5">
+                      <Flag size={8} /> Up next
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Progress bar */}
+        <div className="mt-2 pt-3 border-t border-black/[0.05]">
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-[10px] font-semibold text-[#9BA3B8]">Deal Progress</span>
+            <span className="text-[10px] font-bold text-[#34D399]">50%</span>
+          </div>
+          <div className="h-2 rounded-full bg-[#F2F4FA] overflow-hidden">
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: '50%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="h-full rounded-full bg-gradient-to-r from-[#34D399] to-[#6366F1]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /* ── Feature data ── */
 const features = [
   {
@@ -191,6 +307,24 @@ const features = [
     ],
     mockup: AnalyticsMockup,
     align: 'right' as const,
+  },
+  {
+    icon: ListChecks,
+    color: '#F43F5E',
+    bg: 'rgba(244,63,94,0.08)',
+    border: 'rgba(244,63,94,0.18)',
+    eyebrow: 'AI Mutual Action Plans',
+    title: 'AI reads your call. Builds the timeline.',
+    description:
+      'Forget manual checklists. Co-Lab\'s AI extracts buyer timelines, stakeholder requirements, and key milestones from your call transcript — then auto-generates a shared Mutual Action Plan that keeps both sides accountable.',
+    tags: ['Auto-Generated MAPs', 'Timeline Extraction', 'Shared Milestones'],
+    benefits: [
+      'AI detects "end of Q2" and builds the milestone plan',
+      'Stakeholders, owners & dates assigned automatically',
+      'Buyer-facing — both sides track progress in real time',
+    ],
+    mockup: MAPMockup,
+    align: 'left' as const,
   },
 ]
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TrendingUp, Users, Settings2, Check, Sparkles } from 'lucide-react'
+import { TrendingUp, Users, Settings2, HeartHandshake, Check } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const personas = [
@@ -47,6 +47,20 @@ const personas = [
       'White-label rooms match your company brand',
     ],
   },
+  {
+    icon: HeartHandshake,
+    color: '#F43F5E',
+    bg: 'rgba(244,63,94,0.08)',
+    border: 'rgba(244,63,94,0.15)',
+    role: 'Customer Success',
+    tagline: 'Sales room becomes an onboarding portal.',
+    description: 'When the deal closes, the pod doesn\u2019t die. Co-Lab seamlessly transitions from a deal room into a customer onboarding portal \u2014 same link, same space, zero friction for the buyer.',
+    benefits: [
+      'One link from sales through onboarding',
+      'Swap blocks from deal content to CS resources',
+      'Track customer engagement post-sale',
+    ],
+  },
 ]
 
 export default function ForWho() {
@@ -71,7 +85,7 @@ export default function ForWho() {
             <span className="text-gradient-ai">close deals.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-4 text-lg text-[#3D4663] max-w-xl mx-auto">
-            Whether you&apos;re an AE closing $50k deals or a VP managing 30 reps, Co-Lab&apos;s AI fits how you work.
+            From first call to onboarding — Co-Lab&apos;s AI fits every team that touches the deal.
           </motion.p>
         </motion.div>
 
@@ -80,7 +94,7 @@ export default function ForWho() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {personas.map((persona) => {
             const Icon = persona.icon
@@ -88,33 +102,33 @@ export default function ForWho() {
               <motion.div
                 key={persona.role}
                 variants={scaleIn}
-                className="bg-white rounded-2xl border border-black/[0.06] p-8 flex flex-col card-hover shadow-sm"
+                className="bg-white rounded-2xl border border-black/[0.06] p-7 flex flex-col card-hover shadow-sm"
               >
                 <div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0"
+                  className="w-11 h-11 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0"
                   style={{ backgroundColor: persona.bg, border: `1.5px solid ${persona.border}` }}
                 >
-                  <Icon size={22} style={{ color: persona.color }} />
+                  <Icon size={20} style={{ color: persona.color }} />
                 </div>
 
                 <div
-                  className="text-xs font-bold uppercase tracking-wider mb-1"
+                  className="text-[11px] font-bold uppercase tracking-wider mb-1"
                   style={{ color: persona.color }}
                 >
                   {persona.role}
                 </div>
 
-                <h3 className="text-base font-bold text-[#0D1117] mb-2 leading-snug">{persona.tagline}</h3>
-                <p className="text-sm text-[#3D4663] leading-relaxed mb-6">{persona.description}</p>
+                <h3 className="text-[15px] font-bold text-[#0D1117] mb-2 leading-snug">{persona.tagline}</h3>
+                <p className="text-[13px] text-[#3D4663] leading-relaxed mb-5">{persona.description}</p>
 
-                <ul className="mt-auto space-y-3">
+                <ul className="mt-auto space-y-2.5">
                   {persona.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-start gap-2.5 text-sm text-[#3D4663]">
+                    <li key={benefit} className="flex items-start gap-2 text-[13px] text-[#3D4663]">
                       <span
-                        className="flex-shrink-0 w-5 h-5 rounded-lg flex items-center justify-center mt-0.5"
+                        className="flex-shrink-0 w-[18px] h-[18px] rounded-md flex items-center justify-center mt-0.5"
                         style={{ backgroundColor: persona.bg }}
                       >
-                        <Check size={10} style={{ color: persona.color }} />
+                        <Check size={9} style={{ color: persona.color }} />
                       </span>
                       {benefit}
                     </li>
