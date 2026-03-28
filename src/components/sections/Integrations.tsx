@@ -70,28 +70,28 @@ export default function Integrations() {
               <span className="text-[10px] bg-[#34D399]/10 text-[#34D399] font-semibold px-2 py-0.5 rounded-full ml-auto">Entirely inside Co-Lab</span>
             </div>
 
-            {/* Pipeline stages */}
-            <div className="flex items-center gap-0 overflow-x-auto pb-2">
+            {/* Pipeline stages — grid on mobile, flex row on desktop */}
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-0">
               {dealFlowStages.map((stage, i) => (
-                <div key={stage.label} className="flex items-center flex-shrink-0">
+                <div key={stage.label} className="flex flex-col sm:flex-row items-center">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     viewport={{ once: true }}
-                    className="flex flex-col items-center text-center min-w-[120px]"
+                    className="flex flex-col items-center text-center"
                   >
                     <div
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center mb-2 text-sm font-bold"
+                      className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center mb-2 text-sm font-bold"
                       style={{ backgroundColor: stage.bg, color: stage.color, border: `1.5px solid ${stage.color}25` }}
                     >
                       {i + 1}
                     </div>
-                    <span className="text-xs font-semibold text-[#0D1117]">{stage.label}</span>
-                    <span className="text-[10px] text-[#9BA3B8] mt-0.5">{stage.tool}</span>
+                    <span className="text-[11px] sm:text-xs font-semibold text-[#0D1117]">{stage.label}</span>
+                    <span className="text-[9px] sm:text-[10px] text-[#9BA3B8] mt-0.5">{stage.tool}</span>
                   </motion.div>
                   {i < dealFlowStages.length - 1 && (
-                    <div className="flex-shrink-0 mx-1">
+                    <div className="hidden sm:block flex-shrink-0 mx-1">
                       <ArrowRight size={14} className="text-[#C5CBDA]" />
                     </div>
                   )}

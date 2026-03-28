@@ -66,7 +66,7 @@ function AppMockup() {
       </div>
 
       {/* ── App shell ── */}
-      <div className="flex bg-[#F8F9FC] relative" style={{ minHeight: '480px' }}>
+      <div className="flex bg-[#F8F9FC] relative" style={{ minHeight: '420px' }}>
 
         {/* ── AI Toast overlay ── */}
         <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30">
@@ -106,8 +106,8 @@ function AppMockup() {
           </AnimatePresence>
         </div>
 
-        {/* ── Sidebar ── */}
-        <div className="w-[200px] flex-shrink-0 bg-white border-r border-[#E5E7EB] flex flex-col py-4">
+        {/* ── Sidebar (hidden on mobile) ── */}
+        <div className="hidden md:flex w-[200px] flex-shrink-0 bg-white border-r border-[#E5E7EB] flex-col py-4">
           {/* Logo */}
           <div className="flex items-center gap-2 px-4 mb-5">
             <div className="w-7 h-7 rounded-lg bg-[#6366F1] flex items-center justify-center shadow-sm">

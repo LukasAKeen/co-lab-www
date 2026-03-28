@@ -159,7 +159,7 @@ export default function WhiteLabel() {
           </motion.div>
 
           {/* Right: Branded pod previews */}
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <BrandedPodPreview
               brand="Acme Corp"
               color="#2563EB"

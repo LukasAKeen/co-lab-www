@@ -40,8 +40,8 @@ function PodBuilderMockup() {
           AI Ready
         </span>
       </div>
-      <div className="flex">
-        <div className="w-1/2 border-r border-black/[0.05] p-4">
+      <div className="flex flex-col sm:flex-row">
+        <div className="sm:w-1/2 border-b sm:border-b-0 sm:border-r border-black/[0.05] p-4">
           <div className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider mb-3">Templates</div>
           <div className="space-y-2">
             {templates.map((t) => (
@@ -64,7 +64,7 @@ function PodBuilderMockup() {
             ))}
           </div>
         </div>
-        <div className="w-1/2 p-4">
+        <div className="sm:w-1/2 p-4">
           <div className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider mb-3">AI-Suggested Blocks</div>
           <div className="space-y-2">
             {blocks.map((b) => (
