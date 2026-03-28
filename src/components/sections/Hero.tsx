@@ -236,15 +236,14 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="relative mx-auto max-w-[1100px]"
         >
-          {/* Gradient glow behind mockup */}
+          {/* Aurora blobs behind mockup */}
+          <div className="aurora-blob aurora-blob-1 w-[400px] h-[300px] -top-20 left-[10%]" />
+          <div className="aurora-blob aurora-blob-2 w-[350px] h-[280px] top-10 right-[5%]" />
+          <div className="aurora-blob aurora-blob-3 w-[300px] h-[250px] bottom-0 left-[30%]" />
+          <div className="aurora-blob aurora-blob-orange w-[250px] h-[200px] -top-10 right-[25%]" />
+
+          {/* Outer glow */}
           <div className="absolute -inset-8 rounded-[40px] glow-ai opacity-60 pointer-events-none" />
-          <div
-            className="absolute -inset-20 pointer-events-none opacity-40"
-            style={{
-              background:
-                'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(99,102,241,0.2) 0%, transparent 70%)',
-            }}
-          />
 
           {/* Floating badge — AI Status */}
           <motion.div
@@ -254,7 +253,7 @@ export default function Hero() {
             transition={{ delay: 0.9 }}
             className="absolute -left-4 top-24 z-20 hidden xl:block"
           >
-            <div className="bg-white rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12)] border border-black/[0.06]">
+            <div className="glass-card rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.10)]">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-[#34D399]/12 flex items-center justify-center">
                   <Sparkles size={14} className="text-[#34D399]" />
@@ -275,7 +274,7 @@ export default function Hero() {
             transition={{ delay: 1.1 }}
             className="absolute -right-4 top-20 z-20 hidden xl:block"
           >
-            <div className="bg-white rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12)] border border-black/[0.06]">
+            <div className="glass-card rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.10)]">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-[#F59E0B]/12 flex items-center justify-center">
                   <Zap size={14} className="text-[#F59E0B]" />

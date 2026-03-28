@@ -119,7 +119,7 @@ export default function HowItWorks() {
               <motion.div
                 key={step.number}
                 variants={scaleIn}
-                className="relative bg-white rounded-2xl border border-black/[0.06] p-8 card-hover shadow-sm"
+                className="relative rounded-2xl glass-card-hover p-8"
               >
                 {/* Number + Icon */}
                 <div className="relative mb-6 flex items-start justify-between">

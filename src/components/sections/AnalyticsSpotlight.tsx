@@ -61,7 +61,7 @@ export default function AnalyticsSpotlight() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="bg-white rounded-2xl border border-black/[0.06] p-6 shadow-[0_16px_60px_rgba(0,0,0,0.08)]"
+            className="rounded-2xl glass-card p-6 shadow-[0_16px_60px_rgba(0,0,0,0.06)]"
           >
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
@@ -69,8 +69,11 @@ export default function AnalyticsSpotlight() {
                 <div className="text-xs text-[#9BA3B8] mb-0.5">Meridian Q2 Deal</div>
                 <div className="text-sm font-semibold text-[#0D1117]">AI Visitor Analytics</div>
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] text-[#34D399] bg-[#34D399]/10 border border-[#34D399]/20 px-2.5 py-1 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] animate-pulse" />
+              <div className="flex items-center gap-1.5 text-[10px] font-semibold text-[#34D399] bg-[#34D399]/10 border border-[#34D399]/20 px-2.5 py-1 rounded-full">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34D399] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34D399]" />
+                </span>
                 Live
               </div>
             </div>

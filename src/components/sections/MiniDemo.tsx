@@ -44,6 +44,10 @@ export default function MiniDemo() {
     <section className="py-28 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#F2F4FA]" />
       <div className="absolute inset-0 gradient-mesh opacity-40" />
+      {/* Aurora blobs */}
+      <div className="aurora-blob aurora-blob-1 w-[500px] h-[400px] top-[10%] left-[15%]" />
+      <div className="aurora-blob aurora-blob-2 w-[400px] h-[350px] top-[20%] right-[10%]" />
+      <div className="aurora-blob aurora-blob-3 w-[300px] h-[250px] bottom-[10%] left-[40%]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -79,7 +83,7 @@ export default function MiniDemo() {
           viewport={viewportConfig}
           className="max-w-3xl mx-auto"
         >
-          <div className="rounded-2xl border border-black/[0.06] bg-white shadow-[0_24px_80px_rgba(0,0,0,0.08)] overflow-hidden">
+          <div className="rounded-2xl glass-card shadow-[0_24px_80px_rgba(0,0,0,0.06)] overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-black/[0.05] bg-[#FAFBFF]">
               <div className="flex items-center gap-2">

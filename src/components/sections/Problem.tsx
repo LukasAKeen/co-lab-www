@@ -63,68 +63,67 @@ export default function Problem() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Old Way */}
+          {/* Old Way — muted, grayed out, visually dull */}
           <motion.div
             variants={slideInLeft}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="rounded-2xl border border-[#F43F5E]/12 bg-[#F43F5E]/[0.02] p-8"
+            className="rounded-2xl border border-black/[0.06] bg-[#F2F4FA]/60 p-8 opacity-75 grayscale-[30%]"
           >
             <div className="flex items-center gap-3 mb-7">
-              <div className="w-11 h-11 rounded-xl bg-[#F43F5E]/10 flex items-center justify-center">
-                <Mail size={18} className="text-[#F43F5E]" />
+              <div className="w-11 h-11 rounded-xl bg-[#9BA3B8]/10 flex items-center justify-center">
+                <Mail size={18} className="text-[#9BA3B8]" />
               </div>
               <div>
-                <div className="text-[10px] font-semibold text-[#F43F5E] uppercase tracking-wider">The old way</div>
-                <div className="text-sm font-semibold text-[#0D1117]">Manual Decks + Email</div>
+                <div className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider">The old way</div>
+                <div className="text-sm font-semibold text-[#6B7394]">Manual Decks + Email</div>
               </div>
             </div>
             <ul className="space-y-3.5">
-              {oldWay.map((item) => {
-                const Icon = item.icon
-                return (
-                  <li key={item.text} className="flex items-center gap-3 text-sm text-[#6B7394]">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#F43F5E]/8 flex items-center justify-center">
-                      <X size={11} className="text-[#F43F5E]" />
-                    </span>
-                    <span className="line-through opacity-70">{item.text}</span>
-                  </li>
-                )
-              })}
+              {oldWay.map((item) => (
+                <li key={item.text} className="flex items-center gap-3 text-sm text-[#9BA3B8]">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#E3E6F0] flex items-center justify-center">
+                    <X size={11} className="text-[#9BA3B8]" />
+                  </span>
+                  <span className="line-through">{item.text}</span>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
-          {/* New Way */}
+          {/* New Way — glowing gradient border, elevated, vibrant */}
           <motion.div
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="rounded-2xl border border-[#34D399]/20 bg-[#34D399]/[0.02] p-8 shadow-[0_0_60px_rgba(52,211,153,0.06)]"
+            className="relative rounded-2xl glow-border-mint bg-white p-8 shadow-[0_20px_60px_rgba(52,211,153,0.10),0_0_80px_rgba(52,211,153,0.06)]"
           >
-            <div className="flex items-center gap-3 mb-7">
-              <div className="w-11 h-11 rounded-xl bg-[#34D399]/10 flex items-center justify-center">
-                <Sparkles size={18} className="text-[#34D399]" />
+            {/* Aurora accent */}
+            <div className="aurora-blob aurora-blob-2 w-[200px] h-[150px] -top-10 -right-10 opacity-40" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-7">
+                <div className="w-11 h-11 rounded-xl bg-[#34D399]/12 flex items-center justify-center">
+                  <Sparkles size={18} className="text-[#34D399]" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-semibold text-[#059669] uppercase tracking-wider">The Co-Lab way</div>
+                  <div className="text-sm font-semibold text-[#0D1117]">AI-Built Sales Rooms</div>
+                </div>
               </div>
-              <div>
-                <div className="text-[10px] font-semibold text-[#059669] uppercase tracking-wider">The Co-Lab way</div>
-                <div className="text-sm font-semibold text-[#0D1117]">AI-Built Sales Rooms</div>
-              </div>
-            </div>
-            <ul className="space-y-3.5">
-              {newWay.map((item) => {
-                const Icon = item.icon
-                return (
-                  <li key={item.text} className="flex items-center gap-3 text-sm text-[#0D1117]">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#34D399]/12 flex items-center justify-center">
+              <ul className="space-y-3.5">
+                {newWay.map((item) => (
+                  <li key={item.text} className="flex items-center gap-3 text-sm text-[#0D1117] font-medium">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#34D399]/15 flex items-center justify-center">
                       <Check size={11} className="text-[#059669]" />
                     </span>
                     {item.text}
                   </li>
-                )
-              })}
-            </ul>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         </div>
       </div>

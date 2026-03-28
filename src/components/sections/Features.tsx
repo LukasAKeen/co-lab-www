@@ -99,9 +99,9 @@ function AnalyticsMockup() {
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-black/[0.05] bg-[#FAFBFF]">
         <span className="text-xs font-semibold text-[#0D1117]">Meridian Q2 Deal</span>
         <div className="flex items-center gap-1.5">
-          <span className="relative flex h-1.5 w-1.5">
+          <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34D399] opacity-75" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#34D399]" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34D399]" />
           </span>
           <span className="text-[10px] font-semibold text-[#34D399]">Live</span>
         </div>
