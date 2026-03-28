@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { X, Check, Mail, Sparkles, Clock, Send, EyeOff, Bot } from 'lucide-react'
+import { X, Check, Mail, Sparkles, Clock, Send, EyeOff } from 'lucide-react'
 import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const oldWay = [
@@ -13,11 +13,11 @@ const oldWay = [
 ]
 
 const newWay = [
-  { icon: Bot, text: 'AI builds the pod from your call transcript' },
+  { icon: Sparkles, text: 'AI builds the pod from your call transcript' },
   { icon: Sparkles, text: 'Real-time intent scoring on every visit' },
   { icon: Check, text: 'One link, all content, fully trackable' },
   { icon: Sparkles, text: 'Every room auto-personalized per buyer' },
-  { icon: Bot, text: 'AI assistant handles objections 24/7' },
+  { icon: Check, text: 'AI alerts you when buyers re-engage' },
 ]
 
 export default function Problem() {

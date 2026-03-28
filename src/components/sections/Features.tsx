@@ -4,17 +4,9 @@ import { motion } from 'framer-motion'
 import {
   Sparkles,
   BarChart3,
-  Bot,
   Flame,
   Check,
-  Brain,
   Clock,
-  Link,
-  Zap,
-  FileText,
-  LayoutGrid,
-  MessageSquare,
-  TrendingUp,
 } from 'lucide-react'
 import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
 
@@ -162,60 +154,6 @@ function AnalyticsMockup() {
   )
 }
 
-/* ── Feature 3 mockup: AI Assistant ── */
-function AssistantMockup() {
-  const messages = [
-    { from: 'buyer', text: 'What does implementation look like for a 50-person team?', time: '2:14 PM' },
-    { from: 'ai', text: 'For a 50-person team, setup takes ~2 hours with your admin. We provide hands-on onboarding, custom templates, and a dedicated CSM for the first 90 days.', time: '2:14 PM' },
-    { from: 'buyer', text: 'Can we start with a pilot group?', time: '2:17 PM' },
-  ]
-
-  return (
-    <div className="rounded-2xl border border-black/[0.06] bg-white overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.1)]">
-      <div className="flex items-center justify-between px-5 py-3.5 border-b border-black/[0.05] bg-[#FAFBFF]">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#34D399] flex items-center justify-center">
-            <Brain size={12} className="text-white" />
-          </div>
-          <span className="text-xs font-semibold text-[#0D1117]">AI Deal Assistant</span>
-        </div>
-        <span className="text-[10px] bg-[#34D399]/12 text-[#34D399] font-semibold px-2 py-0.5 rounded-full">Active 24/7</span>
-      </div>
-      <div className="p-4 space-y-3">
-        {messages.map((msg, i) => (
-          <div key={i} className={`flex ${msg.from === 'buyer' ? 'justify-start' : 'justify-end'}`}>
-            <div
-              className={`max-w-[80%] rounded-2xl px-3.5 py-2.5 text-[11px] leading-relaxed ${
-                msg.from === 'buyer'
-                  ? 'bg-[#F2F4FA] text-[#3D4663]'
-                  : 'bg-gradient-to-br from-[#6366F1] to-[#818CF8] text-white'
-              }`}
-            >
-              {msg.text}
-              <div className={`text-[9px] mt-1 opacity-60 ${msg.from === 'buyer' ? 'text-[#9BA3B8]' : 'text-white'}`}>
-                {msg.time}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="px-4 pb-4">
-        <div className="rounded-xl bg-[#F2F4FA] border border-black/[0.05] p-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles size={13} className="text-[#6366F1]" />
-            <span className="text-[11px] font-medium text-[#0D1117]">AI is typing a response...</span>
-          </div>
-          <div className="flex gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1] animate-bounce" style={{ animationDelay: '0ms' }} />
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1] animate-bounce" style={{ animationDelay: '150ms' }} />
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1] animate-bounce" style={{ animationDelay: '300ms' }} />
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 /* ── Feature data ── */
 const features = [
   {
@@ -253,24 +191,6 @@ const features = [
     ],
     mockup: AnalyticsMockup,
     align: 'right' as const,
-  },
-  {
-    icon: Bot,
-    color: '#F59E0B',
-    bg: 'rgba(245,158,11,0.08)',
-    border: 'rgba(245,158,11,0.18)',
-    eyebrow: 'AI Deal Assistant',
-    title: 'An AI teammate that handles objections 24/7.',
-    description:
-      'Embed an AI assistant trained on your product, pricing, and case studies. It answers buyer questions instantly — even at 2am — so you never lose momentum on a deal.',
-    tags: ['AI Q&A Agent', 'Always-On', 'Trained on Your Data'],
-    benefits: [
-      'Answers buyer questions in real time',
-      'Trained on your docs, pricing & case studies',
-      'Escalates complex questions to your team',
-    ],
-    mockup: AssistantMockup,
-    align: 'left' as const,
   },
 ]
 
