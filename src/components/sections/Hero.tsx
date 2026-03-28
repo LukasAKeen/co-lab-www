@@ -66,7 +66,7 @@ function AppMockup() {
       </div>
 
       {/* ── App shell ── */}
-      <div className="flex bg-[#F8F9FC] relative min-h-[320px] sm:min-h-[380px] md:min-h-[420px]">
+      <div className="flex bg-[#F8F9FC] relative" style={{ minHeight: 420 }}>
 
         {/* ── AI Toast overlay ── */}
         <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30">
@@ -106,8 +106,8 @@ function AppMockup() {
           </AnimatePresence>
         </div>
 
-        {/* ── Sidebar (hidden on mobile) ── */}
-        <div className="hidden md:flex w-[200px] flex-shrink-0 bg-white border-r border-[#E5E7EB] flex-col py-4">
+        {/* ── Sidebar ── */}
+        <div className="w-[200px] flex-shrink-0 bg-white border-r border-[#E5E7EB] flex flex-col py-4">
           {/* Logo */}
           <div className="flex items-center gap-2 px-4 mb-5">
             <div className="w-7 h-7 rounded-lg bg-[#6366F1] flex items-center justify-center shadow-sm">
@@ -356,13 +356,13 @@ export default function Hero() {
       <div className="absolute inset-0 gradient-mesh-hero" />
       <div className="absolute inset-0 dot-grid opacity-30" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
         {/* Text content */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-4xl mx-auto mb-16"
+          className="text-center max-w-4xl mx-auto mb-10 sm:mb-16"
         >
           {/* Badges */}
           <motion.div variants={fadeUp} className="inline-flex flex-wrap items-center justify-center gap-2.5 mb-8">
@@ -416,7 +416,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* App mockup with aurora */}
+        {/* App mockup with aurora — scale-wrapper for mobile */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -432,12 +432,18 @@ export default function Hero() {
           {/* Outer glow */}
           <div className="absolute -inset-8 rounded-[40px] glow-ai opacity-60 pointer-events-none" />
 
-          <div className="relative z-10">
+          {/*
+            Scale wrapper: on mobile the mockup renders at its natural
+            ~800px internal width, then CSS scales it down to fit.
+            The negative margin compensates for the extra whitespace
+            that transform:scale leaves behind.
+          */}
+          <div className="relative z-10 hero-mockup-scale">
             <AppMockup />
           </div>
 
           {/* Bottom fade */}
-          <div className="h-20 bg-gradient-to-b from-transparent to-[#FAFBFF] relative -mt-20 pointer-events-none z-20" />
+          <div className="h-16 sm:h-20 bg-gradient-to-b from-transparent to-[#FAFBFF] relative -mt-16 sm:-mt-20 pointer-events-none z-20" />
         </motion.div>
       </div>
     </section>
