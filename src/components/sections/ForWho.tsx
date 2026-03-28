@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TrendingUp, Users, Settings2, Check } from 'lucide-react'
+import { TrendingUp, Users, Settings2, Check, Sparkles } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const personas = [
@@ -9,45 +9,42 @@ const personas = [
     icon: TrendingUp,
     color: '#6366F1',
     bg: 'rgba(99,102,241,0.08)',
-    border: 'rgba(99,102,241,0.2)',
-    borderCard: 'rgba(99,102,241,0.15)',
+    border: 'rgba(99,102,241,0.15)',
     role: 'Account Executives',
-    tagline: 'Spend less time on admin. More time selling.',
-    description: 'Build a pod in 5 minutes, track every buyer move, and follow up at exactly the right moment.',
+    tagline: 'AI does the busywork. You do the selling.',
+    description: 'Paste a call transcript and let AI build the pod. Track every buyer move with real-time intent. Follow up at exactly the right moment.',
     benefits: [
-      'Know which deals are heating up',
-      'Build a personalized room in minutes',
-      'Get notified the instant buyers engage',
+      'AI builds pods from call transcripts',
+      'Real-time alerts when deals heat up',
+      'Close 4.2× more deals with personalized rooms',
     ],
   },
   {
     icon: Users,
-    color: '#059669',
-    bg: 'rgba(5,150,105,0.08)',
-    border: 'rgba(5,150,105,0.2)',
-    borderCard: 'rgba(5,150,105,0.15)',
+    color: '#34D399',
+    bg: 'rgba(52,211,153,0.08)',
+    border: 'rgba(52,211,153,0.15)',
     role: 'Sales Leaders',
-    tagline: 'Full visibility into deal health across your pipeline.',
-    description: 'See which deals need attention before they stall. Coach your team with real engagement data.',
+    tagline: 'AI-powered visibility into every deal.',
+    description: 'See which deals need attention before they stall. AI scores intent across your pipeline so you coach from data, not gut feel.',
     benefits: [
-      'Pipeline-wide intent scoring at a glance',
+      'Pipeline-wide AI intent scoring',
       'Spot at-risk deals before they go cold',
-      'Standardize how your team runs deals',
+      'Standardize AI-powered deal rooms across teams',
     ],
   },
   {
     icon: Settings2,
-    color: '#D97706',
-    bg: 'rgba(217,119,6,0.08)',
-    border: 'rgba(217,119,6,0.2)',
-    borderCard: 'rgba(217,119,6,0.15)',
+    color: '#F59E0B',
+    bg: 'rgba(245,158,11,0.08)',
+    border: 'rgba(245,158,11,0.15)',
     role: 'Revenue Operations',
-    tagline: 'Standardize your process. Scale what works.',
-    description: 'Create templates once and roll them out across the entire team. Consistent, trackable, replicable.',
+    tagline: 'Scale AI-driven deal rooms across the org.',
+    description: 'Create AI templates once, deploy them everywhere. Every pod is consistent, trackable, and integrated with your CRM stack.',
     benefits: [
-      'One template, infinite personalized deals',
-      'Tie room engagement back to revenue',
-      'Integrate with your existing CRM stack',
+      'One AI template, infinite personalized pods',
+      'Engagement data syncs back to your CRM',
+      'White-label rooms match your company brand',
     ],
   },
 ]
@@ -68,12 +65,13 @@ export default function ForWho() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0D1117]"
+            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
-            Built for the people who own the deal.
+            Built for teams that{' '}
+            <span className="text-gradient-ai">close deals.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-4 text-lg text-[#5A6480] max-w-xl mx-auto">
-            Whether you&apos;re an AE closing $50k deals or a VP managing a team of 30, Co-Lab fits how you work.
+          <motion.p variants={fadeUp} className="mt-4 text-lg text-[#3D4663] max-w-xl mx-auto">
+            Whether you&apos;re an AE closing $50k deals or a VP managing 30 reps, Co-Lab&apos;s AI fits how you work.
           </motion.p>
         </motion.div>
 
@@ -90,18 +88,15 @@ export default function ForWho() {
               <motion.div
                 key={persona.role}
                 variants={scaleIn}
-                className="bg-white rounded-[18px] border p-8 flex flex-col hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all hover:-translate-y-0.5"
-                style={{ borderColor: persona.borderCard }}
+                className="bg-white rounded-2xl border border-black/[0.06] p-8 flex flex-col card-hover shadow-sm"
               >
-                {/* Icon */}
                 <div
-                  className="w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 flex-shrink-0"
-                  style={{ backgroundColor: persona.bg, border: `1px solid ${persona.border}` }}
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0"
+                  style={{ backgroundColor: persona.bg, border: `1.5px solid ${persona.border}` }}
                 >
                   <Icon size={22} style={{ color: persona.color }} />
                 </div>
 
-                {/* Role */}
                 <div
                   className="text-xs font-bold uppercase tracking-wider mb-1"
                   style={{ color: persona.color }}
@@ -110,17 +105,16 @@ export default function ForWho() {
                 </div>
 
                 <h3 className="text-base font-bold text-[#0D1117] mb-2 leading-snug">{persona.tagline}</h3>
-                <p className="text-sm text-[#5A6480] leading-relaxed mb-6">{persona.description}</p>
+                <p className="text-sm text-[#3D4663] leading-relaxed mb-6">{persona.description}</p>
 
-                {/* Benefits */}
-                <ul className="mt-auto space-y-2.5">
+                <ul className="mt-auto space-y-3">
                   {persona.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-start gap-2.5 text-sm text-[#5A6480]">
+                    <li key={benefit} className="flex items-start gap-2.5 text-sm text-[#3D4663]">
                       <span
-                        className="flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center mt-0.5"
+                        className="flex-shrink-0 w-5 h-5 rounded-lg flex items-center justify-center mt-0.5"
                         style={{ backgroundColor: persona.bg }}
                       >
-                        <Check size={9} style={{ color: persona.color }} />
+                        <Check size={10} style={{ color: persona.color }} />
                       </span>
                       {benefit}
                     </li>

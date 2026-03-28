@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
-import { Flame, Monitor, Smartphone, TrendingUp } from 'lucide-react'
+import { Flame, Monitor, Smartphone, TrendingUp, Sparkles, Zap } from 'lucide-react'
 import { fadeUp, slideInLeft, staggerContainer, viewportConfig } from '@/lib/motion'
 
 function Counter({ to, suffix = '' }: { to: number; suffix?: string }) {
@@ -36,21 +36,24 @@ function Counter({ to, suffix = '' }: { to: number; suffix?: string }) {
 }
 
 const sessions = [
-  { name: 'Sarah Chen', company: 'Meridian Corp', role: 'VP Sales', duration: '7m 14s', intent: 'HIGH', color: '#059669', device: 'desktop' },
-  { name: 'James Liu', company: 'Nexus Capital', role: 'CRO', duration: '4m 32s', intent: 'HIGH', color: '#059669', device: 'mobile' },
-  { name: 'Priya Nair', company: 'CloudOps Inc', role: 'AE', duration: '2m 05s', intent: 'MED', color: '#D97706', device: 'desktop' },
+  { name: 'Sarah Chen', company: 'Meridian Corp', role: 'VP Sales', duration: '7m 14s', intent: 'HIGH', color: '#34D399', device: 'desktop' as const },
+  { name: 'James Liu', company: 'Nexus Capital', role: 'CRO', duration: '4m 32s', intent: 'HIGH', color: '#34D399', device: 'mobile' as const },
+  { name: 'Priya Nair', company: 'CloudOps Inc', role: 'AE', duration: '2m 05s', intent: 'MED', color: '#F59E0B', device: 'desktop' as const },
 ]
 
 const stats = [
-  { value: '4.2×', label: 'more buyer engagement vs. email' },
-  { value: '100%', label: 'intent scored on every visit' },
-  { value: 'Block-level', label: 'tracking shows what they re-read' },
+  { icon: Zap, value: '4.2×', label: 'more buyer engagement vs. email', color: '#6366F1' },
+  { icon: Flame, value: '100%', label: 'intent scored on every visit by AI', color: '#34D399' },
+  { icon: Sparkles, value: 'Block-level', label: 'AI heatmaps show what resonates', color: '#F59E0B' },
 ]
 
 export default function AnalyticsSpotlight() {
   return (
-    <section id="analytics" className="py-28 px-6 bg-[#F2F4FA] border-y border-black/[0.06]">
-      <div className="max-w-7xl mx-auto">
+    <section id="analytics" className="py-28 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#F2F4FA]" />
+      <div className="absolute inset-0 gradient-mesh opacity-40" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Analytics mockup */}
           <motion.div
@@ -58,29 +61,29 @@ export default function AnalyticsSpotlight() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="bg-white rounded-[18px] border border-black/[0.08] p-6 shadow-[0_16px_60px_rgba(0,0,0,0.08)]"
+            className="bg-white rounded-2xl border border-black/[0.06] p-6 shadow-[0_16px_60px_rgba(0,0,0,0.08)]"
           >
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <div>
                 <div className="text-xs text-[#9BA3B8] mb-0.5">Meridian Q2 Deal</div>
-                <div className="text-sm font-semibold text-[#0D1117]">Visitor Activity</div>
+                <div className="text-sm font-semibold text-[#0D1117]">AI Visitor Analytics</div>
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] text-[#059669] bg-[#059669]/10 border border-[#059669]/20 px-2.5 py-1 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#059669] animate-pulse" />
+              <div className="flex items-center gap-1.5 text-[10px] text-[#34D399] bg-[#34D399]/10 border border-[#34D399]/20 px-2.5 py-1 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#34D399] animate-pulse" />
                 Live
               </div>
             </div>
 
             {/* Intent gauge */}
-            <div className="bg-[#F2F4FA] rounded-[14px] p-4 mb-4 flex items-center gap-4">
+            <div className="bg-[#F2F4FA] rounded-2xl p-4 mb-4 flex items-center gap-4">
               <div className="relative w-16 h-16 flex-shrink-0">
                 <svg viewBox="0 0 64 64" className="w-full h-full -rotate-90">
-                  <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(99,102,241,0.1)" strokeWidth="8" />
+                  <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(52,211,153,0.12)" strokeWidth="8" />
                   <motion.circle
                     cx="32" cy="32" r="26"
                     fill="none"
-                    stroke="#059669"
+                    stroke="#34D399"
                     strokeWidth="8"
                     strokeLinecap="round"
                     strokeDasharray="163.4"
@@ -91,17 +94,17 @@ export default function AnalyticsSpotlight() {
                   />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center rotate-90">
-                  <span className="text-sm font-bold text-[#059669]">
+                  <span className="text-sm font-bold text-[#34D399]">
                     <Counter to={87} />
                   </span>
                 </div>
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <Flame size={14} className="text-[#059669]" />
-                  <span className="text-xs font-semibold text-[#059669] uppercase tracking-wider">Intent Score</span>
+                  <Flame size={14} className="text-[#34D399]" />
+                  <span className="text-xs font-semibold text-[#34D399] uppercase tracking-wider">AI Intent Score</span>
                 </div>
-                <div className="text-xs text-[#9BA3B8] mt-1">visits × session time × actions</div>
+                <div className="text-xs text-[#9BA3B8] mt-1">visits x session time x actions</div>
               </div>
             </div>
 
@@ -114,9 +117,9 @@ export default function AnalyticsSpotlight() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + i * 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="bg-[#F2F4FA] rounded-[10px] px-4 py-3 flex items-center gap-3"
+                  className="bg-[#F2F4FA] rounded-xl px-4 py-3 flex items-center gap-3"
                 >
-                  <div className="w-8 h-8 rounded-[8px] bg-[#6366F1]/10 flex items-center justify-center text-xs font-bold text-[#6366F1] flex-shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-[#6366F1]/10 flex items-center justify-center text-xs font-bold text-[#6366F1] flex-shrink-0">
                     {s.name[0]}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -129,9 +132,9 @@ export default function AnalyticsSpotlight() {
                     ) : (
                       <Monitor size={11} className="text-[#9BA3B8]" />
                     )}
-                    <span className="text-[10px] text-[#5A6480]">{s.duration}</span>
+                    <span className="text-[10px] text-[#6B7394]">{s.duration}</span>
                     <span
-                      className="text-[10px] font-semibold px-1.5 py-0.5 rounded-[4px]"
+                      className="text-[10px] font-semibold px-1.5 py-0.5 rounded-lg"
                       style={{ color: s.color, backgroundColor: `${s.color}12` }}
                     >
                       {s.intent}
@@ -142,12 +145,12 @@ export default function AnalyticsSpotlight() {
             </div>
 
             {/* Mini chart */}
-            <div className="mt-4 pt-4 border-t border-black/[0.06]">
+            <div className="mt-4 pt-4 border-t border-black/[0.05]">
               <div className="flex items-end gap-1.5 h-12">
                 {[3, 5, 4, 8, 6, 11, 9].map((h, i) => (
                   <motion.div
                     key={i}
-                    className="flex-1 rounded-t-[3px] bg-[#6366F1]/20"
+                    className="flex-1 rounded-t-[4px] bg-gradient-to-t from-[#6366F1]/30 to-[#34D399]/20"
                     initial={{ scaleY: 0 }}
                     whileInView={{ scaleY: 1 }}
                     transition={{ delay: 0.6 + i * 0.07, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -171,36 +174,46 @@ export default function AnalyticsSpotlight() {
             whileInView="visible"
             viewport={viewportConfig}
           >
-            <motion.p variants={fadeUp} className="text-xs font-semibold text-[#6366F1] uppercase tracking-[0.15em] mb-4">
-              Buyer Intelligence
-            </motion.p>
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-5">
+              <span className="bg-[#34D399]/8 border border-[#34D399]/15 rounded-full px-4 py-1.5 text-xs font-semibold text-[#059669] shadow-sm flex items-center gap-1.5">
+                <Sparkles size={11} className="text-[#34D399]" />
+                AI-Powered Analytics
+              </span>
+            </motion.div>
             <motion.h2
               variants={fadeUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0D1117] leading-tight mb-4"
+              className="text-3xl md:text-4xl lg:text-[48px] font-extrabold tracking-tight text-[#0D1117] leading-tight mb-5"
             >
-              Know exactly when your deal is heating up.
+              AI tells you when your{' '}
+              <span className="text-gradient-mint">deal is heating up.</span>
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-lg text-[#5A6480] leading-relaxed mb-10">
-              Co-Lab scores every buyer&apos;s intent in real time — so you follow up at the
-              perfect moment, not a week too late.
+            <motion.p variants={fadeUp} className="text-lg text-[#3D4663] leading-relaxed mb-10">
+              Co-Lab&apos;s AI scores every buyer&apos;s intent in real time — surfacing the signals
+              that matter so you follow up at the perfect moment, not a week too late.
             </motion.p>
 
             <div className="space-y-5">
-              {stats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  variants={fadeUp}
-                  className="flex items-center gap-4"
-                >
-                  <div className="flex-shrink-0 w-14 h-14 rounded-[14px] bg-[#6366F1]/08 border border-[#6366F1]/15 flex items-center justify-center">
-                    <TrendingUp size={20} className="text-[#6366F1]" />
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-[#0D1117]">{stat.value}</div>
-                    <div className="text-sm text-[#5A6480]">{stat.label}</div>
-                  </div>
-                </motion.div>
-              ))}
+              {stats.map((stat) => {
+                const Icon = stat.icon
+                return (
+                  <motion.div
+                    key={stat.label}
+                    variants={fadeUp}
+                    className="flex items-center gap-4"
+                  >
+                    <div
+                      className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center"
+                      style={{ backgroundColor: `${stat.color}10`, border: `1.5px solid ${stat.color}20` }}
+                    >
+                      <Icon size={20} style={{ color: stat.color }} />
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-[#0D1117]">{stat.value}</div>
+                      <div className="text-sm text-[#3D4663]">{stat.label}</div>
+                    </div>
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
         </div>

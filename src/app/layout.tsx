@@ -15,17 +15,17 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Co-Lab — The Sales Room Your Buyers Will Actually Engage With',
+  title: 'Co-Lab — AI Builds the Deal Room. You Close the Deal.',
   description:
-    'Co-Lab gives every deal its own personalized sales room — interactive, trackable, and built to move buyers forward. Real-time intent scoring, buyer analytics, and AI-powered pod building.',
+    'Co-Lab is the AI-native digital sales room. AI analyzes your calls, auto-builds personalized pods, and gives buyers an AI assistant — so every deal moves forward on autopilot.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
   },
   openGraph: {
-    title: 'Co-Lab — Stop Sending Decks. Start Closing Deals.',
+    title: 'Co-Lab — AI-Native Digital Sales Rooms',
     description:
-      'Personalized digital sales rooms with real-time buyer intent scoring. Built for modern sales teams.',
+      'AI builds personalized deal rooms from your call transcripts. Real-time intent scoring, buyer analytics, and an AI assistant that handles objections 24/7.',
     type: 'website',
   },
 }
@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="bg-[#FAFBFF] text-[#0D1117] antialiased font-[Inter,sans-serif]">
+      <body className="bg-[#FAFBFF] text-[#0D1117] antialiased font-[Inter,ui-sans-serif,system-ui,sans-serif]">
         {children}
       </body>
     </html>

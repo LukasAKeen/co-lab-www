@@ -5,9 +5,10 @@ import HowItWorks from '@/components/sections/HowItWorks'
 import Problem from '@/components/sections/Problem'
 import ForWho from '@/components/sections/ForWho'
 import Features from '@/components/sections/Features'
-import Integrations from '@/components/sections/Integrations'
 import AnalyticsSpotlight from '@/components/sections/AnalyticsSpotlight'
 import BuilderShowcase from '@/components/sections/BuilderShowcase'
+import WhiteLabel from '@/components/sections/WhiteLabel'
+import Integrations from '@/components/sections/Integrations'
 import Testimonials from '@/components/sections/Testimonials'
 import FinalCTA from '@/components/sections/FinalCTA'
 
@@ -18,11 +19,12 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <Problem />
-      <ForWho />
       <Features />
-      <Integrations />
       <AnalyticsSpotlight />
+      <ForWho />
       <BuilderShowcase />
+      <WhiteLabel />
+      <Integrations />
       <Testimonials />
       <FinalCTA />
       <Footer />

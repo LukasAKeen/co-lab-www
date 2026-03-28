@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { Sparkles } from 'lucide-react'
 import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const blocks = [
@@ -18,20 +19,20 @@ const blocks = [
 
 const templates = [
   {
-    name: 'Tech Sales Suite',
-    desc: 'Demo recording + ROI calculator for software deals',
-    tag: 'Enterprise',
+    name: 'AI Enterprise Suite',
+    desc: 'AI-built from your transcript — demo, ROI & case study',
+    tag: 'AI',
     color: '#6366F1',
   },
   {
     name: 'SaaS Renewal Pack',
     desc: 'Usage stats, success highlights & next-tier value',
-    tag: 'Renewal',
-    color: '#059669',
+    tag: 'Template',
+    color: '#34D399',
   },
   {
     name: 'Enterprise Onboarding',
-    desc: 'Implementation roadmap, key contacts & resource hub',
+    desc: 'Implementation roadmap, contacts & resource hub',
     tag: 'Post-sale',
     color: '#4F46E5',
   },
@@ -39,19 +40,19 @@ const templates = [
     name: 'SMB Intro Pack',
     desc: 'Quick wins, pricing & easy path to yes',
     tag: 'SMB',
-    color: '#D97706',
+    color: '#F59E0B',
   },
   {
     name: 'Competitive Displacement',
     desc: 'Battle cards, comparisons & switching incentives',
-    tag: 'Competitive',
-    color: '#DC2626',
+    tag: 'Compete',
+    color: '#F43F5E',
   },
   {
     name: 'AI Pod Builder',
     desc: 'Paste your call transcript — AI builds the pod',
-    tag: 'Beta',
-    color: '#059669',
+    tag: 'AI',
+    color: '#34D399',
   },
 ]
 
@@ -80,14 +81,13 @@ export default function BuilderShowcase() {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0D1117]"
+            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
-            A room for every deal,
-            <br />
-            <span className="text-[#9BA3B8]">built in minutes.</span>
+            A room for every deal,{' '}
+            <span className="text-gradient-ai">built by AI.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-4 text-lg text-[#5A6480] max-w-xl mx-auto">
-            Choose a template or start from scratch. Drag in blocks, add your content, hit publish.
+          <motion.p variants={fadeUp} className="mt-4 text-lg text-[#3D4663] max-w-xl mx-auto">
+            Choose an AI template or paste a transcript. AI selects the blocks, you hit publish.
           </motion.p>
         </motion.div>
 
@@ -106,30 +106,31 @@ export default function BuilderShowcase() {
               {blocks.map((block, i) => (
                 <div
                   key={block.label}
-                  className="flex items-center gap-3 px-4 py-3 rounded-[10px] border transition-all duration-300"
+                  className="flex items-center gap-3 px-4 py-3 rounded-2xl border transition-all duration-300"
                   style={
                     activeBlock === i
                       ? {
-                          backgroundColor: 'rgba(99,102,241,0.06)',
-                          borderColor: 'rgba(99,102,241,0.2)',
-                          boxShadow: '0 0 16px rgba(99,102,241,0.08)',
+                          backgroundColor: 'rgba(99,102,241,0.05)',
+                          borderColor: 'rgba(99,102,241,0.18)',
+                          boxShadow: '0 0 20px rgba(99,102,241,0.06)',
                         }
                       : {
                           backgroundColor: '#FFFFFF',
-                          borderColor: 'rgba(0,0,0,0.07)',
+                          borderColor: 'rgba(0,0,0,0.05)',
                         }
                   }
                 >
                   <span className="text-lg w-6 text-center">{block.icon}</span>
                   <span
                     className="text-sm font-medium transition-colors duration-300"
-                    style={{ color: activeBlock === i ? '#0D1117' : '#5A6480' }}
+                    style={{ color: activeBlock === i ? '#0D1117' : '#6B7394' }}
                   >
                     {block.label}
                   </span>
                   {activeBlock === i && (
-                    <span className="ml-auto text-[10px] text-[#6366F1] bg-[#6366F1]/10 px-2 py-0.5 rounded-full">
-                      active
+                    <span className="ml-auto text-[10px] text-[#6366F1] bg-[#6366F1]/10 px-2.5 py-0.5 rounded-full font-medium flex items-center gap-1">
+                      <Sparkles size={8} />
+                      AI pick
                     </span>
                   )}
                 </div>
@@ -151,19 +152,20 @@ export default function BuilderShowcase() {
               {templates.map((template) => (
                 <div
                   key={template.name}
-                  className="group rounded-[14px] border border-black/[0.07] bg-white p-4 hover:border-[#6366F1]/25 hover:bg-[#6366F1]/[0.02] transition-all cursor-pointer shadow-sm hover:shadow-md"
+                  className="group rounded-2xl border border-black/[0.05] bg-white p-4 hover:border-[#6366F1]/20 hover:bg-[#6366F1]/[0.02] transition-all cursor-pointer shadow-sm hover:shadow-md"
                 >
                   <div className="flex items-start justify-between mb-2">
                     <span className="text-sm font-semibold text-[#0D1117] leading-tight">
                       {template.name}
                     </span>
                     <span
-                      className="text-[10px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ml-2"
+                      className="text-[10px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ml-2 flex items-center gap-0.5"
                       style={{
                         color: template.color,
                         backgroundColor: `${template.color}12`,
                       }}
                     >
+                      {template.tag === 'AI' && <Sparkles size={8} />}
                       {template.tag}
                     </span>
                   </div>

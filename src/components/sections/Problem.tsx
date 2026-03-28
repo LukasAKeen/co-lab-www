@@ -1,29 +1,31 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { X, Check, Mail, Handshake } from 'lucide-react'
+import { X, Check, Mail, Sparkles, Clock, Send, EyeOff, Bot } from 'lucide-react'
 import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const oldWay = [
-  'No tracking — zero visibility',
-  'Gets buried in inbox',
-  "Can't personalize per deal",
-  'Forwarded to the wrong person',
-  "No idea if anyone opened it",
+  { icon: Clock, text: 'Hours spent manually building decks' },
+  { icon: EyeOff, text: 'Zero visibility into buyer engagement' },
+  { icon: Send, text: 'Attachments buried in inbox threads' },
+  { icon: Mail, text: "Can't personalize at scale" },
+  { icon: EyeOff, text: 'No idea if anyone even opened it' },
 ]
 
 const newWay = [
-  'Real-time visitor tracking',
-  'Personalized per buyer',
-  'Interactive content blocks',
-  'Intent scoring on every visit',
-  "Know exactly who's engaged",
+  { icon: Bot, text: 'AI builds the pod from your call transcript' },
+  { icon: Sparkles, text: 'Real-time intent scoring on every visit' },
+  { icon: Check, text: 'One link, all content, fully trackable' },
+  { icon: Sparkles, text: 'Every room auto-personalized per buyer' },
+  { icon: Bot, text: 'AI assistant handles objections 24/7' },
 ]
 
 export default function Problem() {
   return (
     <section className="py-28 px-6 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="absolute inset-0 dot-grid opacity-20" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -31,17 +33,18 @@ export default function Problem() {
           viewport={viewportConfig}
           className="text-center mb-16"
         >
-          <motion.p variants={fadeUp} className="text-xs font-semibold text-[#6366F1] uppercase tracking-[0.15em] mb-4">
+          <motion.p variants={fadeUp} className="text-xs font-semibold text-[#F43F5E] uppercase tracking-[0.15em] mb-4">
             The problem
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0D1117] max-w-2xl mx-auto leading-tight"
+            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] max-w-3xl mx-auto leading-tight"
           >
-            Your buyers are drowning in forgotten attachments.
+            Manual deal rooms are killing your{' '}
+            <span className="text-gradient">win rate.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-4 text-lg text-[#5A6480] max-w-xl mx-auto">
-            Sales decks get forwarded to the wrong person, links expire, and you have no idea if anyone even opened it.
+          <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-xl mx-auto">
+            While you spend hours on decks, your competitors are using AI. The gap is growing.
           </motion.p>
         </motion.div>
 
@@ -53,9 +56,9 @@ export default function Problem() {
           viewport={viewportConfig}
           className="max-w-4xl mx-auto mb-8"
         >
-          <div className="rounded-[14px] bg-[#FEF2F2] border border-[#DC2626]/12 px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
-            <span className="text-2xl font-extrabold text-[#DC2626]">73%</span>
-            <span className="text-sm text-[#5A6480]">of deals are lost because buyers go silent — no follow-up trigger, no visibility into intent.</span>
+          <div className="rounded-2xl bg-[#F43F5E]/[0.04] border border-[#F43F5E]/12 px-6 py-5 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+            <span className="text-3xl font-extrabold text-[#F43F5E]">73%</span>
+            <span className="text-sm text-[#3D4663]">of deals are lost because buyers go silent — no AI follow-up trigger, no visibility into intent.</span>
           </div>
         </motion.div>
 
@@ -66,26 +69,29 @@ export default function Problem() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="rounded-[18px] border border-[#DC2626]/15 bg-[#DC2626]/[0.03] p-8"
+            className="rounded-2xl border border-[#F43F5E]/12 bg-[#F43F5E]/[0.02] p-8"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-[10px] bg-[#DC2626]/10 flex items-center justify-center">
-                <Mail size={18} className="text-[#DC2626]" />
+            <div className="flex items-center gap-3 mb-7">
+              <div className="w-11 h-11 rounded-xl bg-[#F43F5E]/10 flex items-center justify-center">
+                <Mail size={18} className="text-[#F43F5E]" />
               </div>
               <div>
-                <div className="text-[10px] font-semibold text-[#DC2626] uppercase tracking-wider">The old way</div>
-                <div className="text-sm font-semibold text-[#0D1117]">Email + Attachment</div>
+                <div className="text-[10px] font-semibold text-[#F43F5E] uppercase tracking-wider">The old way</div>
+                <div className="text-sm font-semibold text-[#0D1117]">Manual Decks + Email</div>
               </div>
             </div>
-            <ul className="space-y-3">
-              {oldWay.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-[#5A6480]">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#DC2626]/10 flex items-center justify-center">
-                    <X size={11} className="text-[#DC2626]" />
-                  </span>
-                  <span className="line-through opacity-60">{item}</span>
-                </li>
-              ))}
+            <ul className="space-y-3.5">
+              {oldWay.map((item) => {
+                const Icon = item.icon
+                return (
+                  <li key={item.text} className="flex items-center gap-3 text-sm text-[#6B7394]">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#F43F5E]/8 flex items-center justify-center">
+                      <X size={11} className="text-[#F43F5E]" />
+                    </span>
+                    <span className="line-through opacity-70">{item.text}</span>
+                  </li>
+                )
+              })}
             </ul>
           </motion.div>
 
@@ -95,26 +101,29 @@ export default function Problem() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="rounded-[18px] border border-[#059669]/20 bg-[#059669]/[0.03] p-8 shadow-[0_0_40px_rgba(5,150,105,0.06)]"
+            className="rounded-2xl border border-[#34D399]/20 bg-[#34D399]/[0.02] p-8 shadow-[0_0_60px_rgba(52,211,153,0.06)]"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-[10px] bg-[#059669]/10 flex items-center justify-center">
-                <Handshake size={18} className="text-[#059669]" />
+            <div className="flex items-center gap-3 mb-7">
+              <div className="w-11 h-11 rounded-xl bg-[#34D399]/10 flex items-center justify-center">
+                <Sparkles size={18} className="text-[#34D399]" />
               </div>
               <div>
                 <div className="text-[10px] font-semibold text-[#059669] uppercase tracking-wider">The Co-Lab way</div>
-                <div className="text-sm font-semibold text-[#0D1117]">Personal Sales Room</div>
+                <div className="text-sm font-semibold text-[#0D1117]">AI-Built Sales Rooms</div>
               </div>
             </div>
-            <ul className="space-y-3">
-              {newWay.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-[#0D1117]">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#059669]/15 flex items-center justify-center">
-                    <Check size={11} className="text-[#059669]" />
-                  </span>
-                  {item}
-                </li>
-              ))}
+            <ul className="space-y-3.5">
+              {newWay.map((item) => {
+                const Icon = item.icon
+                return (
+                  <li key={item.text} className="flex items-center gap-3 text-sm text-[#0D1117]">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#34D399]/12 flex items-center justify-center">
+                      <Check size={11} className="text-[#059669]" />
+                    </span>
+                    {item.text}
+                  </li>
+                )
+              })}
             </ul>
           </motion.div>
         </div>

@@ -1,13 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
+import { Star, Sparkles } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const testimonials = [
   {
     quote:
-      'Co-Lab helped us close our biggest enterprise deal of the quarter. Our champion could finally share everything in one place — and we knew exactly when they were engaged.',
+      'I pasted a Gong transcript and Co-Lab built a full deal room in under a minute. My champion shared it with the entire buying committee. We closed 2 weeks early.',
     name: 'Sarah K.',
     role: 'Enterprise Account Executive',
     company: 'Meridian Corp',
@@ -16,28 +16,31 @@ const testimonials = [
   },
   {
     quote:
-      'I used to wonder if prospects even opened my decks. Now I get an intent score the moment someone visits. It completely changed how I prioritize my pipeline.',
+      'The AI intent scoring is a game changer. I used to wonder if anyone opened my decks. Now I know exactly who viewed what, for how long, and when to follow up.',
     name: 'Marcus T.',
     role: 'Account Executive',
     company: 'CloudOps Inc',
     initials: 'MT',
-    color: '#059669',
+    color: '#34D399',
   },
   {
     quote:
-      'Templates save me 30 minutes per deal. The AI builder is wild — paste a call transcript and the pod builds itself. My buyers actually reply to follow-ups now.',
+      'The AI assistant handles objections at 2am while I sleep. Buyers get instant answers, I get notified of key questions, and deals move forward without me lifting a finger.',
     name: 'Jordan L.',
     role: 'Mid-Market AE',
     company: 'Nexus Capital',
     initials: 'JL',
-    color: '#D97706',
+    color: '#F59E0B',
   },
 ]
 
 export default function Testimonials() {
   return (
-    <section className="py-28 px-6 bg-[#F2F4FA] border-t border-black/[0.06]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-28 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#F2F4FA]" />
+      <div className="absolute inset-0 gradient-mesh opacity-30" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -46,13 +49,14 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <motion.p variants={fadeUp} className="text-xs font-semibold text-[#6366F1] uppercase tracking-[0.15em] mb-4">
-            Social Proof
+            Social proof
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0D1117]"
+            className="text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
-            What sales teams are saying
+            Teams are closing faster{' '}
+            <span className="text-gradient-ai">with AI.</span>
           </motion.h2>
 
           {/* Metric bar */}
@@ -63,8 +67,10 @@ export default function Testimonials() {
               ))}
               <span className="text-sm font-semibold text-[#0D1117] ml-1">4.8 / 5 on G2</span>
             </div>
-            <span className="hidden sm:block w-px h-4 bg-black/[0.12]" />
-            <span className="text-sm text-[#5A6480]">Loved by <span className="font-semibold text-[#0D1117]">200+</span> sales teams in early access</span>
+            <span className="hidden sm:block w-px h-4 bg-black/[0.1]" />
+            <span className="text-sm text-[#3D4663]">
+              Loved by <span className="font-semibold text-[#0D1117]">200+</span> sales teams in early access
+            </span>
           </motion.div>
         </motion.div>
 
@@ -79,7 +85,7 @@ export default function Testimonials() {
             <motion.div
               key={t.name}
               variants={scaleIn}
-              className="bg-white rounded-[18px] border border-black/[0.07] p-8 flex flex-col shadow-sm"
+              className="bg-white rounded-2xl border border-black/[0.06] p-8 flex flex-col shadow-sm card-hover"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6">
@@ -91,19 +97,19 @@ export default function Testimonials() {
               {/* Quote mark */}
               <div
                 className="text-5xl font-serif leading-none mb-3 -mt-2"
-                style={{ color: t.color, opacity: 0.3 }}
+                style={{ color: t.color, opacity: 0.25 }}
               >
                 &ldquo;
               </div>
 
               {/* Quote */}
-              <p className="text-sm text-[#5A6480] leading-relaxed flex-1 mb-6">{t.quote}</p>
+              <p className="text-sm text-[#3D4663] leading-relaxed flex-1 mb-6">{t.quote}</p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-5 border-t border-black/[0.06]">
+              <div className="flex items-center gap-3 pt-5 border-t border-black/[0.05]">
                 <div
-                  className="w-9 h-9 rounded-[8px] flex items-center justify-center text-xs font-bold flex-shrink-0"
-                  style={{ backgroundColor: `${t.color}12`, border: `1px solid ${t.color}20` }}
+                  className="w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold flex-shrink-0"
+                  style={{ backgroundColor: `${t.color}12`, border: `1.5px solid ${t.color}20` }}
                 >
                   <span style={{ color: t.color }}>{t.initials}</span>
                 </div>
