@@ -351,7 +351,7 @@ export default function Features() {
           </motion.h2>
         </motion.div>
 
-        <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-24 sm:gap-32">
           {features.map((feature) => {
             const Icon = feature.icon
             const Mockup = feature.mockup
@@ -360,7 +360,7 @@ export default function Features() {
             return (
               <div
                 key={feature.eyebrow}
-                className={`flex flex-col ${isRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12 lg:gap-20`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center"
               >
                 {/* Text */}
                 <motion.div
@@ -368,7 +368,7 @@ export default function Features() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={viewportConfig}
-                  className="flex-1 max-w-lg"
+                  className={isRight ? 'lg:order-2' : ''}
                 >
                   <div className="flex items-center gap-2.5 mb-5">
                     <div
@@ -424,7 +424,7 @@ export default function Features() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={viewportConfig}
-                  className="flex-1 w-full max-w-lg"
+                  className={isRight ? 'lg:order-1' : ''}
                 >
                   <Mockup />
                 </motion.div>
