@@ -400,19 +400,22 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="#cta"
+              href="https://app.co-lab.com/signup"
               className="group relative inline-flex items-center gap-2.5 px-7 py-4 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.45)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
-              Get early access
+              Get Started Free
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <button className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] bg-white/80 backdrop-blur-sm rounded-2xl transition-all shadow-sm hover:shadow-md">
+            <a
+              href="https://app.co-lab.com/demo"
+              className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] bg-white/80 backdrop-blur-sm rounded-2xl transition-all shadow-sm hover:shadow-md"
+            >
               <span className="w-7 h-7 rounded-xl bg-[#6366F1]/10 flex items-center justify-center flex-shrink-0">
                 <Play size={10} className="text-[#6366F1] fill-[#6366F1] ml-0.5" />
               </span>
-              Watch demo
-            </button>
+              Book a Demo
+            </a>
           </motion.div>
         </motion.div>
 

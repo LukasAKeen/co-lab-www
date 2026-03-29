@@ -1,4 +1,4 @@
-import { Handshake, Twitter, Linkedin, Sparkles } from 'lucide-react'
+import { Handshake, Twitter, Linkedin, Sparkles, ArrowRight } from 'lucide-react'
 
 const links = {
   Product: ['Features', 'Analytics', 'Templates', 'AI Assistant', 'Pricing'],
@@ -23,10 +23,26 @@ export default function Footer() {
                 AI
               </span>
             </div>
-            <p className="text-sm text-[#9BA3B8] leading-relaxed max-w-[260px]">
+            <p className="text-sm text-[#9BA3B8] leading-relaxed max-w-[260px] mb-5">
               The AI-native digital sales room. AI builds the deal room — you close the deal.
             </p>
-            <div className="flex items-center gap-3 mt-6">
+            {/* Footer CTAs */}
+            <div className="flex flex-wrap items-center gap-3 mb-5">
+              <a
+                href="https://app.co-lab.com/signup"
+                className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-lg transition-all hover:shadow-[0_0_16px_rgba(99,102,241,0.3)] active:scale-[0.97]"
+              >
+                Start Free
+                <ArrowRight size={12} />
+              </a>
+              <a
+                href="https://app.co-lab.com/demo"
+                className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#6B7394] hover:text-[#0D1117] border border-black/[0.07] hover:border-black/[0.12] rounded-lg transition-all"
+              >
+                Book a Demo
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
               <a
                 href="#"
                 className="w-9 h-9 rounded-xl border border-black/[0.07] flex items-center justify-center text-[#9BA3B8] hover:text-[#3D4663] hover:border-black/[0.12] transition-all"
@@ -66,8 +82,8 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-black/[0.05] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#9BA3B8]">&copy; 2025 Co-Lab. All rights reserved.</p>
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-black/[0.05] flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[#9BA3B8]">&copy; 2026 Co-Lab. All rights reserved.</p>
           <p className="text-xs text-[#9BA3B8] flex items-center gap-1">
             <Sparkles size={10} className="text-[#6366F1]" />
             Built for sales teams who let AI close.

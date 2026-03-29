@@ -148,7 +148,7 @@ export default function Security() {
               {/* Right CTA */}
               <div className="flex-shrink-0">
                 <a
-                  href="#cta"
+                  href="https://app.co-lab.com/demo"
                   className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.3)] active:scale-[0.97]"
                 >
                   <ShieldCheck size={14} />

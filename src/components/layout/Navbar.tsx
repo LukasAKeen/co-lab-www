@@ -70,10 +70,16 @@ export default function Navbar() {
               Sign in
             </a>
             <a
-              href="#cta"
+              href="https://app.co-lab.com/demo"
+              className="px-4 py-2 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.12] rounded-xl transition-all"
+            >
+              Book a Demo
+            </a>
+            <a
+              href="https://app.co-lab.com/signup"
               className="px-4 py-2 text-sm font-medium text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.35)] active:scale-[0.97]"
             >
-              Get early access
+              Start Free
             </a>
           </div>
 
@@ -117,11 +123,17 @@ export default function Navbar() {
                   Sign in
                 </a>
                 <a
-                  href="#cta"
+                  href="https://app.co-lab.com/demo"
+                  className="px-4 py-2.5 text-sm font-medium text-center text-[#3D4663] hover:text-[#0D1117] border border-black/[0.07] rounded-xl transition-colors"
+                >
+                  Book a Demo
+                </a>
+                <a
+                  href="https://app.co-lab.com/signup"
                   onClick={() => setMobileOpen(false)}
                   className="px-4 py-2.5 text-sm font-medium text-center text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-colors"
                 >
-                  Get early access
+                  Start Free
                 </a>
               </div>
             </div>

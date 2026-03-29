@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, Play } from 'lucide-react'
 import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
 
 export default function FinalCTA() {
@@ -19,9 +19,9 @@ export default function FinalCTA() {
           viewport={viewportConfig}
         >
           <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-8">
-            <span className="bg-white/80 backdrop-blur-sm border border-[#6366F1]/15 rounded-full px-4 py-1.5 text-xs font-semibold text-[#6366F1] shadow-sm flex items-center gap-1.5">
-              <Sparkles size={11} className="text-[#6366F1]" />
-              Invite-only early access
+            <span className="bg-white/80 backdrop-blur-sm border border-[#34D399]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#059669] shadow-sm flex items-center gap-1.5">
+              <Sparkles size={11} className="text-[#34D399]" />
+              Now Live
             </span>
           </motion.div>
 
@@ -38,22 +38,32 @@ export default function FinalCTA() {
             className="text-lg text-[#3D4663] mb-10 leading-relaxed"
           >
             Join sales teams using Co-Lab&apos;s AI to build deal rooms, track intent,
-            and close faster. Early access is invite-only — spots are limited.
+            and close faster. Sign up free and start in minutes.
           </motion.p>
 
           <motion.p variants={fadeUp} className="text-sm text-[#9BA3B8] mb-8">
-            Join <span className="font-semibold text-[#3D4663]">200+ sales teams</span> already on the waitlist
+            Trusted by <span className="font-semibold text-[#3D4663]">200+ sales teams</span> already using Co-Lab
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="mailto:hello@co-lab.com?subject=Early Access Request"
+              href="https://app.co-lab.com/signup"
               className="group relative inline-flex items-center gap-2.5 px-8 py-4 text-base font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all animate-[pulse-glow_3s_ease-in-out_infinite] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
-              Request early access
+              Get Started Free
               <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
+            <a
+              href="https://app.co-lab.com/demo"
+              className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] bg-white/80 backdrop-blur-sm rounded-2xl transition-all shadow-sm hover:shadow-md"
+            >
+              <Play size={12} className="text-[#6366F1] fill-[#6366F1]" />
+              Book a Demo
+            </a>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-5 flex items-center justify-center">
             <a
               href="https://app.co-lab.com/login"
               className="inline-flex items-center gap-1.5 text-sm text-[#9BA3B8] hover:text-[#3D4663] transition-colors"
@@ -63,8 +73,8 @@ export default function FinalCTA() {
             </a>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="mt-6 text-xs text-[#C5CBDA]">
-            No credit card required · Invite-only · Cancel anytime
+          <motion.p variants={fadeUp} className="mt-5 text-xs text-[#C5CBDA]">
+            No credit card required · Free plan available · Cancel anytime
           </motion.p>
         </motion.div>
       </div>

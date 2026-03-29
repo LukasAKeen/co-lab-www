@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
-import { Flame, Monitor, Smartphone, TrendingUp, Sparkles, Zap } from 'lucide-react'
+import { Flame, Monitor, Smartphone, TrendingUp, Sparkles, Zap, ArrowRight } from 'lucide-react'
 import { fadeUp, slideInLeft, staggerContainer, viewportConfig } from '@/lib/motion'
 
 function Counter({ to, suffix = '' }: { to: number; suffix?: string }) {
@@ -218,6 +218,17 @@ export default function AnalyticsSpotlight() {
                 )
               })}
             </div>
+
+            <motion.div variants={fadeUp} className="mt-10">
+              <a
+                href="https://app.co-lab.com/signup"
+                className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
+              >
+                <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
+                Start Free
+                <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </div>

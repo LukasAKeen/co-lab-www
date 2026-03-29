@@ -243,11 +243,11 @@ export default function MiniDemo() {
                       className="mt-5 flex items-center gap-3"
                     >
                       <a
-                        href="#cta"
+                        href="https://app.co-lab.com/signup"
                         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.98]"
                       >
                         <Sparkles size={13} />
-                        Try with your own transcript
+                        Start Free — Try With Your Data
                       </a>
                       <div className="text-[11px] text-[#9BA3B8] flex-shrink-0">
                         5 blocks · 2.4s

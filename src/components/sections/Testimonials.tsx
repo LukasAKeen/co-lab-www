@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Star, Sparkles } from 'lucide-react'
+import { Star, Sparkles, ArrowRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const testimonials = [
@@ -69,7 +69,7 @@ export default function Testimonials() {
             </div>
             <span className="hidden sm:block w-px h-4 bg-black/[0.1]" />
             <span className="text-sm text-[#3D4663]">
-              Loved by <span className="font-semibold text-[#0D1117]">200+</span> sales teams in early access
+              Trusted by <span className="font-semibold text-[#0D1117]">200+</span> sales teams
             </span>
           </motion.div>
         </motion.div>
@@ -122,6 +122,25 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+          className="text-center mt-12"
+        >
+          <p className="text-sm text-[#9BA3B8] mb-4">Join the teams closing deals faster.</p>
+          <a
+            href="https://app.co-lab.com/signup"
+            className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
+          >
+            <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
+            Get Started Free
+            <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+          </a>
         </motion.div>
       </div>
     </section>
