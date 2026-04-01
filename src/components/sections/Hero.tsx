@@ -448,7 +448,7 @@ export default function Hero() {
           </div>
 
           {/* Bottom fade — dark to light transition */}
-          <div className="h-32 sm:h-48 relative -mt-32 sm:-mt-48 pointer-events-none z-20" style={{ background: 'linear-gradient(to bottom, transparent 0%, #0A0D14 30%, #FAFBFF 100%)' }} />
+          <div className="h-24 sm:h-32 bg-gradient-to-b from-transparent to-[#FAFBFF] relative -mt-24 sm:-mt-32 pointer-events-none z-20" />
         </motion.div>
       </div>
     </section>
