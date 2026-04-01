@@ -351,10 +351,12 @@ function AppMockup() {
 /* ── Hero section ── */
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center pt-20 md:pt-28 pb-0 overflow-hidden">
-      {/* Background mesh */}
-      <div className="absolute inset-0 gradient-mesh-hero" />
-      <div className="absolute inset-0 dot-grid opacity-30" />
+    <section className="relative flex flex-col items-center pt-20 md:pt-28 pb-0 overflow-hidden bg-[#0A0D14]">
+      {/* Dark gradient background */}
+      <div className="absolute inset-0" style={{
+        background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.20) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 30%, rgba(52,211,153,0.10) 0%, transparent 60%), radial-gradient(ellipse 50% 60% at 20% 40%, rgba(244,63,94,0.06) 0%, transparent 60%)',
+      }} />
+      <div className="absolute inset-0 dot-grid opacity-[0.04]" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
         {/* Text content */}
@@ -366,13 +368,13 @@ export default function Hero() {
         >
           {/* Badges */}
           <motion.div variants={fadeUp} className="inline-flex flex-wrap items-center justify-center gap-2.5 mb-8">
-            <span className="bg-white/80 backdrop-blur-sm border border-[#34D399]/25 rounded-full px-4 py-1.5 text-xs font-semibold text-[#059669] flex items-center gap-2 shadow-sm">
+            <span className="bg-white/[0.06] backdrop-blur-sm border border-[#34D399]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#34D399] flex items-center gap-2">
               <AIPulseDot />
               AI-Powered
               <Sparkles size={11} className="text-[#34D399]" />
             </span>
-            <span className="bg-white/80 backdrop-blur-sm border border-[#6366F1]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#6366F1] flex items-center gap-1.5 shadow-sm">
-              <Zap size={11} className="fill-[#6366F1] text-[#6366F1]" />
+            <span className="bg-white/[0.06] backdrop-blur-sm border border-[#818CF8]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#818CF8] flex items-center gap-1.5">
+              <Zap size={11} className="fill-[#818CF8] text-[#818CF8]" />
               4.2× more buyer engagement
             </span>
           </motion.div>
@@ -380,7 +382,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={fadeUp}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-[1.08] sm:leading-[1.04] mb-5 sm:mb-6 text-[#0D1117]"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-[1.08] sm:leading-[1.04] mb-5 sm:mb-6 text-white"
           >
             Your AI builds the deal room.
             <br />
@@ -390,7 +392,7 @@ export default function Hero() {
           {/* Subhead */}
           <motion.p
             variants={fadeUp}
-            className="text-base sm:text-lg md:text-xl text-[#3D4663] leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-[#8892AA] leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto"
           >
             Co-Lab is the AI-native digital sales room that analyzes your calls,
             auto-builds personalized pods, and gives buyers an AI assistant — so
@@ -401,7 +403,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="https://app.co-lab.com/signup"
-              className="group relative inline-flex items-center gap-2.5 px-7 py-4 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.45)] active:scale-[0.97]"
+              className="group relative inline-flex items-center gap-2.5 px-7 py-4 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
               Get Started Free
@@ -409,10 +411,10 @@ export default function Hero() {
             </a>
             <a
               href="https://app.co-lab.com/demo"
-              className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] bg-white/80 backdrop-blur-sm rounded-2xl transition-all shadow-sm hover:shadow-md"
+              className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#C5CBDA] hover:text-white border border-white/[0.10] hover:border-white/[0.20] bg-white/[0.04] backdrop-blur-sm rounded-2xl transition-all hover:bg-white/[0.08]"
             >
-              <span className="w-7 h-7 rounded-xl bg-[#6366F1]/10 flex items-center justify-center flex-shrink-0">
-                <Play size={10} className="text-[#6366F1] fill-[#6366F1] ml-0.5" />
+              <span className="w-7 h-7 rounded-xl bg-[#6366F1]/20 flex items-center justify-center flex-shrink-0">
+                <Play size={10} className="text-[#818CF8] fill-[#818CF8] ml-0.5" />
               </span>
               Book a Demo
             </a>
@@ -426,14 +428,14 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="relative mx-auto max-w-[1100px]"
         >
-          {/* Aurora blobs */}
-          <div className="aurora-blob aurora-blob-1 w-[400px] h-[300px] -top-20 left-[10%]" />
-          <div className="aurora-blob aurora-blob-2 w-[350px] h-[280px] top-10 right-[5%]" />
-          <div className="aurora-blob aurora-blob-3 w-[300px] h-[250px] bottom-0 left-[30%]" />
-          <div className="aurora-blob aurora-blob-orange w-[250px] h-[200px] -top-10 right-[25%]" />
+          {/* Aurora blobs — brighter on dark bg */}
+          <div className="aurora-blob aurora-blob-1 w-[400px] h-[300px] -top-20 left-[10%] !opacity-70" />
+          <div className="aurora-blob aurora-blob-2 w-[350px] h-[280px] top-10 right-[5%] !opacity-60" />
+          <div className="aurora-blob aurora-blob-3 w-[300px] h-[250px] bottom-0 left-[30%] !opacity-50" />
+          <div className="aurora-blob aurora-blob-orange w-[250px] h-[200px] -top-10 right-[25%] !opacity-40" />
 
           {/* Outer glow */}
-          <div className="absolute -inset-8 rounded-[40px] glow-ai opacity-60 pointer-events-none" />
+          <div className="absolute -inset-8 rounded-[40px] glow-ai opacity-80 pointer-events-none" />
 
           {/*
             Scale wrapper: on mobile the mockup renders at its natural
@@ -445,8 +447,8 @@ export default function Hero() {
             <AppMockup />
           </div>
 
-          {/* Bottom fade */}
-          <div className="h-16 sm:h-20 bg-gradient-to-b from-transparent to-[#FAFBFF] relative -mt-16 sm:-mt-20 pointer-events-none z-20" />
+          {/* Bottom fade — dark to light transition */}
+          <div className="h-24 sm:h-32 bg-gradient-to-b from-transparent via-[#0A0D14] to-[#FAFBFF] relative -mt-24 sm:-mt-32 pointer-events-none z-20" />
         </motion.div>
       </div>
     </section>

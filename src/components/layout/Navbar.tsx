@@ -39,7 +39,7 @@ export default function Navbar() {
             <div className="w-8 h-8 rounded-xl bg-[#6366F1] flex items-center justify-center shadow-[0_0_16px_rgba(99,102,241,0.35)] group-hover:shadow-[0_0_24px_rgba(99,102,241,0.5)] transition-shadow">
               <Handshake size={16} className="text-white" />
             </div>
-            <span className="font-semibold text-[15px] text-[#0D1117] tracking-tight">
+            <span className={`font-semibold text-[15px] tracking-tight transition-colors duration-500 ${scrolled ? 'text-[#0D1117]' : 'text-white'}`}>
               Co-Lab
             </span>
             <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-semibold text-[#34D399] bg-[#34D399]/10 px-2 py-0.5 rounded-full border border-[#34D399]/15">
@@ -54,7 +54,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 text-sm text-[#3D4663] hover:text-[#0D1117] transition-colors rounded-xl hover:bg-black/[0.03]"
+                className={`px-4 py-2 text-sm transition-colors rounded-xl ${scrolled ? 'text-[#3D4663] hover:text-[#0D1117] hover:bg-black/[0.03]' : 'text-[#8892AA] hover:text-white hover:bg-white/[0.06]'}`}
               >
                 {link.label}
               </a>
@@ -65,13 +65,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <a
               href="https://app.co-lab.com/login"
-              className="px-4 py-2 text-sm text-[#3D4663] hover:text-[#0D1117] transition-colors"
+              className={`px-4 py-2 text-sm transition-colors ${scrolled ? 'text-[#3D4663] hover:text-[#0D1117]' : 'text-[#8892AA] hover:text-white'}`}
             >
               Sign in
             </a>
             <a
               href="https://app.co-lab.com/demo"
-              className="px-4 py-2 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.12] rounded-xl transition-all"
+              className={`px-4 py-2 text-sm font-medium rounded-xl transition-all ${scrolled ? 'text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.12]' : 'text-[#C5CBDA] hover:text-white border border-white/[0.10] hover:border-white/[0.20]'}`}
             >
               Book a Demo
             </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2.5 -mr-1 text-[#3D4663] hover:text-[#0D1117] transition-colors"
+            className={`md:hidden p-2.5 -mr-1 transition-colors ${scrolled ? 'text-[#3D4663] hover:text-[#0D1117]' : 'text-[#8892AA] hover:text-white'}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
