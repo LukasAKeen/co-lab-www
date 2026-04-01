@@ -394,9 +394,9 @@ export default function Hero() {
             variants={fadeUp}
             className="text-base sm:text-lg md:text-xl text-[#8892AA] leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto"
           >
-            Co-Lab is the AI-native digital sales room that analyzes your calls,
-            auto-builds personalized pods, and gives buyers an AI assistant — so
-            every deal moves forward on autopilot.
+            Co-Lab is the AI-native digital sales room that analyzes your calls
+            and auto-builds personalized pods — so every deal moves forward on
+            autopilot.
           </motion.p>
 
           {/* CTAs */}

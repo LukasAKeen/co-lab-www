@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     quote:
-      'The AI assistant handles objections at 2am while I sleep. Buyers get instant answers, I get notified of key questions, and deals move forward without me lifting a finger.',
+      'The AI-built deal rooms are a game changer. I paste a transcript and get a polished pod with the right case studies, pricing, and next steps — ready to share in minutes, not hours.',
     name: 'Jordan L.',
     role: 'Mid-Market AE',
     company: 'Nexus Capital',

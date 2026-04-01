@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'Co-Lab — AI Builds the Deal Room. You Close the Deal.',
   description:
-    'Co-Lab is the AI-native digital sales room. AI analyzes your calls, auto-builds personalized pods, and gives buyers an AI assistant — so every deal moves forward on autopilot.',
+    'Co-Lab is the AI-native digital sales room. AI analyzes your calls and auto-builds personalized pods — so every deal moves forward on autopilot.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Co-Lab — AI-Native Digital Sales Rooms',
     description:
-      'AI builds personalized deal rooms from your call transcripts. Real-time intent scoring, buyer analytics, and an AI assistant that handles objections 24/7.',
+      'AI builds personalized deal rooms from your call transcripts. Real-time intent scoring, buyer analytics, and AI-powered deal intelligence.',
     type: 'website',
   },
 }
