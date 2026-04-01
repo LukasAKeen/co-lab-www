@@ -68,8 +68,8 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[#F2F4FA]" />
+      {/* Background — gradient top avoids hard line against page bg */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFF] via-[#F2F4FA] to-[#F2F4FA]" style={{ backgroundSize: '100% 100%', backgroundPosition: 'top' }} />
       <div className="absolute inset-0 gradient-mesh opacity-50" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
