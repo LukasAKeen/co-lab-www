@@ -29,7 +29,7 @@ export default function Footer() {
             {/* Footer CTAs */}
             <div className="flex flex-wrap items-center gap-3 mb-5">
               <a
-                href="https://app.colabapp.ai/signup"
+                href="https://app.colabapp.ai/register"
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-lg transition-all hover:shadow-[0_0_16px_rgba(99,102,241,0.3)] active:scale-[0.97]"
               >
                 Start Free

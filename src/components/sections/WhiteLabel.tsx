@@ -150,7 +150,7 @@ export default function WhiteLabel() {
             <motion.div variants={fadeUp}>
               <div className="flex flex-wrap items-center gap-3">
                 <a
-                  href="https://app.colabapp.ai/signup"
+                  href="https://app.colabapp.ai/register"
                   className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.3)] active:scale-[0.97]"
                 >
                   Start Free

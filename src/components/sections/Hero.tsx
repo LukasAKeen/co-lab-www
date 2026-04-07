@@ -402,7 +402,7 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="https://app.colabapp.ai/signup"
+              href="https://app.colabapp.ai/register"
               className="group relative inline-flex items-center gap-2.5 px-7 py-4 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />

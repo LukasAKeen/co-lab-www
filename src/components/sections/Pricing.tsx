@@ -18,7 +18,7 @@ const plans = [
     highlighted: false,
     cta: 'Get Started Free',
     ctaStyle: 'secondary' as const,
-    href: 'https://app.colabapp.ai/signup',
+    href: 'https://app.colabapp.ai/register',
     features: [
       'Up to 3 pods',
       'Google & Outlook Calendar',
@@ -40,7 +40,7 @@ const plans = [
     highlighted: true,
     cta: 'Start Growth Plan',
     ctaStyle: 'primary' as const,
-    href: 'https://app.colabapp.ai/signup?plan=growth',
+    href: 'https://app.colabapp.ai/register',
     features: [
       'Up to 20 pods',
       'All Starter features',
@@ -63,7 +63,7 @@ const plans = [
     highlighted: false,
     cta: 'Start Accelerate Plan',
     ctaStyle: 'primary' as const,
-    href: 'https://app.colabapp.ai/signup?plan=accelerate',
+    href: 'https://app.colabapp.ai/register',
     features: [
       'Unlimited pods',
       'All Growth features',

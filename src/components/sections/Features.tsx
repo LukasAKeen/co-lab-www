@@ -443,7 +443,7 @@ export default function Features() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="https://app.colabapp.ai/signup"
+              href="https://app.colabapp.ai/register"
               className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />

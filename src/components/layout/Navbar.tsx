@@ -64,7 +64,7 @@ export default function Navbar() {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://app.colabapp.ai/login"
+              href="https://app.colabapp.ai"
               className={`px-4 py-2 text-sm transition-colors ${scrolled ? 'text-[#3D4663] hover:text-[#0D1117]' : 'text-[#8892AA] hover:text-white'}`}
             >
               Sign in
@@ -76,7 +76,7 @@ export default function Navbar() {
               Book a Demo
             </a>
             <a
-              href="https://app.colabapp.ai/signup"
+              href="https://app.colabapp.ai/register"
               className="px-4 py-2 text-sm font-medium text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.35)] active:scale-[0.97]"
             >
               Start Free
@@ -117,7 +117,7 @@ export default function Navbar() {
               ))}
               <div className="mt-3 pt-3 border-t border-black/[0.06] flex flex-col gap-2">
                 <a
-                  href="https://app.colabapp.ai/login"
+                  href="https://app.colabapp.ai"
                   className="px-4 py-2.5 text-sm text-center text-[#3D4663] hover:text-[#0D1117] transition-colors border border-black/[0.07] rounded-xl"
                 >
                   Sign in
@@ -129,7 +129,7 @@ export default function Navbar() {
                   Book a Demo
                 </a>
                 <a
-                  href="https://app.colabapp.ai/signup"
+                  href="https://app.colabapp.ai/register"
                   onClick={() => setMobileOpen(false)}
                   className="px-4 py-2.5 text-sm font-medium text-center text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-colors"
                 >
