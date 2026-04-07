@@ -59,7 +59,7 @@ function AppMockup() {
         </div>
         <div className="flex-1 flex justify-center">
           <div className="bg-white rounded-lg px-3 py-1 text-[11px] text-[#9BA3B8] border border-[#E5E7EB] max-w-[300px] w-full text-center">
-            app.co-lab.com/pods/meridian-q2
+            app.colabapp.ai/pods/meridian-q2
           </div>
         </div>
         <div className="w-16 flex-shrink-0" />
@@ -402,7 +402,7 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="https://app.co-lab.com/signup"
+              href="https://app.colabapp.ai/signup"
               className="group relative inline-flex items-center gap-2.5 px-7 py-4 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
@@ -410,7 +410,7 @@ export default function Hero() {
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a
-              href="https://app.co-lab.com/demo"
+              href="https://app.colabapp.ai/demo"
               className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#C5CBDA] hover:text-white border border-white/[0.10] hover:border-white/[0.20] bg-white/[0.04] backdrop-blur-sm rounded-2xl transition-all hover:bg-white/[0.08]"
             >
               <span className="w-7 h-7 rounded-xl bg-[#6366F1]/20 flex items-center justify-center flex-shrink-0">

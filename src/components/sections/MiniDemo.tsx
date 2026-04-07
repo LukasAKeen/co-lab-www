@@ -243,7 +243,7 @@ export default function MiniDemo() {
                       className="mt-5 flex items-center gap-3"
                     >
                       <a
-                        href="https://app.co-lab.com/signup"
+                        href="https://app.colabapp.ai/signup"
                         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.98]"
                       >
                         <Sparkles size={13} />

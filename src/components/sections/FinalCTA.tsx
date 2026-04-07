@@ -47,7 +47,7 @@ export default function FinalCTA() {
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://app.co-lab.com/signup"
+              href="https://app.colabapp.ai/signup"
               className="group relative inline-flex items-center gap-2.5 px-8 py-4 text-base font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all animate-[pulse-glow_3s_ease-in-out_infinite] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
@@ -55,7 +55,7 @@ export default function FinalCTA() {
               <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a
-              href="https://app.co-lab.com/demo"
+              href="https://app.colabapp.ai/demo"
               className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] bg-white/80 backdrop-blur-sm rounded-2xl transition-all shadow-sm hover:shadow-md"
             >
               <Play size={12} className="text-[#6366F1] fill-[#6366F1]" />
@@ -65,7 +65,7 @@ export default function FinalCTA() {
 
           <motion.div variants={fadeUp} className="mt-5 flex items-center justify-center">
             <a
-              href="https://app.co-lab.com/login"
+              href="https://app.colabapp.ai/login"
               className="inline-flex items-center gap-1.5 text-sm text-[#9BA3B8] hover:text-[#3D4663] transition-colors"
             >
               Already have an account? Sign in

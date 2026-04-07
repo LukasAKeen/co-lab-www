@@ -134,7 +134,7 @@ export default function Testimonials() {
         >
           <p className="text-sm text-[#9BA3B8] mb-4">Join the teams closing deals faster.</p>
           <a
-            href="https://app.co-lab.com/signup"
+            href="https://app.colabapp.ai/signup"
             className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
           >
             <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
