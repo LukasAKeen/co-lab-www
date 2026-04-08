@@ -180,7 +180,7 @@ export default function Pricing() {
                 {/* CTA */}
                 {plan.ctaStyle === 'primary' ? (
                   <a
-                    href={plan.href}
+                    target="_blank" rel="noopener noreferrer" href={plan.href}
                     className={`group relative w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white rounded-xl transition-all active:scale-[0.97] ${
                       plan.highlighted
                         ? 'bg-[#6366F1] hover:bg-[#5558E8] hover:shadow-[0_0_30px_rgba(99,102,241,0.35)]'
@@ -193,7 +193,7 @@ export default function Pricing() {
                   </a>
                 ) : (
                   <a
-                    href={plan.href}
+                    target="_blank" rel="noopener noreferrer" href={plan.href}
                     className="group w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] rounded-xl transition-all hover:shadow-md active:scale-[0.97]"
                   >
                     {plan.cta}

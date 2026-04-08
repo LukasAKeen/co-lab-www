@@ -185,7 +185,7 @@ export default function HowItWorks() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="https://app.colabapp.ai/register"
+              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
               className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
@@ -193,7 +193,7 @@ export default function HowItWorks() {
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a
-              href="https://app.colabapp.ai/demo"
+              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
               className="group inline-flex items-center gap-2 text-sm font-semibold text-[#6366F1] hover:text-[#4F46E5] transition-colors"
             >
               See how it works in 2 minutes

@@ -402,7 +402,7 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="https://app.colabapp.ai/register"
+              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
               className="group relative inline-flex items-center gap-2.5 px-7 py-4 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] active:scale-[0.97]"
             >
               <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
@@ -410,7 +410,7 @@ export default function Hero() {
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a
-              href="https://app.colabapp.ai/demo"
+              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
               className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#C5CBDA] hover:text-white border border-white/[0.10] hover:border-white/[0.20] bg-white/[0.04] backdrop-blur-sm rounded-2xl transition-all hover:bg-white/[0.08]"
             >
               <span className="w-7 h-7 rounded-xl bg-[#6366F1]/20 flex items-center justify-center flex-shrink-0">

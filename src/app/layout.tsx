@@ -15,19 +15,72 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
+const siteUrl = 'https://co-lab-www.vercel.app'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+
   title: 'Co-Lab — AI Builds the Deal Room. You Close the Deal.',
   description:
-    'Co-Lab is the AI-native digital sales room. AI analyzes your calls and auto-builds personalized pods — so every deal moves forward on autopilot.',
+    'AI-native digital sales rooms built from call transcripts. Real-time intent scoring, buyer analytics, and automated deal intelligence. Start free.',
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
+
   openGraph: {
     title: 'Co-Lab — AI-Native Digital Sales Rooms',
     description:
       'AI builds personalized deal rooms from your call transcripts. Real-time intent scoring, buyer analytics, and AI-powered deal intelligence.',
     type: 'website',
+    url: siteUrl,
+    siteName: 'Co-Lab',
+    locale: 'en_US',
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Co-Lab — AI-native digital sales rooms that build themselves',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Co-Lab — AI Builds the Deal Room. You Close the Deal.',
+    description:
+      'AI-native sales rooms built from call transcripts. Real-time intent scoring and automated deal intelligence.',
+    images: [`${siteUrl}/og-image.png`],
+  },
+
+  keywords: [
+    'AI sales room',
+    'digital sales room',
+    'AI deal room',
+    'AI pod builder',
+    'buyer intent scoring',
+    'sales enablement',
+    'mutual action plan',
+    'deal intelligence',
+    'sales analytics',
+    'Gong integration',
+    'call transcript AI',
+  ],
+
+  authors: [{ name: 'Co-Lab' }],
+  creator: 'Co-Lab',
+  publisher: 'Co-Lab',
+
+  alternates: {
+    canonical: siteUrl,
   },
 }
 

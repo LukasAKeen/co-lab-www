@@ -29,14 +29,14 @@ export default function Footer() {
             {/* Footer CTAs */}
             <div className="flex flex-wrap items-center gap-3 mb-5">
               <a
-                href="https://app.colabapp.ai/register"
+                target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-lg transition-all hover:shadow-[0_0_16px_rgba(99,102,241,0.3)] active:scale-[0.97]"
               >
                 Start Free
                 <ArrowRight size={12} />
               </a>
               <a
-                href="https://app.colabapp.ai/demo"
+                target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#6B7394] hover:text-[#0D1117] border border-black/[0.07] hover:border-black/[0.12] rounded-lg transition-all"
               >
                 Book a Demo
