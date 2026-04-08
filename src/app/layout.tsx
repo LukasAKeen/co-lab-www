@@ -15,7 +15,7 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
-const siteUrl = 'https://co-lab-www.vercel.app'
+const siteUrl = 'https://colabapp.ai'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

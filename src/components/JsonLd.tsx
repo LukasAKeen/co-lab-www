@@ -1,5 +1,5 @@
 export default function JsonLd() {
-  const siteUrl = 'https://co-lab-www.vercel.app'
+  const siteUrl = 'https://colabapp.ai'
   const appUrl = 'https://app.colabapp.ai'
 
   const organization = {
