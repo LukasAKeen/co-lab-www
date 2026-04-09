@@ -1,9 +1,22 @@
 import { Handshake, Twitter, Linkedin, Sparkles, ArrowRight } from 'lucide-react'
 
 const links = {
-  Product: ['Features', 'Analytics', 'Templates', 'AI Assistant', 'Pricing'],
-  Company: ['About', 'Blog', 'Careers'],
-  Legal: ['Privacy', 'Terms'],
+  Product: [
+    { label: 'Features', href: '#features' },
+    { label: 'Analytics', href: '#analytics' },
+    { label: 'Templates', href: '#templates' },
+    { label: 'AI Assistant', href: '#features' },
+    { label: 'Pricing', href: '#pricing' },
+  ],
+  Company: [
+    { label: 'About', href: '#' },
+    { label: 'Blog', href: '#' },
+    { label: 'Careers', href: '#' },
+  ],
+  Legal: [
+    { label: 'Privacy', href: '/privacy' },
+    { label: 'Terms', href: '/terms' },
+  ],
 }
 
 export default function Footer() {
@@ -68,12 +81,12 @@ export default function Footer() {
               </p>
               <ul className="space-y-3">
                 {items.map((item) => (
-                  <li key={item}>
+                  <li key={item.label}>
                     <a
-                      href="#"
+                      href={item.href}
                       className="text-sm text-[#6B7394] hover:text-[#0D1117] transition-colors"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}
