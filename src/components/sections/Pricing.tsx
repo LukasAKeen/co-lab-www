@@ -30,7 +30,7 @@ const plans = [
   {
     name: 'Growth',
     description: 'Scale your deal rooms',
-    price: '$49',
+    price: '$35',
     period: '/seat/mo',
     color: '#6366F1',
     bg: 'rgba(99,102,241,0.06)',
@@ -53,7 +53,7 @@ const plans = [
   {
     name: 'Accelerate',
     description: 'Unlimited power with AI',
-    price: '$99',
+    price: '$55',
     period: '/seat/mo',
     color: '#34D399',
     bg: 'rgba(52,211,153,0.06)',

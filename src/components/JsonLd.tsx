@@ -38,11 +38,11 @@ export default function JsonLd() {
       {
         '@type': 'Offer',
         name: 'Growth',
-        price: '49',
+        price: '35',
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '49',
+          price: '35',
           priceCurrency: 'USD',
           unitText: 'seat/month',
         },
@@ -52,11 +52,11 @@ export default function JsonLd() {
       {
         '@type': 'Offer',
         name: 'Accelerate',
-        price: '99',
+        price: '55',
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '99',
+          price: '55',
           priceCurrency: 'USD',
           unitText: 'seat/month',
         },
@@ -139,7 +139,7 @@ export default function JsonLd() {
         name: 'How much does Co-Lab cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Co-Lab offers three plans: Starter (Free) with up to 3 pods, Growth ($49/seat/mo) with up to 20 pods and CRM integrations, and Accelerate ($99/seat/mo) with unlimited pods and full AI features including AI Pod Builder, AI content generation, and AI chat agent.',
+          text: 'Co-Lab offers three plans: Starter (Free) with up to 3 pods, Growth ($35/seat/mo) with up to 20 pods and CRM integrations, and Accelerate ($55/seat/mo) with unlimited pods and full AI features including AI Pod Builder, AI content generation, and AI chat agent.',
         },
       },
     ],
