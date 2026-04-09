@@ -14,21 +14,20 @@ import {
 } from 'lucide-react'
 import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
 
-const sampleTranscript = `"Our team has about 200 seats on the current tool. Security compliance is a hard requirement — we'll need SOC2 docs before legal signs off. Can you walk me through the ROI? Timeline is end of Q2 for us. We'd also love a quick intro video from your team..."`
+const templateTranscript = `"Our team has about 200 seats on the current tool. Security compliance is a hard requirement — we'll need SOC2 docs before legal signs off. Can you walk me through the ROI? Timeline is end of Q2 for us. We'd also love a quick intro video from your team..."`
 
 const generatedBlocks = [
-  { icon: LayoutGrid, label: 'Hero Section', detail: 'Personalized for Meridian Corp', color: '#6366F1', confidence: '98%' },
+  { icon: LayoutGrid, label: 'Hero Section', detail: 'Personalized welcome header', color: '#6366F1', confidence: '98%' },
   { icon: Video, label: 'Welcome Video', detail: 'Intro from your AE — placeholder ready', color: '#34D399', confidence: '95%' },
   { icon: BarChart3, label: 'ROI Calculator', detail: 'Extracted: "walk me through the ROI"', color: '#F59E0B', confidence: '94%' },
   { icon: FileText, label: 'Security & Compliance', detail: 'Extracted: "SOC2 docs before legal"', color: '#F43F5E', confidence: '92%' },
   { icon: ListChecks, label: 'Mutual Action Plan', detail: 'Extracted: "Timeline is end of Q2"', color: '#6366F1', confidence: '90%' },
 ]
 
-type Phase = 'input' | 'loading' | 'result'
+type Phase = 'ready' | 'loading' | 'result'
 
 export default function MiniDemo() {
-  const [phase, setPhase] = useState<Phase>('input')
-  const [transcript, setTranscript] = useState('')
+  const [phase, setPhase] = useState<Phase>('ready')
 
   function handleGenerate() {
     setPhase('loading')
@@ -36,8 +35,7 @@ export default function MiniDemo() {
   }
 
   function handleReset() {
-    setPhase('input')
-    setTranscript('')
+    setPhase('ready')
   }
 
   return (
@@ -71,7 +69,7 @@ export default function MiniDemo() {
             <span className="text-gradient-ai">Paste. Generate. Done.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-2xl mx-auto">
-            Drop in a snippet from your last Gong or Zoom call and watch AI build a deal room in seconds.
+            Watch how AI turns a sample call transcript into a complete deal room in seconds.
           </motion.p>
         </motion.div>
 
@@ -97,7 +95,7 @@ export default function MiniDemo() {
                   onClick={handleReset}
                   className="text-xs font-medium text-[#6366F1] hover:text-[#4F46E5] transition-colors"
                 >
-                  Try again
+                  Reset demo
                 </button>
               )}
             </div>
@@ -105,22 +103,21 @@ export default function MiniDemo() {
             {/* Body */}
             <div className="p-6">
               <AnimatePresence mode="wait">
-                {/* ── INPUT PHASE ── */}
-                {phase === 'input' && (
+                {/* ── READY PHASE — static template transcript ── */}
+                {phase === 'ready' && (
                   <motion.div
-                    key="input"
+                    key="ready"
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <textarea
-                      value={transcript}
-                      onChange={(e) => setTranscript(e.target.value)}
-                      placeholder={sampleTranscript}
-                      rows={5}
-                      className="w-full rounded-xl border border-black/[0.08] bg-[#F8F9FC] px-4 py-3.5 text-sm text-[#0D1117] placeholder:text-[#9BA3B8] focus:outline-none focus:border-[#6366F1]/30 focus:ring-2 focus:ring-[#6366F1]/10 transition-all resize-none"
-                    />
+                    <div className="mb-3">
+                      <span className="text-xs font-semibold text-[#9BA3B8] uppercase tracking-wider">Sample Call Transcript</span>
+                    </div>
+                    <div className="w-full rounded-xl border border-black/[0.08] bg-[#F8F9FC] px-4 py-3.5 text-sm text-[#3D4663] leading-relaxed">
+                      {templateTranscript}
+                    </div>
                     <button
                       onClick={handleGenerate}
                       className="group mt-4 w-full relative inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-[#6366F1] to-[#818CF8] hover:from-[#5558E8] hover:to-[#6366F1] rounded-xl transition-all hover:shadow-[0_0_40px_rgba(99,102,241,0.35)] active:scale-[0.98]"
@@ -131,7 +128,7 @@ export default function MiniDemo() {
                       <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
                     </button>
                     <p className="mt-3 text-center text-[11px] text-[#9BA3B8]">
-                      Or just click Generate to use the sample transcript above
+                      This is a sample transcript — click Generate to see the AI in action
                     </p>
                   </motion.div>
                 )}
@@ -146,7 +143,6 @@ export default function MiniDemo() {
                     transition={{ duration: 0.3 }}
                     className="flex flex-col items-center py-12"
                   >
-                    {/* Animated glow ring */}
                     <div className="relative mb-6">
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6366F1] to-[#34D399] flex items-center justify-center glow-ai">
                         <Sparkles size={24} className="text-white" />
@@ -195,17 +191,15 @@ export default function MiniDemo() {
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    {/* Success header */}
                     <div className="flex items-center gap-2 mb-5">
                       <div className="w-6 h-6 rounded-lg bg-[#34D399]/12 flex items-center justify-center">
                         <Sparkles size={12} className="text-[#34D399]" />
                       </div>
                       <span className="text-sm font-semibold text-[#0D1117]">
-                        Auto-Generated Pod — <span className="text-[#34D399]">Meridian Corp Q2 Deal</span>
+                        Auto-Generated Pod — <span className="text-[#34D399]">Sample Q2 Deal</span>
                       </span>
                     </div>
 
-                    {/* Generated blocks */}
                     <div className="space-y-2.5">
                       {generatedBlocks.map((block, i) => {
                         const Icon = block.icon
@@ -235,7 +229,6 @@ export default function MiniDemo() {
                       })}
                     </div>
 
-                    {/* Action bar */}
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}

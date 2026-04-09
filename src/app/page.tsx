@@ -13,7 +13,6 @@ import WhiteLabel from '@/components/sections/WhiteLabel'
 import Security from '@/components/sections/Security'
 import Integrations from '@/components/sections/Integrations'
 import Pricing from '@/components/sections/Pricing'
-import Testimonials from '@/components/sections/Testimonials'
 import FinalCTA from '@/components/sections/FinalCTA'
 
 export default function Home() {
@@ -33,7 +32,6 @@ export default function Home() {
       <Security />
       <Integrations />
       <Pricing />
-      <Testimonials />
       <FinalCTA />
       <Footer />
     </main>

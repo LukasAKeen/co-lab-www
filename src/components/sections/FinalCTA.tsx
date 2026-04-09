@@ -41,10 +41,6 @@ export default function FinalCTA() {
             and close faster. Sign up free and start in minutes.
           </motion.p>
 
-          <motion.p variants={fadeUp} className="text-sm text-[#9BA3B8] mb-8">
-            Trusted by <span className="font-semibold text-[#3D4663]">200+ sales teams</span> already using Co-Lab
-          </motion.p>
-
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
