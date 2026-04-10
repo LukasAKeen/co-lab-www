@@ -13,7 +13,7 @@ export default function JsonLd() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Sales',
-      url: `${appUrl}/demo`,
+      url: `${appUrl}/register`,
     },
   }
 

@@ -48,12 +48,6 @@ export default function Footer() {
                 Start Free
                 <ArrowRight size={12} />
               </a>
-              <a
-                target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
-                className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#6B7394] hover:text-[#0D1117] border border-black/[0.07] hover:border-black/[0.12] rounded-lg transition-all"
-              >
-                Book a Demo
-              </a>
             </div>
             <div className="flex items-center gap-3">
               <a

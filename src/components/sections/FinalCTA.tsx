@@ -50,13 +50,6 @@ export default function FinalCTA() {
               Get Started Free
               <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <a
-              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
-              className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-[#3D4663] hover:text-[#0D1117] border border-black/[0.08] hover:border-black/[0.15] bg-white/80 backdrop-blur-sm rounded-2xl transition-all shadow-sm hover:shadow-md"
-            >
-              <Play size={12} className="text-[#6366F1] fill-[#6366F1]" />
-              Book a Demo
-            </a>
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-5 flex items-center justify-center">

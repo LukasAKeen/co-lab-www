@@ -409,15 +409,6 @@ export default function Hero() {
               Get Started Free
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <a
-              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
-              className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-medium text-[#C5CBDA] hover:text-white border border-white/[0.10] hover:border-white/[0.20] bg-white/[0.04] backdrop-blur-sm rounded-2xl transition-all hover:bg-white/[0.08]"
-            >
-              <span className="w-7 h-7 rounded-xl bg-[#6366F1]/20 flex items-center justify-center flex-shrink-0">
-                <Play size={10} className="text-[#818CF8] fill-[#818CF8] ml-0.5" />
-              </span>
-              Book a Demo
-            </a>
           </motion.div>
         </motion.div>
 

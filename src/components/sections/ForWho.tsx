@@ -156,13 +156,6 @@ export default function ForWho() {
               Get Started Free
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <a
-              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6366F1] hover:text-[#4F46E5] transition-colors"
-            >
-              Book a Demo
-              <ArrowRight size={14} />
-            </a>
           </div>
         </motion.div>
       </div>

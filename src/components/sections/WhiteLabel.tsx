@@ -155,13 +155,6 @@ export default function WhiteLabel() {
                 >
                   Start Free
                 </a>
-                <a
-                  target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/demo"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#F43F5E] hover:text-[#E11D48] transition-colors"
-                >
-                  <Sparkles size={13} />
-                  See it in action
-                </a>
               </div>
             </motion.div>
           </motion.div>
