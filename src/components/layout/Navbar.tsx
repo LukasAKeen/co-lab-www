@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Handshake, Menu, X, Sparkles } from 'lucide-react'
 
 const navLinks = [
+  { label: 'About', href: '#about' },
   { label: 'Features', href: '#features' },
-  { label: 'Analytics', href: '#analytics' },
-  { label: 'Templates', href: '#templates' },
   { label: 'Pricing', href: '#pricing' },
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
 ]
 
 export default function Navbar() {

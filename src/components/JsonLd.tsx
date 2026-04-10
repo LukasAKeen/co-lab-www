@@ -8,7 +8,7 @@ export default function JsonLd() {
     name: 'Co-Lab',
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
-    description: 'AI-native digital sales room platform that builds personalized deal rooms from call transcripts.',
+    description: 'Co-Lab is a digital sales room platform that helps B2B sales teams create personalized, interactive workspaces (Pods) where they share proposals, presentations, pricing, and mutual action plans with their buyers.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -22,7 +22,7 @@ export default function JsonLd() {
     '@type': 'SoftwareApplication',
     name: 'Co-Lab',
     description:
-      'AI-native digital sales room that analyzes call transcripts, auto-builds personalized pods with AI-suggested content blocks, and provides real-time buyer intent scoring.',
+      'Co-Lab is a digital sales room platform for B2B sales teams. Users can create personalized workspaces (Pods), upload sales materials, share content with buyers via a single link, track buyer engagement, generate Mutual Action Plans, and use AI to analyze call transcripts and suggest pod content. Co-Lab integrates with Salesforce, HubSpot, Gong, Slack, DocuSign, and PandaDoc. When users sign in with Google, Co-Lab requests only basic profile data (name, email, profile photo) and does not access Gmail, Drive, Calendar, or other Workspace data.',
     url: siteUrl,
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',

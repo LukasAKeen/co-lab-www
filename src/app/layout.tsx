@@ -20,9 +20,9 @@ const siteUrl = 'https://colabapp.ai'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
-  title: 'Co-Lab — AI Builds the Deal Room. You Close the Deal.',
+  title: 'Co-Lab — Digital Sales Rooms for B2B Sales Teams',
   description:
-    'AI-native digital sales rooms built from call transcripts. Real-time intent scoring, buyer analytics, and automated deal intelligence. Start free.',
+    'Co-Lab is a digital sales room platform that helps B2B sales teams create personalized workspaces (Pods) to share proposals, track buyer engagement, and close deals. AI-powered, with Salesforce, HubSpot, and Gong integrations.',
 
   robots: {
     index: true,
