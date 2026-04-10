@@ -22,7 +22,6 @@ export default function Home() {
       <JsonLd />
       <Navbar />
       <Hero />
-      <AboutDataUsage />
       <HowItWorks />
       <MiniDemo />
       <Problem />
@@ -35,6 +34,7 @@ export default function Home() {
       <Integrations />
       <Pricing />
       <FinalCTA />
+      <AboutDataUsage />
       <Footer />
     </main>
   )
