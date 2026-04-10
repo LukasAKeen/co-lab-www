@@ -2,7 +2,6 @@ import JsonLd from '@/components/JsonLd'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
-import AboutDataUsage from '@/components/sections/AboutDataUsage'
 import MiniDemo from '@/components/sections/MiniDemo'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Problem from '@/components/sections/Problem'
@@ -34,7 +33,6 @@ export default function Home() {
       <Integrations />
       <Pricing />
       <FinalCTA />
-      <AboutDataUsage />
       <Footer />
     </main>
   )
