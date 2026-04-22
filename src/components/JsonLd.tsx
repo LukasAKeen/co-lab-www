@@ -123,7 +123,7 @@ export default function JsonLd() {
         name: 'Does Co-Lab train AI models on my sales data?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No. Co-Lab does NOT train foundational AI models on your proprietary sales calls or buyer data. Your data is yours. Co-Lab is SOC 2 Type II compliant with end-to-end encryption.',
+          text: 'No. Co-Lab does NOT train foundational AI models on your proprietary sales calls or buyer data. Your data is yours, encrypted in transit and at rest.',
         },
       },
       {

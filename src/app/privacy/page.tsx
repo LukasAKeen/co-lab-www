@@ -117,9 +117,7 @@ export default function PrivacyPage() {
             <ul className="list-disc pl-6 space-y-1.5 mt-2">
               <li><strong>Encryption in transit:</strong> All data transmitted via TLS 1.3</li>
               <li><strong>Encryption at rest:</strong> All stored data encrypted with AES-256</li>
-              <li><strong>SOC 2 Type II compliance:</strong> Audited controls for security, availability, and confidentiality</li>
               <li><strong>Access controls:</strong> Role-based access controls and audit logging</li>
-              <li><strong>Regular security testing:</strong> Annual penetration testing by third-party firms</li>
             </ul>
             <p className="mt-3">
               While we strive to protect your information, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.

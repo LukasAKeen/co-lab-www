@@ -8,7 +8,6 @@ import Problem from '@/components/sections/Problem'
 import Features from '@/components/sections/Features'
 import ForWho from '@/components/sections/ForWho'
 import WhiteLabel from '@/components/sections/WhiteLabel'
-import Security from '@/components/sections/Security'
 import Integrations from '@/components/sections/Integrations'
 import Pricing from '@/components/sections/Pricing'
 import FinalCTA from '@/components/sections/FinalCTA'
@@ -25,7 +24,6 @@ export default function Home() {
       <Features />
       <ForWho />
       <WhiteLabel />
-      <Security />
       <Integrations />
       <Pricing />
       <FinalCTA />
