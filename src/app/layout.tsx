@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
   title: 'Co-Lab — Digital Sales Rooms for B2B Sales Teams',
   description:
-    'Co-Lab is a digital sales room platform that helps B2B sales teams create personalized workspaces (Pods) to share proposals, track buyer engagement, and close deals. AI-powered, built from your call transcripts.',
+    'Co-Lab is the sales enablement workspace where AEs build buyer-facing micro-sites for every deal. Track engagement, run mutual action plans, and close deals between meetings — with an AI coach along for the ride.',
 
   robots: {
     index: true,
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Co-Lab — AI-Native Digital Sales Rooms',
+    title: 'Co-Lab — Digital Sales Rooms that Move Deals Forward',
     description:
-      'AI builds personalized deal rooms from your call transcripts. Real-time intent scoring, buyer analytics, and AI-powered deal intelligence.',
+      'Build a buyer-facing micro-site for every deal. Track engagement, run mutual action plans, and close more deals — with an AI coach that helps draft the first version.',
     type: 'website',
     url: siteUrl,
     siteName: 'Co-Lab',
@@ -52,30 +52,30 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Co-Lab — AI-native digital sales rooms that build themselves',
+        alt: 'Co-Lab — Digital sales rooms for every deal',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Co-Lab — AI Builds the Deal Room. You Close the Deal.',
+    title: 'Co-Lab — Every Deal Deserves Its Own Space',
     description:
-      'AI-native sales rooms built from call transcripts. Real-time intent scoring and automated deal intelligence.',
+      'The sales enablement workspace where AEs build buyer-facing micro-sites for every deal. Engagement tracking, mutual action plans, and an AI deal coach.',
     images: [`${siteUrl}/og-image.png`],
   },
 
   keywords: [
-    'AI sales room',
     'digital sales room',
-    'AI deal room',
-    'AI pod builder',
-    'buyer intent scoring',
-    'sales enablement',
+    'sales enablement platform',
+    'deal room software',
+    'buyer engagement',
     'mutual action plan',
-    'deal intelligence',
+    'sales micro-site',
+    'sales workspace',
+    'buyer intent scoring',
+    'AI deal coach',
     'sales analytics',
-    'call transcript AI',
   ],
 
   authors: [{ name: 'Co-Lab' }],

@@ -65,11 +65,11 @@ export default function MiniDemo() {
             variants={fadeUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
           >
-            See it for yourself.{' '}
-            <span className="text-gradient-ai">Paste. Generate. Done.</span>
+            Need a head start?{' '}
+            <span className="text-gradient-ai">Let the AI coach draft it.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-2xl mx-auto">
-            Watch how AI turns a sample call transcript into a complete deal room in seconds.
+            Drop in a call transcript and get a complete first draft of your deal room — blocks, pricing, MAP. Refine everything from there.
           </motion.p>
         </motion.div>
 
@@ -88,7 +88,7 @@ export default function MiniDemo() {
                 <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#34D399] flex items-center justify-center">
                   <Sparkles size={13} className="text-white" />
                 </div>
-                <span className="text-sm font-semibold text-[#0D1117]">AI Pod Generator</span>
+                <span className="text-sm font-semibold text-[#0D1117]">AI Draft Assist</span>
               </div>
               {phase === 'result' && (
                 <button
@@ -124,11 +124,11 @@ export default function MiniDemo() {
                     >
                       <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
                       <Sparkles size={15} />
-                      Generate Deal Room
+                      Draft My Deal Room
                       <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
                     </button>
                     <p className="mt-3 text-center text-[11px] text-[#9BA3B8]">
-                      This is a sample transcript — click Generate to see the AI in action
+                      Sample transcript — click Draft to see the AI coach in action
                     </p>
                   </motion.div>
                 )}
@@ -151,7 +151,7 @@ export default function MiniDemo() {
                     </div>
                     <div className="flex items-center gap-2 mb-2">
                       <Loader2 size={14} className="text-[#6366F1] animate-spin" />
-                      <span className="text-sm font-semibold text-[#0D1117]">AI is analyzing transcript...</span>
+                      <span className="text-sm font-semibold text-[#0D1117]">Drafting your deal room...</span>
                     </div>
                     <div className="space-y-1 text-center">
                       <motion.p
@@ -196,7 +196,7 @@ export default function MiniDemo() {
                         <Sparkles size={12} className="text-[#34D399]" />
                       </div>
                       <span className="text-sm font-semibold text-[#0D1117]">
-                        Auto-Generated Pod — <span className="text-[#34D399]">Sample Q2 Deal</span>
+                        First Draft Ready — <span className="text-[#34D399]">Sample Q2 Deal</span>
                       </span>
                     </div>
 

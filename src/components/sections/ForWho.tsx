@@ -11,12 +11,12 @@ const personas = [
     bg: 'rgba(99,102,241,0.08)',
     border: 'rgba(99,102,241,0.15)',
     role: 'Account Executives',
-    tagline: 'AI does the busywork. You do the selling.',
-    description: 'Paste a call transcript and let AI build the pod. Track every buyer move with real-time intent. Follow up at exactly the right moment.',
+    tagline: 'Turn every call into a buyer-ready room.',
+    description: 'Build a personalized deal room in minutes, not hours. See every buyer move with real-time intent, and let the AI coach flag when it\u2019s time to follow up.',
     benefits: [
-      'AI builds pods from call transcripts',
+      'One buyer-facing link per deal',
       'Real-time alerts when deals heat up',
-      'Close 4.2× more deals with personalized rooms',
+      'AI coach drafts your first pod from a call',
     ],
   },
   {
@@ -25,12 +25,12 @@ const personas = [
     bg: 'rgba(52,211,153,0.08)',
     border: 'rgba(52,211,153,0.15)',
     role: 'Sales Leaders',
-    tagline: 'AI-powered visibility into every deal.',
-    description: 'See which deals need attention before they stall. AI scores intent across your pipeline so you coach from data, not gut feel.',
+    tagline: 'See which deals are moving — and which aren\u2019t.',
+    description: 'Pipeline-wide visibility into every buyer interaction. Coach from evidence, not gut feel, and standardize how your team runs every deal.',
     benefits: [
-      'Pipeline-wide AI intent scoring',
+      'Pipeline-wide engagement & intent scoring',
       'Spot at-risk deals before they go cold',
-      'Standardize AI-powered deal rooms across teams',
+      'Consistent rooms across the whole team',
     ],
   },
   {
@@ -39,10 +39,10 @@ const personas = [
     bg: 'rgba(245,158,11,0.08)',
     border: 'rgba(245,158,11,0.15)',
     role: 'Revenue Operations',
-    tagline: 'Scale AI-driven deal rooms across the org.',
-    description: 'Create AI templates once, deploy them everywhere. Every pod is consistent, trackable, and integrated with your CRM stack.',
+    tagline: 'One template. Every deal. Fully branded.',
+    description: 'Define blocks, approvals, and brand rules once — deploy everywhere. Every pod stays on-message, on-brand, and in sync with your CRM.',
     benefits: [
-      'One AI template, infinite personalized pods',
+      'Reusable templates across the org',
       'Engagement data syncs back to your CRM',
       'White-label rooms match your company brand',
     ],
@@ -53,8 +53,8 @@ const personas = [
     bg: 'rgba(244,63,94,0.08)',
     border: 'rgba(244,63,94,0.15)',
     role: 'Customer Success',
-    tagline: 'Sales room becomes an onboarding portal.',
-    description: 'When the deal closes, the pod doesn\u2019t die. Co-Lab seamlessly transitions from a deal room into a customer onboarding portal \u2014 same link, same space, zero friction for the buyer.',
+    tagline: 'Your sales room becomes their onboarding portal.',
+    description: 'When the deal closes, the pod doesn\u2019t die. Swap deal content for onboarding resources — same link, same space, zero friction for the customer.',
     benefits: [
       'One link from sales through onboarding',
       'Swap blocks from deal content to CS resources',
@@ -85,7 +85,7 @@ export default function ForWho() {
             <span className="text-gradient-ai">close deals.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-4 text-lg text-[#3D4663] max-w-xl mx-auto">
-            From first call to onboarding — Co-Lab&apos;s AI fits every team that touches the deal.
+            From first call to onboarding — one workspace for every team that touches the deal.
           </motion.p>
         </motion.div>
 

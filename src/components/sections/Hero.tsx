@@ -1,11 +1,9 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import {
   ArrowRight,
   Sparkles,
-  CheckCircle2,
   Handshake,
   FileText,
   Phone,
@@ -39,13 +37,6 @@ const sidebarItems = [
 
 /* ── The light-mode app mockup with build animation ── */
 function AppMockup() {
-  const [toastPhase, setToastPhase] = useState<'analyzing' | 'done'>('analyzing')
-
-  useEffect(() => {
-    const timer = setTimeout(() => setToastPhase('done'), 3200)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <div className="rounded-2xl overflow-hidden shadow-[0_32px_100px_rgba(0,0,0,0.12),0_0_0_1px_rgba(0,0,0,0.04)]">
       {/* ── Browser chrome ── */}
@@ -65,44 +56,6 @@ function AppMockup() {
 
       {/* ── App shell ── */}
       <div className="flex bg-[#F8F9FC] relative" style={{ minHeight: 420 }}>
-
-        {/* ── AI Toast overlay ── */}
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30">
-          <AnimatePresence mode="wait">
-            {toastPhase === 'analyzing' ? (
-              <motion.div
-                key="analyzing"
-                initial={{ opacity: 0, y: -12, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -8, scale: 0.95 }}
-                transition={{ duration: 0.4, ease }}
-                className="glass-card rounded-xl px-4 py-2.5 shadow-[0_8px_32px_rgba(99,102,241,0.12)] flex items-center gap-2.5"
-              >
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6366F1] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#6366F1]" />
-                </span>
-                <Sparkles size={12} className="text-[#6366F1]" />
-                <span className="text-[12px] font-medium text-[#3D4663]">
-                  Analyzing call transcript: <span className="font-semibold text-[#0D1117]">Meridian Q2 Discovery</span>...
-                </span>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="done"
-                initial={{ opacity: 0, y: -12, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.4, ease }}
-                className="glass-card rounded-xl px-4 py-2.5 shadow-[0_8px_32px_rgba(52,211,153,0.12)] flex items-center gap-2.5"
-              >
-                <CheckCircle2 size={14} className="text-[#34D399]" />
-                <span className="text-[12px] font-semibold text-[#059669]">
-                  Pod generated in 4 seconds
-                </span>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
 
         {/* ── Sidebar ── */}
         <div className="w-[200px] flex-shrink-0 bg-white border-r border-[#E5E7EB] flex flex-col py-4">
@@ -211,7 +164,7 @@ function AppMockup() {
                 </div>
                 <span className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider">Welcome Block</span>
                 <span className="ml-auto text-[9px] font-semibold text-[#6366F1] bg-[#6366F1]/8 px-1.5 py-0.5 rounded flex items-center gap-0.5">
-                  <Sparkles size={7} /> AI
+                  <Sparkles size={7} /> AI Drafted
                 </span>
               </div>
               <h3 className="text-[15px] font-bold text-[#0D1117] mb-1.5 leading-snug">
@@ -242,9 +195,6 @@ function AppMockup() {
                   <FileText size={10} className="text-[#34D399]" />
                 </div>
                 <span className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider">Solution Overview</span>
-                <span className="ml-auto text-[9px] font-semibold text-[#34D399] bg-[#34D399]/8 px-1.5 py-0.5 rounded flex items-center gap-0.5">
-                  <Sparkles size={7} /> AI
-                </span>
               </div>
               {/* Placeholder content */}
               <div className="space-y-2.5">
@@ -274,9 +224,6 @@ function AppMockup() {
                   <BarChart3 size={10} className="text-[#F59E0B]" />
                 </div>
                 <span className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider">ROI & Pricing</span>
-                <span className="ml-auto text-[9px] font-semibold text-[#F59E0B] bg-[#F59E0B]/8 px-1.5 py-0.5 rounded flex items-center gap-0.5">
-                  <Sparkles size={7} /> AI
-                </span>
               </div>
               <div className="flex items-center gap-3">
                 {[
@@ -304,9 +251,6 @@ function AppMockup() {
                   <ListChecks size={10} className="text-[#F43F5E]" />
                 </div>
                 <span className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider">Mutual Action Plan</span>
-                <span className="ml-auto text-[9px] font-semibold text-[#F43F5E] bg-[#F43F5E]/8 px-1.5 py-0.5 rounded flex items-center gap-0.5">
-                  <Sparkles size={7} /> AI
-                </span>
               </div>
               <div className="space-y-2">
                 {[
@@ -364,12 +308,11 @@ export default function Hero() {
           animate="visible"
           className="text-center max-w-4xl mx-auto mb-10 sm:mb-16"
         >
-          {/* Badge — single, design-style pill with inline accent */}
+          {/* Badge — product-first pill */}
           <motion.div variants={fadeUp} className="inline-flex items-center justify-center mb-8">
             <span className="bg-white/[0.06] backdrop-blur-sm border border-white/[0.12] rounded-full pl-1.5 pr-4 py-1 text-xs font-medium text-[#C8CDDA] flex items-center gap-2.5">
               <span className="bg-[#818CF8]/15 border border-[#818CF8]/25 rounded-full px-2.5 py-1 text-[#A5B4FC] font-semibold flex items-center gap-1.5">
-                <Sparkles size={10} />
-                AI-Powered
+                Digital Sales Rooms
               </span>
               <span className="flex items-center gap-1.5">
                 <AIPulseDot />
@@ -383,9 +326,9 @@ export default function Hero() {
             variants={fadeUp}
             className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-[1.08] sm:leading-[1.04] mb-5 sm:mb-6 text-white"
           >
-            Your AI builds the deal room.
+            Every deal deserves its own space.
             <br />
-            <span className="text-gradient-ai">You close the deal.</span>
+            <span className="text-gradient-ai">Close it there.</span>
           </motion.h1>
 
           {/* Subhead */}
@@ -393,9 +336,7 @@ export default function Hero() {
             variants={fadeUp}
             className="text-base sm:text-lg md:text-xl text-[#8892AA] leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto"
           >
-            Co-Lab is the AI-native digital sales room that analyzes your calls
-            and auto-builds personalized pods — so every deal moves forward on
-            autopilot.
+            Co-Lab is the sales workspace where AEs build buyer-facing micro-sites for every deal — with live engagement tracking, mutual action plans, and an AI coach that drafts the first version and flags what&apos;s stalling.
           </motion.p>
 
           {/* CTAs */}

@@ -13,11 +13,11 @@ const oldWay = [
 ]
 
 const newWay = [
-  { icon: Sparkles, text: 'AI builds the pod from your call transcript' },
-  { icon: Sparkles, text: 'Real-time intent scoring on every visit' },
   { icon: Check, text: 'One link, all content, fully trackable' },
-  { icon: Sparkles, text: 'Every room auto-personalized per buyer' },
-  { icon: Check, text: 'AI alerts you when buyers re-engage' },
+  { icon: Check, text: 'Real-time intent scoring on every visit' },
+  { icon: Check, text: 'Every room personalized per buyer' },
+  { icon: Check, text: 'Alerts when buyers re-engage or go cold' },
+  { icon: Sparkles, text: 'AI coach drafts the first version from your call' },
 ]
 
 export default function Problem() {
@@ -40,11 +40,11 @@ export default function Problem() {
             variants={fadeUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] max-w-3xl mx-auto leading-tight"
           >
-            Manual deal rooms are killing your{' '}
-            <span className="text-gradient">win rate.</span>
+            Deals don&apos;t die on calls —{' '}
+            <span className="text-gradient">they die between meetings.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-xl mx-auto">
-            While you spend hours on decks, your competitors are using AI. The gap is growing.
+            The PDF in the inbox. The deck buried three threads deep. The silence after the demo. That&apos;s where deals are won or lost.
           </motion.p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export default function Problem() {
             73%
           </div>
           <p className="mt-4 text-base sm:text-lg text-[#3D4663] max-w-xl mx-auto leading-relaxed">
-            of deals are lost because buyers go silent — no AI follow-up trigger, no visibility into intent.
+            of deals are lost in the silence between meetings — no visibility, no signal, no way back in.
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ export default function Problem() {
                   }}>
                     The Co-Lab way
                   </div>
-                  <div className="text-sm font-semibold text-white">AI-Built Sales Rooms</div>
+                  <div className="text-sm font-semibold text-white">One Space Per Deal</div>
                 </div>
               </div>
               <ul className="space-y-3.5">

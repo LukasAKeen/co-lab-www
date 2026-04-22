@@ -33,10 +33,10 @@ function PodBuilderMockup() {
   return (
     <div className="rounded-2xl border border-black/[0.06] bg-white overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.1)]">
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-black/[0.05] bg-[#FAFBFF]">
-        <span className="text-xs font-semibold text-[#0D1117]">AI Pod Builder</span>
+        <span className="text-xs font-semibold text-[#0D1117]">Pod Builder</span>
         <span className="text-[10px] bg-gradient-to-r from-[#6366F1] to-[#34D399] text-white font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
           <Sparkles size={9} />
-          AI Ready
+          AI Assist
         </span>
       </div>
       <div className="flex flex-col sm:flex-row">
@@ -176,11 +176,11 @@ function MAPMockup() {
           <div className="w-6 h-6 rounded-lg bg-[#F43F5E]/12 flex items-center justify-center">
             <ListChecks size={12} className="text-[#F43F5E]" />
           </div>
-          <span className="text-xs font-semibold text-[#0D1117]">AI Mutual Action Plan</span>
+          <span className="text-xs font-semibold text-[#0D1117]">Mutual Action Plan</span>
         </div>
         <span className="text-[10px] bg-gradient-to-r from-[#F43F5E] to-[#F59E0B] text-white font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
           <Sparkles size={9} />
-          Auto-Generated
+          AI Drafted
         </span>
       </div>
 
@@ -188,7 +188,7 @@ function MAPMockup() {
       <div className="px-5 py-2.5 bg-[#F43F5E]/[0.03] border-b border-[#F43F5E]/10 flex items-center gap-2">
         <Sparkles size={10} className="text-[#F43F5E]" />
         <span className="text-[10px] text-[#F43F5E] font-medium">
-          Generated from transcript: &quot;Buyer timeline is end of Q2&quot;
+          Drafted from call: &quot;Buyer timeline is end of Q2&quot;
         </span>
       </div>
 
@@ -276,15 +276,15 @@ const features = [
     color: '#6366F1',
     bg: 'rgba(99,102,241,0.08)',
     border: 'rgba(99,102,241,0.18)',
-    eyebrow: 'AI Pod Builder',
-    title: 'Paste a transcript. Get a deal room.',
+    eyebrow: 'Pod Builder',
+    title: 'Build a buyer-ready room in minutes.',
     description:
-      'AI analyzes your sales call, selects the perfect template, and assembles a complete pod with the exact blocks, assets, and decks your buyer needs. Ready to share in seconds.',
-    tags: ['AI Generation', 'Smart Templates', 'One-Click Publish'],
+      'A drag-and-drop editor with everything a modern proposal needs — hero, video, pricing, case studies, mutual action plans. Start from a template, or let the AI coach draft one from a call transcript.',
+    tags: ['Drag-and-Drop Editor', 'Smart Templates', 'AI Draft Assist'],
     benefits: [
-      'AI builds from your call transcript',
+      'Reusable blocks, templates, and brand themes',
       'Dynamic tokens auto-fill buyer details',
-      'Blocks ranked by AI confidence score',
+      'Optional AI draft from a call transcript',
     ],
     mockup: PodBuilderMockup,
     align: 'left' as const,
@@ -297,12 +297,12 @@ const features = [
     eyebrow: 'Buyer Intelligence',
     title: "Know who's engaged — before they tell you.",
     description:
-      'Real-time intent scoring on every visit. See who viewed your room, which blocks they re-read, and how long they stayed. AI surfaces the signals — you close the deal.',
-    tags: ['Intent Score', 'Session Analytics', 'AI Signals'],
+      'Real-time intent scoring on every visit. See who viewed your room, which blocks they re-read, and how long they stayed. Your AI deal coach surfaces the signals — you decide when to move.',
+    tags: ['Intent Score', 'Session Analytics', 'Deal Coach Alerts'],
     benefits: [
       'Intent score updated in real time',
       'Block-level heatmaps show what resonates',
-      'AI alerts when deals are heating up',
+      'AI coach alerts when deals heat up or stall',
     ],
     mockup: AnalyticsMockup,
     align: 'right' as const,
@@ -312,15 +312,15 @@ const features = [
     color: '#F43F5E',
     bg: 'rgba(244,63,94,0.08)',
     border: 'rgba(244,63,94,0.18)',
-    eyebrow: 'AI Mutual Action Plans',
-    title: 'AI reads your call. Builds the timeline.',
+    eyebrow: 'Mutual Action Plans',
+    title: 'Keep both sides accountable to the timeline.',
     description:
-      'Forget manual checklists. Co-Lab\'s AI extracts buyer timelines, stakeholder requirements, and key milestones from your call transcript — then auto-generates a shared Mutual Action Plan that keeps both sides accountable.',
-    tags: ['Auto-Generated MAPs', 'Timeline Extraction', 'Shared Milestones'],
+      'A shared Mutual Action Plan lives inside every room — stakeholders, owners, dates, dependencies. The AI coach can draft one from your call transcript so you start with a complete timeline, not a blank checklist.',
+    tags: ['Shared MAPs', 'Stakeholder Tracking', 'AI Draft Assist'],
     benefits: [
-      'AI detects "end of Q2" and builds the milestone plan',
-      'Stakeholders, owners & dates assigned automatically',
       'Buyer-facing — both sides track progress in real time',
+      'Stakeholders, owners & dates in one view',
+      'AI coach drafts the first timeline from your call',
     ],
     mockup: MAPMockup,
     align: 'left' as const,
@@ -339,14 +339,14 @@ export default function Features() {
           className="text-center mb-24"
         >
           <motion.p variants={fadeUp} className="text-xs font-semibold text-[#6366F1] uppercase tracking-[0.15em] mb-4">
-            AI-Powered Features
+            The platform
           </motion.p>
           <motion.h2
             variants={fadeUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117]"
           >
-            Everything AI can do{' '}
-            <span className="text-gradient-ai">for your deals.</span>
+            Everything a modern sales room{' '}
+            <span className="text-gradient-ai">should do.</span>
           </motion.h2>
         </motion.div>
 

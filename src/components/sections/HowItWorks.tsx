@@ -21,13 +21,13 @@ const steps = [
     bg: 'rgba(52,211,153,0.08)',
     border: 'rgba(52,211,153,0.20)',
     glowClass: 'glow-mint',
-    title: 'AI Analyzes Your Calls',
+    title: 'Build Your Pod',
     description:
-      'Upload a call transcript and our AI parses every line, extracting buyer signals, objections, feature requests, and timeline cues automatically.',
+      'Drag in blocks, assets, pricing, and case studies — or start from a template. Prefer a head start? Drop in a call transcript and the AI coach drafts a first version you can refine.',
     details: [
-      { icon: FileText, text: 'Call transcripts parsed in seconds' },
-      { icon: FolderOpen, text: 'Files auto-categorized by type' },
-      { icon: BarChart3, text: 'Buyer signals extracted & scored' },
+      { icon: FolderOpen, text: 'Drag-and-drop block editor' },
+      { icon: FileText, text: 'Reusable templates for every deal stage' },
+      { icon: Sparkles, text: 'Optional AI draft from a call transcript' },
     ],
   },
   {
@@ -37,13 +37,13 @@ const steps = [
     bg: 'rgba(99,102,241,0.08)',
     border: 'rgba(99,102,241,0.20)',
     glowClass: 'glow-indigo',
-    title: 'AI Builds Your Pod',
+    title: 'Share One Link',
     description:
-      'Based on the transcript, AI suggests the perfect blocks, assets, and decks — then assembles a complete Pod layout you can publish in one click.',
+      'A branded, buyer-facing micro-site. No login walls, no attachments, no version confusion — just one place every stakeholder returns to.',
     details: [
-      { icon: Sparkles, text: 'Blocks suggested by AI confidence' },
-      { icon: Wand2, text: 'Assets matched from your library' },
-      { icon: BarChart3, text: 'Layout optimized for conversion' },
+      { icon: Wand2, text: 'Fully branded, no Co-Lab watermark' },
+      { icon: FileText, text: 'Decks, videos, pricing, MAPs in one place' },
+      { icon: BarChart3, text: 'Works on every device, no sign-up needed' },
     ],
   },
   {
@@ -53,13 +53,13 @@ const steps = [
     bg: 'rgba(245,158,11,0.08)',
     border: 'rgba(245,158,11,0.20)',
     glowClass: '',
-    title: 'AI Rewrites in Real Time',
+    title: 'Watch It Move',
     description:
-      'Need to tweak copy, swap a case study, or update pricing? The in-app AI assistant lets you rewrite, expand, or translate any block instantly — right in the workspace.',
+      'See which blocks buyers re-read, who visits, and when. Your AI deal coach surfaces the signals and flags deals going cold — so you follow up at exactly the right moment.',
     details: [
-      { icon: PenLine, text: 'Rewrite any block with a prompt' },
-      { icon: MessageSquareText, text: 'AI chat assistant in-workspace' },
-      { icon: Wand2, text: 'Tone, length & language controls' },
+      { icon: BarChart3, text: 'Block-level engagement analytics' },
+      { icon: MessageSquareText, text: 'AI coach flags stalling deals' },
+      { icon: PenLine, text: 'Iterate copy and blocks with AI assist' },
     ],
   },
 ]
@@ -81,21 +81,19 @@ export default function HowItWorks() {
           className="text-center mb-20"
         >
           <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-5">
-            <span className="bg-white border border-[#6366F1]/15 rounded-full px-4 py-1.5 text-xs font-semibold text-[#6366F1] shadow-sm flex items-center gap-1.5">
-              <Sparkles size={11} className="text-[#6366F1]" />
-              AI-Powered Workflow
+            <span className="bg-white border border-[#6366F1]/15 rounded-full px-4 py-1.5 text-xs font-semibold text-[#6366F1] shadow-sm">
+              How it works
             </span>
           </motion.div>
           <motion.h2
             variants={fadeUp}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
           >
-            From call to close —{' '}
-            <span className="text-gradient-ai">AI handles the rest.</span>
+            A room for every deal.{' '}
+            <span className="text-gradient-ai">Built in minutes.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-2xl mx-auto leading-relaxed">
-            Three steps. Zero manual work. Co-Lab&apos;s AI turns every sales call
-            into a buyer-ready deal room — automatically.
+            Three steps to turn every sales conversation into a living, buyer-facing space — with an AI coach riding shotgun.
           </motion.p>
         </motion.div>
 
