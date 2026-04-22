@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TrendingUp, Users, Settings2, HeartHandshake, Check, ArrowRight } from 'lucide-react'
+import { TrendingUp, Users, Settings2, HeartHandshake, Check } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const personas = [
@@ -65,7 +65,7 @@ const personas = [
 
 export default function ForWho() {
   return (
-    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+    <section id="who" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           variants={staggerContainer}
@@ -139,25 +139,6 @@ export default function ForWho() {
           })}
         </motion.div>
 
-        {/* CTA */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="text-center mt-12"
-        >
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
-              className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
-            >
-              <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
-              Get Started Free
-              <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-            </a>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

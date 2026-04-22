@@ -5,8 +5,6 @@ import { useState, useEffect } from 'react'
 import {
   ArrowRight,
   Sparkles,
-  Play,
-  Zap,
   CheckCircle2,
   Handshake,
   FileText,
@@ -366,16 +364,17 @@ export default function Hero() {
           animate="visible"
           className="text-center max-w-4xl mx-auto mb-10 sm:mb-16"
         >
-          {/* Badges */}
-          <motion.div variants={fadeUp} className="inline-flex flex-wrap items-center justify-center gap-2.5 mb-8">
-            <span className="bg-white/[0.06] backdrop-blur-sm border border-[#34D399]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#34D399] flex items-center gap-2">
-              <AIPulseDot />
-              AI-Powered
-              <Sparkles size={11} className="text-[#34D399]" />
-            </span>
-            <span className="bg-white/[0.06] backdrop-blur-sm border border-[#818CF8]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#818CF8] flex items-center gap-1.5">
-              <Zap size={11} className="fill-[#818CF8] text-[#818CF8]" />
-              4.2× more buyer engagement
+          {/* Badge — single, design-style pill with inline accent */}
+          <motion.div variants={fadeUp} className="inline-flex items-center justify-center mb-8">
+            <span className="bg-white/[0.06] backdrop-blur-sm border border-white/[0.12] rounded-full pl-1.5 pr-4 py-1 text-xs font-medium text-[#C8CDDA] flex items-center gap-2.5">
+              <span className="bg-[#818CF8]/15 border border-[#818CF8]/25 rounded-full px-2.5 py-1 text-[#A5B4FC] font-semibold flex items-center gap-1.5">
+                <Sparkles size={10} />
+                AI-Powered
+              </span>
+              <span className="flex items-center gap-1.5">
+                <AIPulseDot />
+                4.2× more buyer engagement
+              </span>
             </span>
           </motion.div>
 

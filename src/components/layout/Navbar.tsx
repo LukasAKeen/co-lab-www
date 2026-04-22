@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Handshake, Menu, X, Sparkles } from 'lucide-react'
 
 const navLinks = [
+  { label: 'How it works', href: '#how' },
   { label: 'Features', href: '#features' },
-  { label: 'Analytics', href: '#analytics' },
-  { label: 'Templates', href: '#templates' },
+  { label: 'Who it\u2019s for', href: '#who' },
+  { label: 'Integrations', href: '#integrations' },
   { label: 'Pricing', href: '#pricing' },
 ]
 
@@ -35,7 +36,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
+          <a href="/" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-xl bg-[#6366F1] flex items-center justify-center shadow-[0_0_16px_rgba(99,102,241,0.35)] group-hover:shadow-[0_0_24px_rgba(99,102,241,0.5)] transition-shadow">
               <Handshake size={16} className="text-white" />
             </div>

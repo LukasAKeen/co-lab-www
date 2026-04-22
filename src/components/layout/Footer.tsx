@@ -2,16 +2,10 @@ import { Handshake, Twitter, Linkedin, Sparkles, ArrowRight } from 'lucide-react
 
 const links = {
   Product: [
+    { label: 'How it works', href: '#how' },
     { label: 'Features', href: '#features' },
-    { label: 'Analytics', href: '#analytics' },
-    { label: 'Templates', href: '#templates' },
-    { label: 'AI Assistant', href: '#features' },
+    { label: 'Integrations', href: '#integrations' },
     { label: 'Pricing', href: '#pricing' },
-  ],
-  Company: [
-    { label: 'About', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#' },
   ],
   Legal: [
     { label: 'Privacy', href: '/privacy' },

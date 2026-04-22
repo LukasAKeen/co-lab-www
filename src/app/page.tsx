@@ -6,9 +6,7 @@ import MiniDemo from '@/components/sections/MiniDemo'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Problem from '@/components/sections/Problem'
 import Features from '@/components/sections/Features'
-import AnalyticsSpotlight from '@/components/sections/AnalyticsSpotlight'
 import ForWho from '@/components/sections/ForWho'
-import BuilderShowcase from '@/components/sections/BuilderShowcase'
 import WhiteLabel from '@/components/sections/WhiteLabel'
 import Security from '@/components/sections/Security'
 import Integrations from '@/components/sections/Integrations'
@@ -25,9 +23,7 @@ export default function Home() {
       <MiniDemo />
       <Problem />
       <Features />
-      <AnalyticsSpotlight />
       <ForWho />
-      <BuilderShowcase />
       <WhiteLabel />
       <Security />
       <Integrations />

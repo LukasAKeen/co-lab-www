@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { X, Check, Mail, Sparkles, Clock, Send, EyeOff, ArrowRight } from 'lucide-react'
+import { X, Check, Mail, Sparkles, Clock, Send, EyeOff } from 'lucide-react'
 import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const oldWay = [
@@ -48,18 +48,20 @@ export default function Problem() {
           </motion.p>
         </motion.div>
 
-        {/* Stat strip */}
+        {/* Stat block — design-style giant number */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="max-w-4xl mx-auto mb-8"
+          className="max-w-3xl mx-auto mb-12 sm:mb-16 text-center"
         >
-          <div className="rounded-2xl bg-[#F43F5E]/[0.04] border border-[#F43F5E]/12 px-6 py-5 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-            <span className="text-3xl font-extrabold text-[#F43F5E]">73%</span>
-            <span className="text-sm text-[#3D4663]">of deals are lost because buyers go silent — no AI follow-up trigger, no visibility into intent.</span>
+          <div className="text-[88px] sm:text-[120px] md:text-[160px] font-extrabold tracking-[-0.05em] leading-[0.9] bg-gradient-to-br from-[#F43F5E] to-[#6366F1] bg-clip-text text-transparent">
+            73%
           </div>
+          <p className="mt-4 text-base sm:text-lg text-[#3D4663] max-w-xl mx-auto leading-relaxed">
+            of deals are lost because buyers go silent — no AI follow-up trigger, no visibility into intent.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -92,32 +94,42 @@ export default function Problem() {
             </ul>
           </motion.div>
 
-          {/* New Way — glowing gradient border, elevated, vibrant */}
+          {/* New Way — dark elevated card, design-inspired */}
           <motion.div
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="relative rounded-2xl glow-border-mint bg-white p-5 sm:p-8 shadow-[0_20px_60px_rgba(52,211,153,0.10),0_0_80px_rgba(52,211,153,0.06)]"
+            className="relative rounded-2xl bg-[#0A0D14] p-5 sm:p-8 shadow-[0_24px_60px_rgba(99,102,241,0.25)] overflow-hidden"
           >
-            {/* Aurora accent */}
-            <div className="aurora-blob aurora-blob-2 w-[200px] h-[150px] -top-10 -right-10 opacity-40" />
+            {/* Subtle iris glow */}
+            <div className="absolute inset-0 opacity-90 pointer-events-none" style={{
+              background: 'radial-gradient(ellipse 80% 60% at 80% 0%, rgba(99,102,241,0.18) 0%, transparent 60%)',
+            }} />
+            <div className="absolute inset-0 dot-grid opacity-[0.05] pointer-events-none" />
 
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-7">
-                <div className="w-11 h-11 rounded-xl bg-[#34D399]/12 flex items-center justify-center">
-                  <Sparkles size={18} className="text-[#34D399]" />
+                <div className="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.10] flex items-center justify-center">
+                  <Sparkles size={18} className="text-[#818CF8]" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-semibold text-[#059669] uppercase tracking-wider">The Co-Lab way</div>
-                  <div className="text-sm font-semibold text-[#0D1117]">AI-Built Sales Rooms</div>
+                  <div className="text-[10px] font-semibold uppercase tracking-wider" style={{
+                    background: 'linear-gradient(90deg, #818CF8, #34D399)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    color: 'transparent',
+                  }}>
+                    The Co-Lab way
+                  </div>
+                  <div className="text-sm font-semibold text-white">AI-Built Sales Rooms</div>
                 </div>
               </div>
               <ul className="space-y-3.5">
                 {newWay.map((item) => (
-                  <li key={item.text} className="flex items-center gap-3 text-sm text-[#0D1117] font-medium">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#34D399]/15 flex items-center justify-center">
-                      <Check size={11} className="text-[#059669]" />
+                  <li key={item.text} className="flex items-center gap-3 text-sm text-white font-medium">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#818CF8]/15 border border-[#818CF8]/25 flex items-center justify-center">
+                      <Check size={11} className="text-[#818CF8]" />
                     </span>
                     {item.text}
                   </li>
@@ -126,24 +138,6 @@ export default function Problem() {
             </div>
           </motion.div>
         </div>
-
-        {/* CTA */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="text-center mt-12"
-        >
-          <a
-            target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
-            className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
-          >
-            <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
-            Get Started Free
-            <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-          </a>
-        </motion.div>
       </div>
     </section>
   )

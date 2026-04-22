@@ -5,7 +5,6 @@ import {
   FileSearch,
   Sparkles,
   MessageSquareText,
-  ArrowRight,
   FileText,
   FolderOpen,
   BarChart3,
@@ -67,7 +66,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
+    <section id="how" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
       {/* Background — gradient top avoids hard line against page bg */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFF] via-[#F2F4FA] to-[#F2F4FA]" style={{ backgroundSize: '100% 100%', backgroundPosition: 'top' }} />
       <div className="absolute inset-0 gradient-mesh opacity-50" />
@@ -175,23 +174,6 @@ export default function HowItWorks() {
           })}
         </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="text-center mt-16"
-        >
-          <a
-            target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
-            className="group relative inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-xl transition-all hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] active:scale-[0.97]"
-          >
-            <span className="absolute inset-0 rounded-xl shimmer pointer-events-none" />
-            Start Free
-            <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-          </a>
-        </motion.div>
       </div>
     </section>
   )
