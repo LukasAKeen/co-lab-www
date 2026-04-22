@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
   title: 'Co-Lab — Digital Sales Rooms for B2B Sales Teams',
   description:
-    'Co-Lab is a digital sales room platform that helps B2B sales teams create personalized workspaces (Pods) to share proposals, track buyer engagement, and close deals. AI-powered, with Salesforce, HubSpot, and Gong integrations.',
+    'Co-Lab is a digital sales room platform that helps B2B sales teams create personalized workspaces (Pods) to share proposals, track buyer engagement, and close deals. AI-powered, built from your call transcripts.',
 
   robots: {
     index: true,
@@ -75,7 +75,6 @@ export const metadata: Metadata = {
     'mutual action plan',
     'deal intelligence',
     'sales analytics',
-    'Gong integration',
     'call transcript AI',
   ],
 

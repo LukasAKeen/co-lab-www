@@ -22,7 +22,7 @@ export default function JsonLd() {
     '@type': 'SoftwareApplication',
     name: 'Co-Lab',
     description:
-      'Co-Lab is a digital sales room platform for B2B sales teams. Users can create personalized workspaces (Pods), upload sales materials, share content with buyers via a single link, track buyer engagement, generate Mutual Action Plans, and use AI to analyze call transcripts and suggest pod content. Co-Lab integrates with Salesforce, HubSpot, Gong, Slack, DocuSign, and PandaDoc. When users sign in with Google, Co-Lab requests only basic profile data (name, email, profile photo) and does not access Gmail, Drive, Calendar, or other Workspace data.',
+      'Co-Lab is a digital sales room platform for B2B sales teams. Users can create personalized workspaces (Pods), upload sales materials, share content with buyers via a single link, track buyer engagement, generate Mutual Action Plans, and use AI to analyze call transcripts and suggest pod content. When users sign in with Google, Co-Lab requests only basic profile data (name, email, profile photo) and does not access Gmail, Drive, Calendar, or other Workspace data.',
     url: siteUrl,
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
@@ -46,7 +46,7 @@ export default function JsonLd() {
           priceCurrency: 'USD',
           unitText: 'seat/month',
         },
-        description: 'Up to 20 pods, Gong integration, CRM sync, priority support',
+        description: 'Up to 20 pods, CRM sync, Slack notifications, priority support',
         url: `${appUrl}/register`,
       },
       {
@@ -71,7 +71,7 @@ export default function JsonLd() {
       'White-label custom branding',
       'Salesforce & HubSpot integration',
       'DocuSign & PandaDoc e-signature',
-      'Gong call transcript analysis',
+      'Call transcript analysis',
       'Block-level engagement heatmaps',
       'Team collaboration & templates',
     ],
@@ -99,7 +99,7 @@ export default function JsonLd() {
         name: 'How does Co-Lab build a deal room with AI?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Co-Lab analyzes your Gong or Zoom call transcript, extracts buyer signals, timelines, and requirements, then auto-generates a complete deal room (Pod) with the exact content blocks, assets, and mutual action plan your buyer needs — ready to share in seconds.',
+          text: 'Co-Lab analyzes your uploaded call transcript, extracts buyer signals, timelines, and requirements, then auto-generates a complete deal room (Pod) with the exact content blocks, assets, and mutual action plan your buyer needs — ready to share in seconds.',
         },
       },
       {
@@ -131,7 +131,7 @@ export default function JsonLd() {
         name: 'What integrations does Co-Lab support?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Co-Lab integrates with Salesforce, HubSpot, Gong, Slack, DocuSign, PandaDoc, and more. The platform connects your entire deal workflow from discovery call to signed contract.',
+          text: 'Integrations with Salesforce, HubSpot, Gong, Slack, DocuSign, PandaDoc, Zoom, Gmail, LinkedIn, and Zapier are on the roadmap. Today, Co-Lab connects your deal workflow through call-transcript upload and direct buyer sharing.',
         },
       },
       {

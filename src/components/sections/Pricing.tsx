@@ -45,7 +45,6 @@ const plans = [
       'Up to 20 pods',
       'All Starter features',
       'Slack notifications',
-      'Gong integration',
       'Close CRM sync',
       'Priority support',
     ],

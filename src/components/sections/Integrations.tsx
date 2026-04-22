@@ -1,16 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Sparkles, ArrowRight, Check } from 'lucide-react'
+import { Sparkles, ArrowRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const integrations = [
-  { name: 'Salesforce', label: 'CRM', color: '#00A1E0', bg: 'rgba(0,161,224,0.08)', border: 'rgba(0,161,224,0.18)', initial: 'SF' },
-  { name: 'HubSpot', label: 'CRM', color: '#FF7A59', bg: 'rgba(255,122,89,0.08)', border: 'rgba(255,122,89,0.18)', initial: 'HS' },
-  { name: 'Gong', label: 'Revenue Intel', color: '#6366F1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)', initial: 'Go' },
-  { name: 'DocuSign', label: 'E-Signature', color: '#FFCD00', bg: 'rgba(255,205,0,0.10)', border: 'rgba(255,205,0,0.25)', initial: 'DS', featured: true },
-  { name: 'PandaDoc', label: 'E-Signature', color: '#4FCEA1', bg: 'rgba(79,206,161,0.08)', border: 'rgba(79,206,161,0.18)', initial: 'PD', featured: true },
-  { name: 'Slack', label: 'Messaging', color: '#4A154B', bg: 'rgba(74,21,75,0.06)', border: 'rgba(74,21,75,0.12)', initial: 'Sl' },
+  { name: 'Salesforce', label: 'CRM', color: '#00A1E0', bg: 'rgba(0,161,224,0.08)', border: 'rgba(0,161,224,0.18)', initial: 'SF', comingSoon: true },
+  { name: 'HubSpot', label: 'CRM', color: '#FF7A59', bg: 'rgba(255,122,89,0.08)', border: 'rgba(255,122,89,0.18)', initial: 'HS', comingSoon: true },
+  { name: 'Gong', label: 'Revenue Intel', color: '#6366F1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)', initial: 'Go', comingSoon: true },
+  { name: 'DocuSign', label: 'E-Signature', color: '#FFCD00', bg: 'rgba(255,205,0,0.10)', border: 'rgba(255,205,0,0.25)', initial: 'DS', comingSoon: true },
+  { name: 'PandaDoc', label: 'E-Signature', color: '#4FCEA1', bg: 'rgba(79,206,161,0.08)', border: 'rgba(79,206,161,0.18)', initial: 'PD', comingSoon: true },
+  { name: 'Slack', label: 'Messaging', color: '#4A154B', bg: 'rgba(74,21,75,0.06)', border: 'rgba(74,21,75,0.12)', initial: 'Sl', comingSoon: true },
   { name: 'Zoom', label: 'Video', color: '#2D8CFF', bg: 'rgba(45,140,255,0.08)', border: 'rgba(45,140,255,0.18)', initial: 'Zm', comingSoon: true },
   { name: 'Gmail', label: 'Email', color: '#EA4335', bg: 'rgba(234,67,53,0.08)', border: 'rgba(234,67,53,0.18)', initial: 'Gm', comingSoon: true },
   { name: 'LinkedIn', label: 'Social', color: '#0A66C2', bg: 'rgba(10,102,194,0.08)', border: 'rgba(10,102,194,0.18)', initial: 'Li', comingSoon: true },
@@ -19,7 +19,7 @@ const integrations = [
 
 /* ── Deal Flow Pipeline ── */
 const dealFlowStages = [
-  { label: 'Discovery', tool: 'Gong', color: '#6366F1', bg: 'rgba(99,102,241,0.08)' },
+  { label: 'Discovery', tool: 'Call transcript', color: '#6366F1', bg: 'rgba(99,102,241,0.08)' },
   { label: 'Pod Built', tool: 'Co-Lab AI', color: '#34D399', bg: 'rgba(52,211,153,0.08)' },
   { label: 'Engagement', tool: 'Co-Lab Analytics', color: '#F59E0B', bg: 'rgba(245,158,11,0.08)' },
   { label: 'Proposal', tool: 'Co-Lab + CRM', color: '#818CF8', bg: 'rgba(129,140,248,0.08)' },
@@ -51,7 +51,7 @@ export default function Integrations() {
             <span className="text-gradient-ai">All inside Co-Lab.</span>
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-4 text-lg text-[#3D4663] max-w-2xl mx-auto">
-            From the first Gong call to the final DocuSign — Co-Lab connects your entire deal workflow so nothing falls through the cracks.
+            From your first call transcript to the final signature — Co-Lab connects your entire deal workflow so nothing falls through the cracks.
           </motion.p>
         </motion.div>
 
@@ -124,21 +124,11 @@ export default function Integrations() {
             <motion.div
               key={integration.name}
               variants={scaleIn}
-              className={`relative bg-white rounded-2xl border p-5 flex flex-col items-center text-center card-hover shadow-sm ${
-                integration.featured
-                  ? 'border-[#F43F5E]/20 ring-1 ring-[#F43F5E]/10'
-                  : 'border-black/[0.06]'
-              }`}
+              className="relative bg-white rounded-2xl border border-black/[0.06] p-5 flex flex-col items-center text-center card-hover shadow-sm"
             >
               {integration.comingSoon && (
                 <span className="absolute -top-2 -right-2 text-[9px] font-bold px-2 py-0.5 rounded-xl bg-[#F2F4FA] border border-black/[0.08] text-[#9BA3B8] shadow-sm">
                   Soon
-                </span>
-              )}
-              {integration.featured && (
-                <span className="absolute -top-2 -right-2 text-[9px] font-bold px-2 py-0.5 rounded-xl bg-[#F43F5E] text-white shadow-sm flex items-center gap-0.5">
-                  <Check size={8} />
-                  E-Sign
                 </span>
               )}
               <div

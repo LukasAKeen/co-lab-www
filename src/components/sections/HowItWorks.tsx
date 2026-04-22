@@ -23,7 +23,7 @@ const steps = [
     glowClass: 'glow-mint',
     title: 'AI Analyzes Your Calls',
     description:
-      'Upload a call transcript or connect Gong — our AI parses every line, extracting buyer signals, objections, feature requests, and timeline cues automatically.',
+      'Upload a call transcript and our AI parses every line, extracting buyer signals, objections, feature requests, and timeline cues automatically.',
     details: [
       { icon: FileText, text: 'Call transcripts parsed in seconds' },
       { icon: FolderOpen, text: 'Files auto-categorized by type' },

@@ -84,7 +84,7 @@ function AppMockup() {
                 </span>
                 <Sparkles size={12} className="text-[#6366F1]" />
                 <span className="text-[12px] font-medium text-[#3D4663]">
-                  Analyzing Gong transcript: <span className="font-semibold text-[#0D1117]">Meridian Q2 Discovery</span>...
+                  Analyzing call transcript: <span className="font-semibold text-[#0D1117]">Meridian Q2 Discovery</span>...
                 </span>
               </motion.div>
             ) : (
