@@ -1,7 +1,7 @@
 ---
 title: "The 5 Blocks Every Deal Room Needs (And the 9 You Don't)"
 description: "A minimum-viable structure for buyer-facing deal rooms — and the blocks teams add that don't move the needle."
-date: "2026-04-28"
+date: "2026-03-25"
 category: "Deal Rooms"
 categorySlug: "deal-rooms"
 readTime: 6

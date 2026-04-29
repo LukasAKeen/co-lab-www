@@ -1,7 +1,7 @@
 ---
 title: "Stalled Deals: 6 Engagement Signals You Missed Before It Went Cold"
 description: "The signals that show up 7-14 days before a deal officially stalls — and what to do when you see them."
-date: "2026-04-28"
+date: "2026-04-22"
 category: "Buyer Intelligence"
 categorySlug: "buyer-intel"
 readTime: 6

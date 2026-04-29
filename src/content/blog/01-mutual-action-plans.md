@@ -1,7 +1,7 @@
 ---
 title: "Mutual Action Plans That Actually Get Executed"
 description: "Why most MAPs become decoration — and the three changes that turn them into deal-moving artifacts."
-date: "2026-04-28"
+date: "2026-03-09"
 category: "Sales Process"
 categorySlug: "sales-process"
 readTime: 5

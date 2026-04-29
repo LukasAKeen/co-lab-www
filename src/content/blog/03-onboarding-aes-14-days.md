@@ -1,7 +1,7 @@
 ---
 title: "Ramp New AEs in 14 Days, Not 90"
 description: "What changes when your training material is just real pods from real deals."
-date: "2026-04-28"
+date: "2026-04-15"
 category: "RevOps"
 categorySlug: "revops"
 readTime: 5

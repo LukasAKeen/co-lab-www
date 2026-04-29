@@ -1,7 +1,7 @@
 ---
 title: "Reading Buyer Activity Like a Forecast"
 description: "A practical scoring framework for turning engagement data into deal-state insight."
-date: "2026-04-28"
+date: "2026-03-30"
 category: "Buyer Intelligence"
 categorySlug: "buyer-intel"
 readTime: 5

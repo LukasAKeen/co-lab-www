@@ -1,7 +1,7 @@
 ---
 title: "Champion Vetting: How to Tell If Your Internal Advocate Is Real"
 description: "Four signals that distinguish a real champion from a friendly contact who's about to ghost you."
-date: "2026-04-28"
+date: "2026-04-10"
 category: "Buyer Intelligence"
 categorySlug: "buyer-intel"
 readTime: 5

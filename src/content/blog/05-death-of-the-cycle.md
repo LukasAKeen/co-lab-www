@@ -1,7 +1,7 @@
 ---
 title: "The Death of the Email-Deck-Loom-Spreadsheet Cycle"
 description: "Why the standard B2B sales follow-up is the worst buyer experience in software, and what's replacing it."
-date: "2026-04-28"
+date: "2026-04-17"
 category: "Deal Rooms"
 categorySlug: "deal-rooms"
 readTime: 5

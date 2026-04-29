@@ -1,7 +1,7 @@
 ---
 title: "Forecasting With Engagement Data, Not Just Stage Advancement"
 description: "Why stage % alone is the worst predictor in your forecast — and what to add instead."
-date: "2026-04-28"
+date: "2026-03-23"
 category: "RevOps"
 categorySlug: "revops"
 readTime: 6

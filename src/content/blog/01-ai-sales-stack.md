@@ -1,7 +1,7 @@
 ---
 title: "The AI Sales Stack in 2026: What Actually Works"
 description: "Cutting through the 200+ \"AI sales tools\" pitches landing in your inbox to the four categories that move pipeline."
-date: "2026-04-28"
+date: "2026-03-16"
 category: "AI in Sales"
 categorySlug: "ai-sales"
 readTime: 6

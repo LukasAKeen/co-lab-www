@@ -1,7 +1,7 @@
 ---
 title: "5 Buyer Engagement Signals That Actually Predict Deals"
 description: "Cutting through the dashboard noise to the signals that correlate with closing."
-date: "2026-04-28"
+date: "2026-03-06"
 category: "Buyer Intelligence"
 categorySlug: "buyer-intel"
 readTime: 6

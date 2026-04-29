@@ -1,7 +1,7 @@
 ---
 title: "Closing Velocity: Why the Best AEs Send Less Email"
 description: "The counter-intuitive pattern in our top-quartile performer data."
-date: "2026-04-28"
+date: "2026-04-01"
 category: "Sales Process"
 categorySlug: "sales-process"
 readTime: 5

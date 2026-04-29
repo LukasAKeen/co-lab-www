@@ -1,7 +1,7 @@
 ---
 title: "5 Things You Can Do With a Sales Call Transcript Beyond Note-Taking"
 description: "The transcript is the most underused asset in your sales workflow. Here's how to extract real leverage from it."
-date: "2026-04-28"
+date: "2026-03-27"
 category: "AI in Sales"
 categorySlug: "ai-sales"
 readTime: 5

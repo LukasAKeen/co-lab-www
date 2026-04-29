@@ -1,7 +1,7 @@
 ---
 title: "The 2026 Sales Tools Audit: What to Cut, What to Keep"
 description: "An honest framework for trimming a sales stack that's grown to 18 tools nobody fully uses."
-date: "2026-04-28"
+date: "2026-04-03"
 category: "RevOps"
 categorySlug: "revops"
 readTime: 6

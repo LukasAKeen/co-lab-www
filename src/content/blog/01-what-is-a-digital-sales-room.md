@@ -1,7 +1,7 @@
 ---
 title: "What Is a Digital Sales Room? (And Why Your Deck Isn't One)"
 description: "The category, the confusion, and what actually distinguishes a deal room from the things you've been calling deal rooms."
-date: "2026-04-28"
+date: "2026-03-02"
 category: "Deal Rooms"
 categorySlug: "deal-rooms"
 readTime: 6

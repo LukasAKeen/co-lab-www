@@ -1,7 +1,7 @@
 ---
 title: "Deal Rooms vs Sales Decks: When to Use Which"
 description: "A practical decision guide for sales leaders who've been told \"decks are dead\" but still need them sometimes."
-date: "2026-04-28"
+date: "2026-03-13"
 category: "Deal Rooms"
 categorySlug: "deal-rooms"
 readTime: 5

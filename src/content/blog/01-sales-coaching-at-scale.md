@@ -1,7 +1,7 @@
 ---
 title: "Sales Coaching at Scale: What 100 Pod Reviews Taught Us"
 description: "Patterns from reviewing 100 active deal rooms across teams of 5 and teams of 500."
-date: "2026-04-28"
+date: "2026-03-11"
 category: "RevOps"
 categorySlug: "revops"
 readTime: 6

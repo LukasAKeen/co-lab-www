@@ -1,7 +1,7 @@
 ---
 title: "The Limits of AI in B2B Sales (And Where Humans Still Win)"
 description: "An honest list of jobs not worth automating yet — from someone who builds AI sales tools."
-date: "2026-04-28"
+date: "2026-04-20"
 category: "AI in Sales"
 categorySlug: "ai-sales"
 readTime: 6

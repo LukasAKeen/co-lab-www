@@ -1,7 +1,7 @@
 ---
 title: "The Hidden Cost of the \"Quick Sync\" Call"
 description: "Why every \"let's set up a quick call\" is a 3-day deal delay — and what to do instead."
-date: "2026-04-28"
+date: "2026-04-24"
 category: "Sales Process"
 categorySlug: "sales-process"
 readTime: 5

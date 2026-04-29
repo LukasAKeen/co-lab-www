@@ -1,7 +1,7 @@
 ---
 title: "Where Renewal Risk Actually Hides (Hint: The Handoff)"
 description: "Why most churn is a handoff problem disguised as a renewal problem — and how to fix it."
-date: "2026-04-28"
+date: "2026-04-27"
 category: "RevOps"
 categorySlug: "revops"
 readTime: 5

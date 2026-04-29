@@ -1,7 +1,7 @@
 ---
 title: "Multi-Threaded Selling Without Burning Your Champion"
 description: "How to bring more contacts into a deal without making your champion feel circumvented."
-date: "2026-04-28"
+date: "2026-04-13"
 category: "Sales Process"
 categorySlug: "sales-process"
 readTime: 5

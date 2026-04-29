@@ -1,7 +1,7 @@
 ---
 title: "Why Your CRM Misses 80% of the Buyer Journey"
 description: "The signals living outside Salesforce that predict deals better than anything in it."
-date: "2026-04-28"
+date: "2026-03-18"
 category: "Buyer Intelligence"
 categorySlug: "buyer-intel"
 readTime: 5

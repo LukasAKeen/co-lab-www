@@ -1,7 +1,7 @@
 ---
 title: "Why Your Discovery Call Should Generate Your Pod"
 description: "Treating the discovery call as the input to the deal room — not as a separate event followed by a manual write-up."
-date: "2026-04-28"
+date: "2026-03-20"
 category: "Sales Process"
 categorySlug: "sales-process"
 readTime: 5

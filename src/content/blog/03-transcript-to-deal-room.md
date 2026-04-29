@@ -1,7 +1,7 @@
 ---
 title: "From Discovery Call to Deal Room in 90 Seconds"
 description: "How AI compresses the 6-hour post-call grunt work into a single transcript drop."
-date: "2026-04-28"
+date: "2026-03-04"
 category: "AI in Sales"
 categorySlug: "ai-sales"
 readTime: 6

@@ -1,7 +1,7 @@
 ---
 title: "Why AI \"Wrappers\" Are Beating Custom-Built Sales Tools"
 description: "The contrarian case for buying the boring product on top of GPT-4 over building your own."
-date: "2026-04-28"
+date: "2026-04-08"
 category: "AI in Sales"
 categorySlug: "ai-sales"
 readTime: 5

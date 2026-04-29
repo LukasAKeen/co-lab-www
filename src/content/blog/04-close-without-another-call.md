@@ -1,7 +1,7 @@
 ---
 title: "How to Close a Deal Without Another Sync Call"
 description: "Three deal-room patterns that move late-stage deals while you sleep."
-date: "2026-04-28"
+date: "2026-04-06"
 category: "Deal Rooms"
 categorySlug: "deal-rooms"
 readTime: 6
