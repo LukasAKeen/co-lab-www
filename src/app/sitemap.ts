@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { getComparisonSlugs } from '@/lib/comparisons'
 
 const baseUrl = 'https://colabapp.ai'
 
@@ -11,6 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: post.date ? new Date(post.date + 'T00:00:00Z') : new Date(),
     changeFrequency: 'monthly',
     priority: 0.6,
+  }))
+
+  const compareEntries: MetadataRoute.Sitemap = getComparisonSlugs().map((slug) => ({
+    url: `${baseUrl}/compare/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
   }))
 
   return [
@@ -45,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     ...postEntries,
+    ...compareEntries,
     {
       url: `${baseUrl}/terms`,
       lastModified: new Date(),
