@@ -51,7 +51,7 @@ export async function submitContact(
 
   const apiKey = process.env.RESEND_API_KEY
   const fromEmail = process.env.CONTACT_FROM_EMAIL ?? 'Co-Lab Contact <notifications@colabapp.ai>'
-  const toEmail = process.env.CONTACT_TO_EMAIL ?? 'lukas.keen@citadelcenter.net'
+  const toEmail = process.env.CONTACT_TO_EMAIL ?? 'lukas.keen.a@gmail.com'
 
   if (!apiKey) {
     console.error('[contact] RESEND_API_KEY is not set')

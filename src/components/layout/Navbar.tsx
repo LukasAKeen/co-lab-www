@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'Who it’s for', href: '/#who' },
   { label: 'Integrations', href: '/#integrations' },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'About', href: '/about' },
 ]
 
 export default function Navbar() {

@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, ArrowRight } from 'lucide-react'
+import { Linkedin, ArrowRight } from 'lucide-react'
 import BrandMark from '@/components/BrandMark'
 
 const links = {
@@ -46,14 +46,9 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <a
-                href="#"
-                className="w-8 h-8 rounded-lg border border-[#E7E7EE] flex items-center justify-center text-[#71768B] hover:text-[#0B0E1A] hover:border-[#C9C9EE] transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={14} />
-              </a>
-              <a
-                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/colabapp-ai/"
                 className="w-8 h-8 rounded-lg border border-[#E7E7EE] flex items-center justify-center text-[#71768B] hover:text-[#0B0E1A] hover:border-[#C9C9EE] transition-colors"
                 aria-label="LinkedIn"
               >

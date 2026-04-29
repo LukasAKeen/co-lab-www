@@ -99,9 +99,6 @@ export default function AboutPage() {
               dashboard. It was a place the buyer actually returned to —
               and a way to know when they did.
             </p>
-            <p className="text-[#71768B]">
-              [REPLACE: founding story, year, location, founder background.]
-            </p>
           </div>
         </div>
       </section>
@@ -149,8 +146,11 @@ export default function AboutPage() {
             A small team of operators and engineers.
           </h2>
           <p className="text-[16px] sm:text-[17px] text-[#1F2333] leading-[1.7] mb-4">
-            [REPLACE: short paragraph about the team — size, where you sit
-            (SF / NYC / remote / wherever), backgrounds (sales / eng / both).]
+            We&apos;re a small team of sales operators, engineers, and designers,
+            distributed across the US. Everyone here has either built or sold
+            B2B software before — and felt the same gaps Co-Lab is built to close.
+            No layers, no committees: the people writing the code are the same
+            ones talking to the customers.
           </p>
           <p className="text-[16px] text-[#71768B] leading-[1.7]">
             We&apos;re hiring across engineering and design.{' '}
