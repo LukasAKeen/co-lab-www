@@ -6,11 +6,11 @@ import { Menu, X, ArrowRight } from 'lucide-react'
 import BrandMark from '@/components/BrandMark'
 
 const navLinks = [
-  { label: 'How it works', href: '#how' },
-  { label: 'Features', href: '#features' },
-  { label: 'Who it’s for', href: '#who' },
-  { label: 'Integrations', href: '#integrations' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'How it works', href: '/#how' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Who it’s for', href: '/#who' },
+  { label: 'Integrations', href: '/#integrations' },
+  { label: 'Pricing', href: '/pricing' },
 ]
 
 export default function Navbar() {

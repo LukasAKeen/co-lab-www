@@ -3,10 +3,14 @@ import BrandMark from '@/components/BrandMark'
 
 const links = {
   Product: [
-    { label: 'How it works', href: '#how' },
-    { label: 'Features', href: '#features' },
-    { label: 'Integrations', href: '#integrations' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'How it works', href: '/#how' },
+    { label: 'Features', href: '/#features' },
+    { label: 'Integrations', href: '/#integrations' },
+    { label: 'Pricing', href: '/pricing' },
+  ],
+  Company: [
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ],
   Resources: [{ label: 'Blog', href: '/blog' }],
   Legal: [
@@ -19,9 +23,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-[#E7E7EE] bg-[#F6F6FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-10 md:gap-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="col-span-2 md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
               <BrandMark size={28} variant="iris" />
               <span className="font-semibold text-[15px] text-[#0B0E1A]">Co-Lab</span>
