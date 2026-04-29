@@ -18,9 +18,9 @@ export default function Home() {
       <JsonLd />
       <Navbar />
       <Hero />
+      <Problem />
       <HowItWorks />
       <MiniDemo />
-      <Problem />
       <Features />
       <ForWho />
       <WhiteLabel />
