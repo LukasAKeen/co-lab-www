@@ -162,7 +162,7 @@ export default function Pricing() {
           viewport={viewportConfig}
           className="text-center text-[12px] text-[#71768B] mt-10"
         >
-          All plans include a 14-day free trial · No credit card required · Cancel anytime
+          All plans include a 14-day free trial · Cancel anytime
         </motion.p>
       </div>
     </section>

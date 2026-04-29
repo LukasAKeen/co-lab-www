@@ -78,7 +78,7 @@ export default function FinalCTA() {
             variants={fadeUp}
             className="mt-6 eyebrow text-[#6E7494] tracking-[0.16em]"
           >
-            14-day trial · No credit card · Cancel anytime
+            14-day trial · Cancel anytime
           </motion.p>
         </motion.div>
       </div>
