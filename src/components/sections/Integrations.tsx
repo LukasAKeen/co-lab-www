@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
+import SectionHeader from '@/components/SectionHeader'
 
 const integrations = [
   { name: 'Salesforce', label: 'CRM', initial: 'SF' },
@@ -32,30 +33,18 @@ export default function Integrations() {
       className="py-20 md:py-28 px-4 sm:px-6 bg-[#F6F6FA] border-y border-[#E7E7EE]"
     >
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="text-center max-w-[760px] mx-auto mb-14"
-        >
-          <motion.p variants={fadeUp} className="eyebrow text-[#5B5BD6] mb-3">
-            Integrations
-          </motion.p>
-          <motion.h2
-            variants={fadeUp}
-            className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A]"
-          >
-            Discovery to signature. <span className="text-gradient">All inside Co-Lab.</span>
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="mt-4 text-[17px] text-[#3D4256] leading-[1.55]"
-          >
-            From your first call transcript to the final signature — Co-Lab connects your
-            entire deal workflow so nothing falls through the cracks.
-          </motion.p>
-        </motion.div>
+        <SectionHeader
+          anchor="07"
+          kicker="Integrations"
+          title={
+            <>
+              Discovery to signature.
+              <br />
+              All inside Co-Lab.
+            </>
+          }
+          subhead="From your first call transcript to the final signature — Co-Lab connects your entire deal workflow so nothing falls through the cracks."
+        />
 
         {/* Deal flow pipeline */}
         <motion.div

@@ -12,7 +12,8 @@ import {
   ListChecks,
   Loader2,
 } from 'lucide-react'
-import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
+import { fadeUp, viewportConfig } from '@/lib/motion'
+import SectionHeader from '@/components/SectionHeader'
 
 const templateTranscript = `"Our team has about 200 seats on the current tool. Security compliance is a hard requirement — we'll need SOC2 docs before legal signs off. Can you walk me through the ROI? Timeline is end of Q2 for us. We'd also love a quick intro video from your team..."`
 
@@ -43,29 +44,18 @@ export default function MiniDemo() {
       <div className="absolute inset-0 dot-grid opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="text-center max-w-[760px] mx-auto mb-12"
-        >
-          <motion.p variants={fadeUp} className="eyebrow text-[#5B5BD6] mb-3">
-            Interactive Demo
-          </motion.p>
-          <motion.h2
-            variants={fadeUp}
-            className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A]"
-          >
-            Need a head start? <span className="text-gradient">Let the AI coach draft it.</span>
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="mt-4 text-[17px] text-[#3D4256] leading-[1.55]"
-          >
-            Drop in a call transcript and get a complete first draft of your deal room — blocks, pricing, MAP. Refine everything from there.
-          </motion.p>
-        </motion.div>
+        <SectionHeader
+          anchor="03"
+          kicker="Try it"
+          title={
+            <>
+              Need a head start?
+              <br />
+              Let the AI coach draft it.
+            </>
+          }
+          subhead="Drop in a call transcript and get a complete first draft of your deal room — blocks, pricing, MAP. Refine everything from there."
+        />
 
         <motion.div
           variants={fadeUp}

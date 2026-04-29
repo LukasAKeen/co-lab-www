@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
+import SectionHeader from '@/components/SectionHeader'
 
 const plans = [
   {
@@ -67,29 +68,18 @@ export default function Pricing() {
       <div className="absolute inset-0 dot-grid opacity-25 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="text-center max-w-[760px] mx-auto mb-14"
-        >
-          <motion.p variants={fadeUp} className="eyebrow text-[#5B5BD6] mb-3">
-            Pricing
-          </motion.p>
-          <motion.h2
-            variants={fadeUp}
-            className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A]"
-          >
-            Simple pricing. <span className="text-gradient">No surprises.</span>
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="mt-4 text-[17px] text-[#3D4256] leading-[1.55]"
-          >
-            Start free. Upgrade when you need more pods, integrations, or AI power.
-          </motion.p>
-        </motion.div>
+        <SectionHeader
+          anchor="08"
+          kicker="Pricing"
+          title={
+            <>
+              Simple pricing.
+              <br />
+              No surprises.
+            </>
+          }
+          subhead="Start free. Upgrade when you need more pods, integrations, or AI power."
+        />
 
         <motion.div
           variants={staggerContainer}

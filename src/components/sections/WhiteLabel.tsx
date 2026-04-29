@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Palette, Globe, Type, ImageIcon } from 'lucide-react'
 import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
+import SectionHeader from '@/components/SectionHeader'
 
 const features = [
   { icon: Palette, label: 'Custom brand colors & themes' },
@@ -102,51 +103,43 @@ export default function WhiteLabel() {
   return (
     <section className="py-20 md:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
+        <SectionHeader
+          anchor="06"
+          kicker="White-Label"
+          title={
+            <>
+              Your brand.
+              <br />
+              Your deal room.
+            </>
+          }
+          subhead="Make every pod look like it was built in-house. Custom colors, your logo, your domain — buyers see your brand, not ours. Full white-label means every touchpoint reinforces trust."
+        />
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <motion.div
+          <motion.ul
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
+            className="border-t border-[#E7E7EE]"
           >
-            <motion.p variants={fadeUp} className="eyebrow text-[#5B5BD6] mb-4">
-              White-Label
-            </motion.p>
-
-            <motion.h2
-              variants={fadeUp}
-              className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A] mb-5"
-            >
-              Your brand. <span className="text-gradient">Your deal room.</span>
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-[17px] text-[#3D4256] leading-[1.55] mb-7"
-            >
-              Make every pod look like it was built in-house. Custom colors, your logo,
-              your domain — buyers see your brand, not ours. Full white-label means
-              every touchpoint reinforces trust.
-            </motion.p>
-
-            <motion.ul variants={staggerContainer} className="border-t border-[#E7E7EE]">
-              {features.map((feat) => {
-                const Icon = feat.icon
-                return (
-                  <motion.li
-                    key={feat.label}
-                    variants={fadeUp}
-                    className="flex items-center gap-3 py-3.5 border-b border-[#E7E7EE]"
-                  >
-                    <span className="flex-shrink-0 w-8 h-8 rounded-md bg-[#F2F2FB] border border-[#E6E6F7] flex items-center justify-center">
-                      <Icon size={14} className="text-[#5B5BD6]" />
-                    </span>
-                    <span className="text-[14px] font-medium text-[#1F2333]">{feat.label}</span>
-                  </motion.li>
-                )
-              })}
-            </motion.ul>
-          </motion.div>
+            {features.map((feat) => {
+              const Icon = feat.icon
+              return (
+                <motion.li
+                  key={feat.label}
+                  variants={fadeUp}
+                  className="flex items-center gap-3 py-3.5 border-b border-[#E7E7EE]"
+                >
+                  <span className="flex-shrink-0 w-8 h-8 rounded-md bg-[#F2F2FB] border border-[#E6E6F7] flex items-center justify-center">
+                    <Icon size={14} className="text-[#5B5BD6]" />
+                  </span>
+                  <span className="text-[14px] font-medium text-[#1F2333]">{feat.label}</span>
+                </motion.li>
+              )
+            })}
+          </motion.ul>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <BrandedPodPreview
