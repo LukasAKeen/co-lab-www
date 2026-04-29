@@ -8,6 +8,7 @@ const links = {
     { label: 'Integrations', href: '#integrations' },
     { label: 'Pricing', href: '#pricing' },
   ],
+  Resources: [{ label: 'Blog', href: '/blog' }],
   Legal: [
     { label: 'Privacy', href: '/privacy' },
     { label: 'Terms', href: '/terms' },

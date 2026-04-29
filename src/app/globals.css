@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* ── Direction B · Snowflake/Datadog enterprise palette ── */
