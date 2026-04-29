@@ -25,7 +25,7 @@ function buildBlogPostingJsonLd(post: Post) {
     dateModified: isoDate,
     author: {
       '@type': 'Organization',
-      name: 'Co-Lab',
+      name: post.author,
       url: SITE_URL,
     },
     publisher: {
@@ -143,10 +143,19 @@ export default async function BlogPostPage({
             {post.description}
           </p>
 
-          <div className="flex items-center gap-3 text-[12.5px] font-mono text-[#71768B] mb-8 pb-8 border-b border-[#E7E7EE]">
-            <span>{formatDate(post.date)}</span>
+          <div className="flex items-center gap-3 mb-8 pb-8 border-b border-[#E7E7EE]">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#5B5BD6] to-[#4040C0] text-white flex items-center justify-center text-[11px] font-bold tracking-tight">
+                CL
+              </div>
+              <span className="text-[13px] font-semibold text-[#0B0E1A]">
+                {post.author}
+              </span>
+            </div>
             <span className="text-[#C9C9EE]">·</span>
-            <span>{post.readTime} min read</span>
+            <span className="text-[12.5px] font-mono text-[#71768B]">{formatDate(post.date)}</span>
+            <span className="text-[#C9C9EE]">·</span>
+            <span className="text-[12.5px] font-mono text-[#71768B]">{post.readTime} min read</span>
           </div>
         </div>
 

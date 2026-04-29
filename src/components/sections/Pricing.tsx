@@ -1,11 +1,25 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { Check, ArrowRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 import SectionHeader from '@/components/SectionHeader'
 
-const plans = [
+type Plan = {
+  name: string
+  description: string
+  price: string
+  period: string
+  badge: string | null
+  highlighted: boolean
+  cta: string
+  href: string
+  external: boolean
+  features: string[]
+}
+
+const plans: Plan[] = [
   {
     name: 'Starter',
     description: 'Get started with the basics',
@@ -15,6 +29,7 @@ const plans = [
     highlighted: false,
     cta: 'Get Started Free',
     href: 'https://app.colabapp.ai/register',
+    external: true,
     features: [
       'Up to 3 pods',
       'Google & Outlook Calendar',
@@ -32,6 +47,7 @@ const plans = [
     highlighted: true,
     cta: 'Start Growth Plan',
     href: 'https://app.colabapp.ai/register',
+    external: true,
     features: [
       'Up to 20 pods',
       'All Starter features',
@@ -49,6 +65,7 @@ const plans = [
     highlighted: false,
     cta: 'Start Accelerate Plan',
     href: 'https://app.colabapp.ai/register',
+    external: true,
     features: [
       'Unlimited pods',
       'All Growth features',
@@ -58,6 +75,27 @@ const plans = [
       'Salesforce & HubSpot',
       'Zapier automation',
       'Dedicated support',
+    ],
+  },
+  {
+    name: 'Enterprise',
+    description: 'Built for larger teams',
+    price: 'Custom',
+    period: '',
+    badge: 'SSO + SLA',
+    highlighted: false,
+    cta: 'Talk to sales',
+    href: '/contact',
+    external: false,
+    features: [
+      'All Accelerate features',
+      'SSO / SAML / SCIM',
+      'Audit logs + retention',
+      'Dedicated CSM',
+      'SLA & priority support',
+      'Volume pricing',
+      'Procurement-friendly contracts',
+      'Custom security review',
     ],
   },
 ]
@@ -86,7 +124,7 @@ export default function Pricing() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto items-start"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto items-start"
         >
           {plans.map((plan) => (
             <motion.div
@@ -138,19 +176,36 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={plan.href}
-                className={`group w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-[13.5px] font-semibold rounded-xl transition-colors active:scale-[0.99] ${
+              {(() => {
+                const ctaClasses = `group w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-[13.5px] font-semibold rounded-xl transition-colors active:scale-[0.99] ${
                   plan.highlighted
                     ? 'bg-[#5B5BD6] hover:bg-[#4040C0] text-white'
                     : 'border border-[#E7E7EE] hover:border-[#C9C9EE] text-[#0B0E1A] bg-white'
-                }`}
-              >
-                {plan.cta}
-                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
-              </a>
+                }`
+                const inner = (
+                  <>
+                    {plan.cta}
+                    <ArrowRight
+                      size={13}
+                      className="group-hover:translate-x-0.5 transition-transform"
+                    />
+                  </>
+                )
+                return plan.external ? (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={plan.href}
+                    className={ctaClasses}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <Link href={plan.href} className={ctaClasses}>
+                    {inner}
+                  </Link>
+                )
+              })()}
             </motion.div>
           ))}
         </motion.div>

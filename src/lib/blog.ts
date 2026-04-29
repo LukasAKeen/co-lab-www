@@ -13,6 +13,7 @@ export type PostMeta = {
   readTime: number
   seo?: string
   hero: string
+  author: string
 }
 
 export type Post = PostMeta & {
@@ -42,6 +43,7 @@ function toPostMeta(slug: string, data: Record<string, unknown>): PostMeta {
     readTime: Number(data.readTime ?? 5),
     seo: data.seo ? String(data.seo) : undefined,
     hero: String(data.hero ?? ''),
+    author: String(data.author ?? 'Co-Lab Success Team'),
   }
 }
 
