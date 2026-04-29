@@ -5,9 +5,48 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { getAllPosts, getPostBySlug, getPostSlugs } from '@/lib/blog'
+import RelatedPosts from '@/components/blog/RelatedPosts'
+import { getAllPosts, getPostBySlug, getPostSlugs, type Post } from '@/lib/blog'
 
 const SITE_URL = 'https://colabapp.ai'
+
+function buildBlogPostingJsonLd(post: Post) {
+  const url = `${SITE_URL}/blog/${post.slug}`
+  const heroUrl = `${SITE_URL}${post.hero}`
+  const isoDate = post.date ? `${post.date}T00:00:00.000Z` : new Date().toISOString()
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    image: [heroUrl],
+    datePublished: isoDate,
+    dateModified: isoDate,
+    author: {
+      '@type': 'Organization',
+      name: 'Co-Lab',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Co-Lab',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/favicon.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    url,
+    articleSection: post.category,
+    inLanguage: 'en-US',
+    wordCount: post.html.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).length,
+    ...(post.seo ? { keywords: post.seo } : {}),
+  }
+}
 
 export async function generateStaticParams() {
   const slugs = await getPostSlugs()
@@ -74,8 +113,14 @@ export default async function BlogPostPage({
   const prev = idx > 0 ? allPosts[idx - 1] : null
   const next = idx >= 0 && idx < allPosts.length - 1 ? allPosts[idx + 1] : null
 
+  const jsonLd = buildBlogPostingJsonLd(post)
+
   return (
     <main className="min-h-screen bg-[#FBFBFD]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <article className="pt-24 sm:pt-28 pb-20">
@@ -140,6 +185,8 @@ export default async function BlogPostPage({
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
+
+        <RelatedPosts current={post} allPosts={allPosts} limit={3} />
 
         {(prev || next) && (
           <div className="max-w-3xl mx-auto px-4 sm:px-6 mt-16 pt-10 border-t border-[#E7E7EE]">
