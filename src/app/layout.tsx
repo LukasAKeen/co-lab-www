@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Sans } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -7,12 +7,14 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
 })
 
-const dmSans = DM_Sans({
+const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  variable: '--font-jetbrains-mono',
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
 })
 
 const siteUrl = 'https://colabapp.ai'
@@ -93,8 +95,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="bg-[#FAFBFF] text-[#0D1117] antialiased font-[Inter,ui-sans-serif,system-ui,sans-serif]">
+    <html lang="en" className={`${inter.variable} ${jetBrainsMono.variable}`}>
+      <body className="bg-[#FBFBFD] text-[#0B0E1A] antialiased font-[Inter,ui-sans-serif,system-ui,sans-serif]">
         {children}
         <Analytics />
       </body>

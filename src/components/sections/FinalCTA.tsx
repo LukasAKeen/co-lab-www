@@ -1,15 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
 
 export default function FinalCTA() {
   return (
-    <section id="cta" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 gradient-mesh-cta" />
-      <div className="absolute inset-0 dot-grid opacity-30" />
+    <section id="cta" className="py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(91,91,214,0.10) 0%, transparent 60%)',
+        }}
+      />
+      <div className="absolute inset-0 dot-grid opacity-30 pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.div
@@ -18,51 +23,58 @@ export default function FinalCTA() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-8">
-            <span className="bg-white/80 backdrop-blur-sm border border-[#34D399]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[#059669] shadow-sm flex items-center gap-1.5">
-              <Sparkles size={11} className="text-[#34D399]" />
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-7">
+            <span className="bg-white border border-[#E7E7EE] rounded-full px-3 py-1 text-[11.5px] font-medium text-[#3D4256] flex items-center gap-1.5">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3D9A6A] opacity-75" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#3D9A6A]" />
+              </span>
               Now Live
             </span>
           </motion.div>
 
           <motion.h2
             variants={fadeUp}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-extrabold tracking-tight text-[#0D1117] mb-5 sm:mb-6 leading-[1.08] sm:leading-[1.05]"
+            className="display text-3xl sm:text-5xl md:text-[64px] text-[#0B0E1A] mb-6 leading-[1.05] tracking-[-0.04em]"
           >
-            Ready to let AI{' '}
-            <span className="text-gradient-ai">run your deals?</span>
+            Ready to let AI <span className="text-gradient">run your deals?</span>
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="text-lg text-[#3D4663] mb-10 leading-relaxed"
+            className="text-[17px] text-[#3D4256] leading-[1.55] mb-9 max-w-[560px] mx-auto"
           >
             Join sales teams using Co-Lab&apos;s AI to build deal rooms, track intent,
             and close faster. Sign up free and start in minutes.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3"
+          >
             <a
-              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai/register"
-              className="group relative inline-flex items-center gap-2.5 px-8 py-4 text-base font-semibold text-white bg-[#6366F1] hover:bg-[#5558E8] rounded-2xl transition-all animate-[pulse-glow_3s_ease-in-out_infinite] hover:shadow-[0_0_50px_rgba(99,102,241,0.5)] active:scale-[0.97]"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.colabapp.ai/register"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 text-[14px] font-semibold text-white bg-[#5B5BD6] hover:bg-[#4040C0] rounded-xl transition-colors active:scale-[0.98]"
             >
-              <span className="absolute inset-0 rounded-2xl shimmer pointer-events-none" />
               Get Started Free
-              <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="mt-5 flex items-center justify-center">
             <a
-              target="_blank" rel="noopener noreferrer" href="https://app.colabapp.ai"
-              className="inline-flex items-center gap-1.5 text-sm text-[#9BA3B8] hover:text-[#3D4663] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.colabapp.ai"
+              className="inline-flex items-center gap-2 px-7 py-3.5 text-[14px] font-semibold text-[#0B0E1A] bg-white border border-[#E7E7EE] hover:border-[#C9C9EE] rounded-xl transition-colors"
             >
-              Already have an account? Sign in
-              <ArrowRight size={13} />
+              Sign in
             </a>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="mt-5 text-xs text-[#C5CBDA]">
+          <motion.p
+            variants={fadeUp}
+            className="mt-5 text-[12px] text-[#71768B]"
+          >
             No credit card required · Free plan available · Cancel anytime
           </motion.p>
         </motion.div>

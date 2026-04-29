@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { X, Check, Mail, Sparkles, Clock, Send, EyeOff } from 'lucide-react'
+import { Check, Mail, Sparkles, Clock, Send, EyeOff } from 'lucide-react'
 import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const oldWay = [
@@ -13,125 +13,109 @@ const oldWay = [
 ]
 
 const newWay = [
-  { icon: Check, text: 'One link, all content, fully trackable' },
-  { icon: Check, text: 'Real-time intent scoring on every visit' },
-  { icon: Check, text: 'Every room personalized per buyer' },
-  { icon: Check, text: 'Alerts when buyers re-engage or go cold' },
-  { icon: Sparkles, text: 'AI coach drafts the first version from your call' },
+  { text: 'One link, all content, fully trackable' },
+  { text: 'Real-time intent scoring on every visit' },
+  { text: 'Every room personalized per buyer' },
+  { text: 'Alerts when buyers re-engage or go cold' },
+  { text: 'AI coach drafts the first version from your call' },
 ]
 
 export default function Problem() {
   return (
-    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
-      <div className="absolute inset-0 dot-grid opacity-20" />
-
+    <section className="py-20 md:py-28 px-4 sm:px-6 relative bg-white border-y border-[#E7E7EE]">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="text-center mb-16"
+          className="text-center max-w-[760px] mx-auto mb-12"
         >
-          <motion.p variants={fadeUp} className="text-xs font-semibold text-[#F43F5E] uppercase tracking-[0.15em] mb-4">
+          <motion.p variants={fadeUp} className="eyebrow text-[#B84263] mb-3">
             The problem
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] max-w-3xl mx-auto leading-tight"
+            className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A]"
           >
-            Deals don&apos;t die on calls —{' '}
-            <span className="text-gradient">they die between meetings.</span>
+            Deals don&apos;t die on calls — <span className="text-gradient">they die between meetings.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-xl mx-auto">
+          <motion.p variants={fadeUp} className="mt-4 text-[17px] text-[#3D4256] leading-[1.55]">
             The PDF in the inbox. The deck buried three threads deep. The silence after the demo. That&apos;s where deals are won or lost.
           </motion.p>
         </motion.div>
 
-        {/* Stat block — design-style giant number */}
+        {/* Stat block */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="max-w-3xl mx-auto mb-12 sm:mb-16 text-center"
+          className="max-w-[760px] mx-auto mb-14 text-center bg-[#FBFBFD] border border-[#E7E7EE] rounded-2xl py-10 px-8"
         >
-          <div className="text-[88px] sm:text-[120px] md:text-[160px] font-extrabold tracking-[-0.05em] leading-[0.9] bg-gradient-to-br from-[#F43F5E] to-[#6366F1] bg-clip-text text-transparent">
+          <div className="display text-[88px] sm:text-[120px] md:text-[140px] tracking-[-0.05em] leading-[0.9] text-gradient">
             73%
           </div>
-          <p className="mt-4 text-base sm:text-lg text-[#3D4663] max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-[15px] text-[#3D4256] max-w-[480px] mx-auto leading-[1.55]">
             of deals are lost in the silence between meetings — no visibility, no signal, no way back in.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Old Way — muted, grayed out, visually dull */}
+        <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+          {/* Old Way */}
           <motion.div
             variants={slideInLeft}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="rounded-2xl border border-black/[0.06] bg-[#F2F4FA]/60 p-5 sm:p-8 opacity-75 grayscale-[30%]"
+            className="rounded-2xl border border-[#E7E7EE] bg-[#FBFBFD] p-7"
           >
-            <div className="flex items-center gap-3 mb-7">
-              <div className="w-11 h-11 rounded-xl bg-[#9BA3B8]/10 flex items-center justify-center">
-                <Mail size={18} className="text-[#9BA3B8]" />
-              </div>
-              <div>
-                <div className="text-[10px] font-semibold text-[#9BA3B8] uppercase tracking-wider">The old way</div>
-                <div className="text-sm font-semibold text-[#6B7394]">Manual Decks + Email</div>
-              </div>
-            </div>
-            <ul className="space-y-3.5">
+            <p className="eyebrow text-[#A4A8BC] mb-3">The old way</p>
+            <h3 className="display text-[20px] text-[#3D4256] mb-5">Manual decks + email</h3>
+            <ul>
               {oldWay.map((item) => (
-                <li key={item.text} className="flex items-center gap-3 text-sm text-[#9BA3B8]">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#E3E6F0] flex items-center justify-center">
-                    <X size={11} className="text-[#9BA3B8]" />
-                  </span>
-                  <span className="line-through">{item.text}</span>
+                <li
+                  key={item.text}
+                  className="flex items-center gap-3 py-2.5 text-[14px] text-[#71768B] border-b border-[#E7E7EE] last:border-b-0"
+                >
+                  <span className="text-[#A4A8BC] flex-shrink-0">—</span>
+                  <span>{item.text}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* New Way — dark elevated card, design-inspired */}
+          {/* New Way */}
           <motion.div
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="relative rounded-2xl bg-[#0A0D14] p-5 sm:p-8 shadow-[0_24px_60px_rgba(99,102,241,0.25)] overflow-hidden"
+            className="relative rounded-2xl bg-[#0B0E1A] p-7 overflow-hidden"
           >
-            {/* Subtle iris glow */}
-            <div className="absolute inset-0 opacity-90 pointer-events-none" style={{
-              background: 'radial-gradient(ellipse 80% 60% at 80% 0%, rgba(99,102,241,0.18) 0%, transparent 60%)',
-            }} />
-            <div className="absolute inset-0 dot-grid opacity-[0.05] pointer-events-none" />
+            <div
+              className="absolute -top-20 -right-20 w-60 h-60 pointer-events-none"
+              style={{
+                background:
+                  'radial-gradient(circle, rgba(91,91,214,0.35) 0%, transparent 70%)',
+              }}
+            />
+            <div className="absolute inset-0 dot-grid-dark opacity-40 pointer-events-none" />
 
             <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-7">
-                <div className="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/[0.10] flex items-center justify-center">
-                  <Sparkles size={18} className="text-[#818CF8]" />
-                </div>
-                <div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wider" style={{
-                    background: 'linear-gradient(90deg, #818CF8, #34D399)',
-                    WebkitBackgroundClip: 'text',
-                    backgroundClip: 'text',
-                    color: 'transparent',
-                  }}>
-                    The Co-Lab way
-                  </div>
-                  <div className="text-sm font-semibold text-white">One Space Per Deal</div>
-                </div>
-              </div>
-              <ul className="space-y-3.5">
+              <p className="eyebrow text-[#7B7BE5] mb-3 flex items-center gap-1.5">
+                <Sparkles size={10} />
+                The Co-Lab way
+              </p>
+              <h3 className="display text-[20px] text-white mb-5">One space per deal</h3>
+              <ul>
                 {newWay.map((item) => (
-                  <li key={item.text} className="flex items-center gap-3 text-sm text-white font-medium">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-[#818CF8]/15 border border-[#818CF8]/25 flex items-center justify-center">
-                      <Check size={11} className="text-[#818CF8]" />
-                    </span>
-                    {item.text}
+                  <li
+                    key={item.text}
+                    className="flex items-center gap-3 py-2.5 text-[14px] text-white/85 border-b border-white/8 last:border-b-0"
+                  >
+                    <Check size={13} className="text-[#7B7BE5] flex-shrink-0" />
+                    <span>{item.text}</span>
                   </li>
                 ))}
               </ul>

@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Palette, Globe, Type, ImageIcon, Check, Sparkles } from 'lucide-react'
-import { fadeUp, slideInLeft, slideInRight, staggerContainer, viewportConfig } from '@/lib/motion'
+import { Palette, Globe, Type, ImageIcon } from 'lucide-react'
+import { fadeUp, staggerContainer, viewportConfig } from '@/lib/motion'
 
 const features = [
   { icon: Palette, label: 'Custom brand colors & themes' },
@@ -11,7 +11,6 @@ const features = [
   { icon: Type, label: 'Font & typography matching' },
 ]
 
-/* ── Mockup: Two branded pod previews side by side ── */
 function BrandedPodPreview({
   brand,
   color,
@@ -27,62 +26,68 @@ function BrandedPodPreview({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24, scale: 0.96 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       viewport={{ once: true }}
-      className="rounded-2xl border border-black/[0.06] bg-white overflow-hidden shadow-[0_12px_48px_rgba(0,0,0,0.08)] flex-1"
+      className="rounded-2xl border border-[#E7E7EE] bg-white overflow-hidden flex-1 shadow-[0_8px_24px_-12px_rgba(15,18,30,0.08)]"
     >
-      {/* Browser bar */}
-      <div className="flex items-center gap-2 px-3 py-2 bg-[#F8F9FC] border-b border-black/[0.05]">
+      <div className="flex items-center gap-2 px-3 py-2 bg-[#FBFBFD] border-b border-[#E7E7EE]">
         <div className="flex gap-1 flex-shrink-0">
-          <div className="w-2 h-2 rounded-full bg-[#E5E7EB]" />
-          <div className="w-2 h-2 rounded-full bg-[#E5E7EB]" />
-          <div className="w-2 h-2 rounded-full bg-[#E5E7EB]" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#E7E7EE]" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#E7E7EE]" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#E7E7EE]" />
         </div>
         <div className="flex-1 flex justify-center">
-          <div className="bg-white rounded-md px-2.5 py-0.5 text-[10px] text-[#9BA3B8] border border-black/[0.05]">
+          <div className="bg-white rounded px-2.5 py-0.5 text-[10px] text-[#71768B] border border-[#E7E7EE] font-mono">
             {domain}
           </div>
         </div>
       </div>
 
-      {/* Pod header with branding */}
       <div className="p-4">
-        <div className="rounded-xl p-4" style={{ backgroundColor: `${color}08`, border: `1px solid ${color}15` }}>
-          {/* Brand bar */}
+        <div
+          className="rounded-xl p-4"
+          style={{ backgroundColor: `${color}0A`, border: `1px solid ${color}20` }}
+        >
           <div className="flex items-center gap-2 mb-3">
             <div
-              className="w-7 h-7 rounded-lg flex items-center justify-center text-[10px] font-bold text-white"
+              className="w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-bold text-white"
               style={{ backgroundColor: color }}
             >
               {logo}
             </div>
-            <span className="text-xs font-semibold text-[#0D1117]">{brand}</span>
+            <span className="text-[12px] font-semibold text-[#0B0E1A]">{brand}</span>
           </div>
 
-          {/* Pod content preview */}
           <div className="space-y-2">
-            <div className="h-2.5 rounded-full w-3/4" style={{ backgroundColor: `${color}20` }} />
-            <div className="h-2 rounded-full w-1/2" style={{ backgroundColor: `${color}12` }} />
+            <div
+              className="h-2 rounded w-3/4"
+              style={{ backgroundColor: `${color}25` }}
+            />
+            <div
+              className="h-1.5 rounded w-1/2"
+              style={{ backgroundColor: `${color}15` }}
+            />
           </div>
 
-          {/* Mini blocks */}
           <div className="mt-4 grid grid-cols-2 gap-2">
             {['Welcome', 'Proposal', 'Demo', 'Next Steps'].map((block) => (
               <div
                 key={block}
-                className="rounded-lg px-2.5 py-2 bg-white border border-black/[0.05]"
+                className="rounded-md px-2.5 py-2 bg-white border border-[#E7E7EE]"
               >
-                <div className="text-[10px] font-medium text-[#0D1117]">{block}</div>
-                <div className="h-1.5 rounded-full mt-1.5 w-2/3" style={{ backgroundColor: `${color}18` }} />
+                <div className="text-[10px] font-medium text-[#0B0E1A]">{block}</div>
+                <div
+                  className="h-1 rounded mt-1.5 w-2/3"
+                  style={{ backgroundColor: `${color}20` }}
+                />
               </div>
             ))}
           </div>
 
-          {/* Branded CTA */}
           <div
-            className="mt-3 rounded-xl py-2 text-center text-[10px] font-semibold text-white"
+            className="mt-3 rounded-lg py-2 text-center text-[10px] font-semibold text-white"
             style={{ backgroundColor: color }}
           >
             Schedule a Call
@@ -95,61 +100,54 @@ function BrandedPodPreview({
 
 export default function WhiteLabel() {
   return (
-    <section className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
-      <div className="absolute inset-0 dot-grid opacity-20" />
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Copy */}
+    <section className="py-20 md:py-28 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-5">
-              <span className="bg-[#F43F5E]/8 border border-[#F43F5E]/15 rounded-full px-4 py-1.5 text-xs font-semibold text-[#F43F5E] shadow-sm flex items-center gap-1.5">
-                <Palette size={11} className="text-[#F43F5E]" />
-                White-Label
-              </span>
-            </motion.div>
+            <motion.p variants={fadeUp} className="eyebrow text-[#5B5BD6] mb-4">
+              White-Label
+            </motion.p>
 
             <motion.h2
               variants={fadeUp}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-extrabold tracking-tight text-[#0D1117] leading-tight mb-5"
+              className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A] mb-5"
             >
-              Your brand.{' '}
-              <span className="text-gradient">Your deal room.</span>
+              Your brand. <span className="text-gradient">Your deal room.</span>
             </motion.h2>
 
-            <motion.p variants={fadeUp} className="text-lg text-[#3D4663] leading-relaxed mb-8">
+            <motion.p
+              variants={fadeUp}
+              className="text-[17px] text-[#3D4256] leading-[1.55] mb-7"
+            >
               Make every pod look like it was built in-house. Custom colors, your logo,
               your domain — buyers see your brand, not ours. Full white-label means
               every touchpoint reinforces trust.
             </motion.p>
 
-            {/* Feature list */}
-            <motion.ul variants={staggerContainer} className="space-y-4 mb-8">
+            <motion.ul variants={staggerContainer} className="border-t border-[#E7E7EE]">
               {features.map((feat) => {
                 const Icon = feat.icon
                 return (
                   <motion.li
                     key={feat.label}
                     variants={fadeUp}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-3 py-3.5 border-b border-[#E7E7EE]"
                   >
-                    <span className="flex-shrink-0 w-8 h-8 rounded-xl bg-[#F43F5E]/8 border border-[#F43F5E]/15 flex items-center justify-center">
-                      <Icon size={14} className="text-[#F43F5E]" />
+                    <span className="flex-shrink-0 w-8 h-8 rounded-md bg-[#F2F2FB] border border-[#E6E6F7] flex items-center justify-center">
+                      <Icon size={14} className="text-[#5B5BD6]" />
                     </span>
-                    <span className="text-sm font-medium text-[#3D4663]">{feat.label}</span>
+                    <span className="text-[14px] font-medium text-[#1F2333]">{feat.label}</span>
                   </motion.li>
                 )
               })}
             </motion.ul>
-
           </motion.div>
 
-          {/* Right: Branded pod previews */}
           <div className="flex flex-col sm:flex-row gap-4">
             <BrandedPodPreview
               brand="Acme Corp"
@@ -160,10 +158,10 @@ export default function WhiteLabel() {
             />
             <BrandedPodPreview
               brand="TechFlow"
-              color="#059669"
+              color="#0E8A6E"
               logo="T"
               domain="rooms.techflow.io"
-              delay={0.25}
+              delay={0.2}
             />
           </div>
         </div>

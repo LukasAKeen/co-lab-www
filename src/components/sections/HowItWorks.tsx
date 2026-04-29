@@ -16,11 +16,7 @@ import { fadeUp, scaleIn, staggerContainer, viewportConfig } from '@/lib/motion'
 const steps = [
   {
     number: '01',
-    icon: FileSearch,
-    color: '#34D399',
-    bg: 'rgba(52,211,153,0.08)',
-    border: 'rgba(52,211,153,0.20)',
-    glowClass: 'glow-mint',
+    icon: FolderOpen,
     title: 'Build Your Pod',
     description:
       'Drag in blocks, assets, pricing, and case studies — or start from a template. Prefer a head start? Drop in a call transcript and the AI coach drafts a first version you can refine.',
@@ -32,11 +28,7 @@ const steps = [
   },
   {
     number: '02',
-    icon: Sparkles,
-    color: '#6366F1',
-    bg: 'rgba(99,102,241,0.08)',
-    border: 'rgba(99,102,241,0.20)',
-    glowClass: 'glow-indigo',
+    icon: FileSearch,
     title: 'Share One Link',
     description:
       'A branded, buyer-facing micro-site. No login walls, no attachments, no version confusion — just one place every stakeholder returns to.',
@@ -48,11 +40,7 @@ const steps = [
   },
   {
     number: '03',
-    icon: MessageSquareText,
-    color: '#F59E0B',
-    bg: 'rgba(245,158,11,0.08)',
-    border: 'rgba(245,158,11,0.20)',
-    glowClass: '',
+    icon: BarChart3,
     title: 'Watch It Move',
     description:
       'See which blocks buyers re-read, who visits, and when. Your AI deal coach surfaces the signals and flags deals going cold — so you follow up at exactly the right moment.',
@@ -66,112 +54,87 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-16 sm:py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
-      {/* Background — gradient top avoids hard line against page bg */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFF] via-[#F2F4FA] to-[#F2F4FA]" style={{ backgroundSize: '100% 100%', backgroundPosition: 'top' }} />
-      <div className="absolute inset-0 gradient-mesh opacity-50" />
-
+    <section
+      id="how"
+      className="py-20 md:py-28 px-4 sm:px-6 relative bg-[#F6F6FA] border-y border-[#E7E7EE]"
+    >
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="text-center mb-20"
+          className="text-center max-w-[760px] mx-auto mb-16"
         >
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-5">
-            <span className="bg-white border border-[#6366F1]/15 rounded-full px-4 py-1.5 text-xs font-semibold text-[#6366F1] shadow-sm">
-              How it works
-            </span>
-          </motion.div>
+          <motion.p variants={fadeUp} className="eyebrow text-[#5B5BD6] mb-3">
+            How it works
+          </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-extrabold tracking-tight text-[#0D1117] leading-tight"
+            className="display text-3xl sm:text-4xl md:text-[44px] text-[#0B0E1A]"
           >
-            A room for every deal.{' '}
-            <span className="text-gradient-ai">Built in minutes.</span>
+            A room for every deal. <span className="text-gradient">Built in minutes.</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-5 text-lg text-[#3D4663] max-w-2xl mx-auto leading-relaxed">
-            Three steps to turn every sales conversation into a living, buyer-facing space — with an AI coach riding shotgun.
+          <motion.p
+            variants={fadeUp}
+            className="mt-4 text-[17px] text-[#3D4256] leading-[1.55]"
+          >
+            Three steps to turn every sales conversation into a living, buyer-facing
+            space — with an AI coach riding shotgun.
           </motion.p>
         </motion.div>
 
-        {/* Steps */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto relative"
+          className="grid md:grid-cols-3 gap-4"
         >
-          {/* Connector line (desktop) */}
-          <div className="hidden md:block absolute top-[60px] left-[calc(33.3%+12px)] right-[calc(33.3%+12px)] z-0">
-            <div className="h-0.5 w-full bg-gradient-to-r from-[#34D399]/40 via-[#6366F1]/40 to-[#F59E0B]/40 rounded-full" />
-          </div>
-
           {steps.map((step) => {
             const Icon = step.icon
             return (
               <motion.div
                 key={step.number}
                 variants={scaleIn}
-                className="relative rounded-2xl glass-card-hover p-8"
+                className="bg-white border border-[#E7E7EE] rounded-2xl p-8 card-hover"
               >
-                {/* Number + Icon */}
-                <div className="relative mb-6 flex items-start justify-between">
-                  <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center relative"
-                    style={{ backgroundColor: step.bg, border: `1.5px solid ${step.border}` }}
-                  >
-                    <Icon size={24} style={{ color: step.color }} />
-                  </div>
-                  <span
-                    className="text-[11px] font-black px-2.5 py-1 rounded-xl border shadow-sm"
-                    style={{
-                      color: step.color,
-                      borderColor: step.border,
-                      backgroundColor: step.bg,
-                    }}
-                  >
-                    Step {step.number}
+                <div className="flex items-center gap-2.5 mb-5">
+                  <span className="w-7 h-7 rounded-md bg-[#F2F2FB] text-[#5B5BD6] flex items-center justify-center text-[12px] font-semibold tabular-nums">
+                    {step.number}
                   </span>
+                  <span className="eyebrow text-[#5B5BD6]">Step {step.number}</span>
                 </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold text-[#0D1117] mb-3 leading-snug">{step.title}</h3>
-                <p className="text-sm text-[#3D4663] leading-relaxed mb-6">{step.description}</p>
+                <div className="w-10 h-10 rounded-lg bg-[#F2F2FB] border border-[#E6E6F7] flex items-center justify-center mb-4">
+                  <Icon size={18} className="text-[#5B5BD6]" />
+                </div>
 
-                {/* Detail list */}
-                <ul className="space-y-2.5">
+                <h3 className="display text-[22px] text-[#0B0E1A] mb-2.5">
+                  {step.title}
+                </h3>
+                <p className="text-[14px] text-[#3D4256] leading-[1.55] mb-5">
+                  {step.description}
+                </p>
+
+                <ul className="border-t border-[#E7E7EE]">
                   {step.details.map((detail) => {
                     const DetailIcon = detail.icon
                     return (
-                      <li key={detail.text} className="flex items-center gap-2.5 text-sm text-[#6B7394]">
-                        <span
-                          className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center"
-                          style={{ backgroundColor: step.bg }}
-                        >
-                          <DetailIcon size={12} style={{ color: step.color }} />
-                        </span>
+                      <li
+                        key={detail.text}
+                        className="flex items-center gap-2.5 py-2.5 text-[13px] text-[#3D4256] border-b border-[#E7E7EE] last:border-b-0"
+                      >
+                        <DetailIcon size={13} className="text-[#5B5BD6] flex-shrink-0" />
                         {detail.text}
                       </li>
                     )
                   })}
                 </ul>
-
-                {/* Decorative gradient line at bottom */}
-                <div
-                  className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full opacity-30"
-                  style={{
-                    background: `linear-gradient(90deg, transparent 0%, ${step.color} 50%, transparent 100%)`,
-                  }}
-                />
               </motion.div>
             )
           })}
         </motion.div>
-
       </div>
     </section>
   )
