@@ -10,6 +10,33 @@ import { getAllPosts, getPostBySlug, getPostSlugs, type Post } from '@/lib/blog'
 
 const SITE_URL = 'https://colabapp.ai'
 
+function buildBreadcrumbJsonLd(post: Post) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `${SITE_URL}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${SITE_URL}/blog`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `${SITE_URL}/blog/${post.slug}`,
+      },
+    ],
+  }
+}
+
 function buildBlogPostingJsonLd(post: Post) {
   const url = `${SITE_URL}/blog/${post.slug}`
   const heroUrl = `${SITE_URL}${post.hero}`
@@ -114,12 +141,17 @@ export default async function BlogPostPage({
   const next = idx >= 0 && idx < allPosts.length - 1 ? allPosts[idx + 1] : null
 
   const jsonLd = buildBlogPostingJsonLd(post)
+  const breadcrumbLd = buildBreadcrumbJsonLd(post)
 
   return (
     <main className="min-h-screen bg-[#FBFBFD]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Navbar />
 
